@@ -1,5 +1,5 @@
 {
-    "project_machine_name": "regexp:match(ul.primary li:first a @href, '[^/]+$')",
+    "project_machine_name": "regexp:match(ul.primary li:nth-of-type(1) a @href, '[^/]+$')",
     "releases_recommended(.download-table-ok tr)": [{
           "quality": "str:tokenize('recommended', '-')",
           "version_full": "a",

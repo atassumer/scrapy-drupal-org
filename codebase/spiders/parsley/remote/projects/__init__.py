@@ -35,8 +35,8 @@ class ReleasesProjectsRemoteParsleySpider(ProjectsRemoteParsleySpider):
     name = 'projects_releases'
 
 # {
-#     "url": "ul.primary li:first a @href",
-#     "machine_name": "regexp:match(ul.primary li:first a @href, '[^/]+$')",
+#     "url": "ul.primary li:nth-of-type(1) a @href",
+#     "machine_name": "regexp:match(ul.primary li:nth-of-type(1) a @href, '[^/]+$')",
 #     "visible_name": "id('page-subtitle')/text()",
 #     "uid": "//div[@class='submitted']/a/@href",
 #     "nid": "id('block-project-development')//ul/li[contains(.,'commits')]/a/@href",
