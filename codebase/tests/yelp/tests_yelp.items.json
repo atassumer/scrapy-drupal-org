@@ -1,0 +1,12 @@
+{
+  "name": "h1",
+  "phone": "#bizPhone",
+  "address": "address",
+  "reviews(.review)": [
+    {
+      "date": ".date",
+      "user_name": ".user-name a",
+      "comment": "with-newlines(.review_comment)"
+    }
+  ]
+}

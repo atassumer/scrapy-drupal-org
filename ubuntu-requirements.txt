@@ -1,0 +1,7 @@
+python2
+python-scrapy
+
+# https://help.ubuntu.com/community/Drupal
+lamp-server
+drupal7
+mysql workbench (optional)

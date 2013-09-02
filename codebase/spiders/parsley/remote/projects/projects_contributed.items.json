@@ -1,0 +1,17 @@
+{
+    "url": "ul.primary li:first a @href",
+    "machine_name": "regexp:match(ul.primary li:first a @href, '[^/]+$')",
+    "visible_name": "#page-subtitle",
+    "uid": "regexp:match(.submitted a @href, '\\d+')",
+    "nid": "regexp:match(id('block-project-development')//ul/li[contains(.,'commits')]/a/@href, '\\d+')",
+    "image_urls?": ".imagecache",
+    "info(.project-info)": [{
+          "info_to": "ul"
+        }],
+    "issues(.issue-cockpit-categories)?": [{
+          "issues_open_count": "regexp:match(.issue-cockpit-totals a:first, '\\d+')",
+          "issues_total_count": "regexp:match(.issue-cockpit-totals a:last, '\\d+')",
+          "bugreports_open_count": "regexp:match(.issue-cockpit-bug a:first, '\\d+')",
+          "bugreports_total_count": "regexp:match(.issue-cockpit-bug a:last, '\\d+')"
+        }]
+}
