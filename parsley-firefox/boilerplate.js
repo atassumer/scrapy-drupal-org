@@ -1,4 +1,5 @@
 // https://drupal.org/project/flag
+
 structure = {
     "url": "ul.primary li:nth-of-type(1) a @href",
     "machine_name": "regexp:match(ul.primary li:nth-of-type(1) a @href, '[^/]+$')",
@@ -17,13 +18,61 @@ structure = {
         }]
 }
 
+
+
 // Known issues: Firefox's implementation of CSS differs from Parsley's implementation
 
-_extractSingleSelector = function(value) {
-    var result = value
+
+
+
+// =====
+// model
+// =====
+
+
+// ==============
+// Selector class
+// ==============
+
+//Selector.prototype.constructor=Selector;       // Otherwise instances of SingleSelector would have a constructor of Selector
+function Selector() {}
+
+Selector.prototype._getNode = function() {
+    try {               // css 3
+        return this.root_node.querySelector(this.extracted_selector_array[0])
+    } catch (err) {     // xpath
+        return document.evaluate( this.extracted_selector_array[0], this.root_node, null, XPathResult.ANY_TYPE, null).iterateNext();
+    }
+}
+
+Selector.prototype._extractSelector = function() {
+    console.log('ERROR: Selector._extractSelector should be overridden')
+}
+
+Selector.prototype.getNode = function() {
+    return this.node
+}
+
+
+
+// ====================
+// SingleSelector class
+// ====================
+SingleSelector.prototype = new Selector();        // Here's where the inheritance occurs
+SingleSelector.prototype.constructor=SingleSelector;       // Otherwise instances of SingleSelector would have a constructor of Selector
+
+function SingleSelector(raw_selector, root_node) {
+	this.raw_selector = raw_selector;
+    this.extracted_selector_array = this._extractSelector(raw_selector)
+    this.root_node = typeof root_node !== 'undefined' ? root_node : document
+    this.node = this._getNode()
+}
+
+SingleSelector.prototype._extractSelector = function(raw_selector) {
+    var result = raw_selector
     // extract attributes
     var re = /^[\w\-]+:[\w\-]+\((.*?)\)$/
-    var occurrences = re.exec(value)
+    var occurrences = re.exec(raw_selector)
     if (occurrences != null) {
         result = occurrences[1]
     }
@@ -34,44 +83,58 @@ _extractSingleSelector = function(value) {
     // separate selector from attribute
     return result.split(' @')
 }
-console.log(_extractSingleSelector('asdfklasjd') == 'asdfklasjd')
-console.log(_extractSingleSelector("regexp:match(.issue-cockpit-totals a:last @href, '\\d+')") == '.issue-cockpit-totals a:last')
+//    console.log(_extractSelector('asdfklasjd') == 'asdfklasjd')
+//    console.log(_extractSelector("regexp:match(.issue-cockpit-totals a:last @href, '\\d+')") == '.issue-cockpit-totals a:last')
 
-_extractGroupSelector = function(value) {
-    var re = /\((.*?)\)/
-    return re.exec(value)[1]
-}
-
-_applySelector = function(selector) {
-    try {
-        return document.querySelector(selector)
-    } catch (err) {
-        return $x(selector)
-    }
-}
-
-_extractValue = function(selector) {
-    var selection = _applySelector(selector[0])
-    if (selector[1]) {
-        return selection.attributes.getNamedItem(selector[0])
+SingleSelector.prototype.getValue = function() {
+    if (this.extracted_selector_array.length == 2) {
+        return this.getNode().attributes.getNamedItem(this.extracted_selector_array[1]).value
     } else {
-        return selector
+        return this.getNode().textContent  // todo: extract text
     }
 }
 
-_forEachSelector = function(key, selector, group_selector) {
+
+// ===================
+// GroupSelector class
+// ===================
+GroupSelector.prototype = new Selector();        // Here's where the inheritance occurs
+SingleSelector.prototype.constructor=GroupSelector;       // Otherwise instances of SingleSelector would have a constructor of Selector
+
+function GroupSelector(raw_selector) {
+	this.raw_selector = raw_selector;
+    this.extracted_selector_array = this._extractSelector(raw_selector)
+    this.root_node = document
+    this.node = this._getNode()
+}
+
+GroupSelector.prototype._extractSelector = function(raw_selector) {
+    var re = /\((.*?)\)/
+    return re.exec(raw_selector)[1]
+}
+
+
+
+
+// ==========
+// controller
+// ==========
+_forEachSelector = function(key, selector, group_node) {
     if (typeof selector == 'string') {
-        selector = _extractSingleSelector(selector)
+        var obj = new SingleSelector(selector, group_node)
         console.log(' ')
         console.log(key)
         console.log(selector)
-        console.log(group_selector)
-        console.log(_extractValue(selector))
+        console.log(group_node)
+        console.log(obj.extracted_selector_array)
+        console.log(obj.getNode())
+        console.log(obj.getValue())
     } else if (selector instanceof Array) {
         var subStructure = selector[0];
         for (var subStructureKey in subStructure) {
-            group_selector = _extractGroupSelector(key)
-            _forEachSelector(subStructureKey, subStructure[subStructureKey], group_selector)
+            obj = new GroupSelector(selector)
+            group_node = obj.getNode()
+            _forEachSelector(subStructureKey, subStructure[subStructureKey], group_node)
         }
     }
 }
@@ -80,7 +143,7 @@ forEachSelector = function(key, selector) {
 //        console.log(selector)
 ////        console.log($(selector).text())
 //        console.log($(selector).css('border', '1px solid black'))
-    _forEachSelector(key, selector, "root");
+    _forEachSelector(key, selector);
 };
 
 jQuery.each(structure, forEachSelector)

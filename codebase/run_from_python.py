@@ -42,4 +42,4 @@ class RunScrapyFromScript:
 # yappi.print_stats(sort_type=yappi.SORTTYPE_TSUB, sort_order=yappi.SORTORDER_DESC, limit=50)
 
 import cProfile
-cProfile.run('RunScrapyFromScript()')
+# cProfile.run('RunScrapyFromScript()')
