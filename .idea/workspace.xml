@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ff47b11-d42a-44bc-9a20-792b27b582c7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/__init__.py" afterPath="$PROJECT_DIR$/codebase/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/spiders/parsley/remote/__init__.py" afterPath="$PROJECT_DIR$/codebase/spiders/parsley/remote/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parsley-firefox/boilerplate.js" afterPath="$PROJECT_DIR$/parsley-firefox/boilerplate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/shared/utils/filesystem.py" afterPath="$PROJECT_DIR$/codebase/shared/utils/filesystem.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/spiders/parsley/remote/projects/projects_contributed.items.json" afterPath="$PROJECT_DIR$/codebase/spiders/parsley/remote/projects/projects_contributed.items.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scrapy-parsey.iws" />
@@ -38,7 +33,7 @@
     <file path="/misc.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377784667357" ignored="false" />
     <file path="/hook.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377166486830" ignored="false" />
     <file path="/scan.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377699944942" ignored="false" />
-    <file path="/Dummy.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378204600497" ignored="false" />
+    <file path="/Dummy.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378228432602" ignored="false" />
     <file path="/projects_contributed.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698190773" ignored="false" />
     <file path="/other_git.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698186789" ignored="false" />
     <file path="/other_contributors.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698182547" ignored="false" />
@@ -71,7 +66,7 @@
     <file path="/projects_contributed.items.json" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378043043657" ignored="false" />
     <file path="/projects_top.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377885296089" ignored="false" />
     <file path="/projects_top.items.json" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377880533404" ignored="false" />
-    <file path="/boilerplate.js" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378228060161" ignored="false" />
+    <file path="/boilerplate.js" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378230603944" ignored="false" />
     <file path="/fragment.js2" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378141129992" ignored="false" />
     <file path="/run_from_python_script.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378097052902" ignored="false" />
     <file path="/run_from_python.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378110137698" ignored="false" />
@@ -103,7 +98,7 @@
       <file leaf-file-name="boilerplate.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parsley-firefox/boilerplate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="1" selection-start="4999" selection-end="4999" vertical-scroll-proportion="2.6618075">
+            <state line="192" column="0" selection-start="6166" selection-end="6166" vertical-scroll-proportion="0.8688047">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -114,7 +109,7 @@
       <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1384" selection-end="1384" vertical-scroll-proportion="0.0">
+            <state line="39" column="19" selection-start="456" selection-end="1368" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -653,7 +648,11 @@
       <created>1378204605877</created>
       <updated>1378204605878</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Parsley-for-firefox now working">
+      <created>1378228440857</created>
+      <updated>1378228440857</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -743,7 +742,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed todos which are already done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parsley-for-firefox now working" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -760,6 +759,7 @@
     <MESSAGE value="Parsley-firefox made object-oriented. Fixed doctests" />
     <MESSAGE value="Cleaned a few todos" />
     <MESSAGE value="Removed todos which are already done" />
+    <MESSAGE value="Parsley-for-firefox now working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -859,14 +859,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1384" selection-end="1384" vertical-scroll-proportion="0.0">
+        <state line="39" column="19" selection-start="456" selection-end="1368" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parsley-firefox/boilerplate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="1" selection-start="4999" selection-end="4999" vertical-scroll-proportion="2.6618075">
+        <state line="192" column="0" selection-start="6166" selection-end="6166" vertical-scroll-proportion="0.8688047">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

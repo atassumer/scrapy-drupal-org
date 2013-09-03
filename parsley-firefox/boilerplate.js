@@ -70,8 +70,13 @@ function SingleSelector(raw_selector, root_node, highlight) {
     this.extracted_selector_array = this._extractSelector(raw_selector)
     this.root_node = typeof root_node !== 'undefined' ? root_node : document
     this.node = this._getNode()
+
     if (highlight == true) {
-        this.node.css("border", "1px solid black")
+        var elementNode = this.node
+        if (this.node instanceof Attr) {
+            elementNode = elementNode.ownerElement
+        }
+        elementNode.style.border = "1px solid black"
     }
 }
 
@@ -136,8 +141,8 @@ function Structure(json) {
     }
     this.json = json
     this.extracted = {}
-    this.parse()
     this.highlight = true
+    this.parse()
 }
 
 Structure.prototype.parse = function() {
@@ -165,3 +170,23 @@ Structure.prototype.toString = function() {
 
 
 // USAGE: `new Structure(json)`
+json = {
+    "url": "ul.primary li:nth-of-type(1) a @href",
+    "machine_name": "regexp:match(ul.primary li:nth-of-type(1) a @href, '[^/]+$')",
+    "visible_name": "#page-subtitle",
+    "uid": "regexp:match(.submitted a @href, '\\d+')",
+    "nid": "regexp:match(id('block-project-development')//ul/li[contains(.,'commits')]/a/@href, '\\d+')",
+    "image_urls?": "a.imagecache @href",
+    "info(.project-info)": [{
+          "info_to": "ul"
+        }],
+    "issues(.issue-cockpit-categories)?": [{
+          "issues_open_count": "regexp:match(.issue-cockpit-totals a:nth-of-type(1), '\\d+')",
+          "issues_total_count": "regexp:match(.issue-cockpit-totals a:nth-of-type(2), '\\d+')",
+          "bugreports_open_count": "regexp:match(.issue-cockpit-bug a:nth-of-type(1), '\\d+')",
+          "bugreports_total_count": "regexp:match(.issue-cockpit-bug a:nth-of-type(2), '\\d+')"
+        }]
+}
+
+
+// new Structure(json)
