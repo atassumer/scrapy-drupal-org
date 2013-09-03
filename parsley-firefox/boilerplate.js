@@ -90,7 +90,7 @@ SingleSelector.prototype.getValue = function() {
     if (this.extracted_selector_array.length == 2) {
         return this.getNode().attributes.getNamedItem(this.extracted_selector_array[1]).value
     } else {
-        return this.getNode().textContent  // todo: extract text
+        return this.getNode().textContent
     }
 }
 

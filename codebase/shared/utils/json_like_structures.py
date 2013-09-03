@@ -49,7 +49,7 @@ def flatten_nested_structure(structure):
     {'to': '/project/panels_everywhere', 'from': '/project/views'}
     """
     if type(structure) not in (dict, list):
-        raise JsonLikeStructuresException('unexpected input')  # todo: make exception class
+        raise JsonLikeStructuresException('unexpected input')
     this_level_items, next_level_items = separate_nodes_by_levels(structure)
     if next_level_items:
         for nl_items in next_level_items:

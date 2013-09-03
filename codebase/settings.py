@@ -14,8 +14,8 @@ IMAGES_MIN_HEIGHT = 110
 IMAGES_STORE = '/home/ubuntu/Programs/drupal/files/images'
 
 DOWNLOADER_MIDDLEWARES = {
-    'scrapy.contrib.downloadermiddleware.httpcache.HttpCacheMiddleware': 543,  # todo: place before other settings?
-    'scrapy.contrib.downloadermiddleware.robotstxt.RobotsTxtMiddleware': 965
+    'scrapy.contrib.downloadermiddleware.httpcache.HttpCacheMiddleware': 543,
+    'scrapy.contrib.downloadermiddleware.robotstxt.RobotsTxtMiddleware': 965,
 }
 
 ITEM_PIPELINES = [

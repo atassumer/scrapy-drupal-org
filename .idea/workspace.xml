@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ff47b11-d42a-44bc-9a20-792b27b582c7" name="Default" comment="">
+    <list default="true" id="8ff47b11-d42a-44bc-9a20-792b27b582c7" name="Default" comment="Cleaned a few todos">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/__init__.py" afterPath="$PROJECT_DIR$/codebase/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parsley-firefox/boilerplate.js" afterPath="$PROJECT_DIR$/parsley-firefox/boilerplate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/run_from_python.py" afterPath="$PROJECT_DIR$/codebase/run_from_python.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/shared/utils/json_like_structures.py" afterPath="$PROJECT_DIR$/codebase/shared/utils/json_like_structures.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/settings.py" afterPath="$PROJECT_DIR$/codebase/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scrapy-parsey.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/" />
-    <file path="/__init__.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378098361355" ignored="false" />
+    <ignored mask=".idea/*" />
+    <file path="/__init__.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378204215298" ignored="false" />
     <file path="/load_items.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377178634160" ignored="false" />
     <file path="/filesystem.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377865706632" ignored="false" />
     <file path="/settings.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377843451496" ignored="false" />
@@ -34,7 +36,7 @@
     <file path="/misc.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377784667357" ignored="false" />
     <file path="/hook.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377166486830" ignored="false" />
     <file path="/scan.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377699944942" ignored="false" />
-    <file path="/Dummy.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378203918907" ignored="false" />
+    <file path="/Dummy.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378204498491" ignored="false" />
     <file path="/projects_contributed.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698190773" ignored="false" />
     <file path="/other_git.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698186789" ignored="false" />
     <file path="/other_contributors.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698182547" ignored="false" />
@@ -106,16 +108,72 @@
       <file leaf-file-name="boilerplate.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parsley-firefox/boilerplate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="1" selection-start="3223" selection-end="3223" vertical-scroll-proportion="0.0">
+            <state line="92" column="41" selection-start="3192" selection-end="3192" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_from_python.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="setup.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="2" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run_from_python.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codebase/run_from_python.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="8" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.7905983">
+            <state line="44" column="39" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vcs.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codebase/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codebase/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parsley_spiders.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codebase/shared/spiders/parselet/parsley_spiders.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="10" selection-start="1122" selection-end="1122" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="json_like_structures.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/codebase/shared/utils/json_like_structures.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="0" selection-start="2338" selection-end="2338" vertical-scroll-proportion="0.8652695">
               <folding />
             </state>
           </provider>
@@ -132,6 +190,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
     <option name="myDateState">
       <MyDateState />
     </option>
@@ -139,8 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/codebase/spiders/parsley/local/modules/modules_dependencies.py" />
-        <option value="$PROJECT_DIR$/codebase/spiders/parsley/local/modules/modules_meta.py" />
         <option value="$PROJECT_DIR$/codebase/spiders/parsley/local/modules/__init__.py" />
         <option value="$PROJECT_DIR$/codebase/shared/items/load_item_objects.py" />
         <option value="$PROJECT_DIR$/codebase/spiders/parsley/remote/projects/projects_linked.items.json" />
@@ -149,12 +206,14 @@
         <option value="$PROJECT_DIR$/codebase/shared/utils/filesystem.py" />
         <option value="$PROJECT_DIR$/codebase/run_from_python_script.py" />
         <option value="$PROJECT_DIR$/codebase/spiders/parsley/remote/other/__init__.py" />
-        <option value="$PROJECT_DIR$/codebase/shared/utils/json_like_structures.py" />
         <option value="$PROJECT_DIR$/codebase/shared/utils/parselets.py" />
         <option value="$PROJECT_DIR$/codebase/spiders/parsley/remote/projects/__init__.py" />
         <option value="$PROJECT_DIR$/parsley-firefox/2.js" />
-        <option value="$PROJECT_DIR$/parsley-firefox/boilerplate.js" />
         <option value="$PROJECT_DIR$/codebase/run_from_python.py" />
+        <option value="$PROJECT_DIR$/codebase/__init__.py" />
+        <option value="$PROJECT_DIR$/codebase/settings.py" />
+        <option value="$PROJECT_DIR$/codebase/shared/utils/json_like_structures.py" />
+        <option value="$PROJECT_DIR$/parsley-firefox/boilerplate.js" />
       </list>
     </option>
   </component>
@@ -521,9 +580,14 @@
       <created>1377014189158</created>
       <updated>1377014189158</updated>
     </task>
+    <task id="LOCAL-00001" summary="Parsley-firefox made object-oriented. Fixed doctests">
+      <created>1378204082998</created>
+      <updated>1378204082998</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="0">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -547,11 +611,12 @@
     <frame x="66" y="24" width="1191" height="876" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32692307" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24934383" sideWeight="0.59615386" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28346458" sideWeight="0.71153843" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28346458" sideWeight="0.6730769" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29395604" sideWeight="0.50043744" order="9" side_tool="true" content_ui="tabs" />
@@ -609,7 +674,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned a few todos" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -623,6 +688,8 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="Parsley-firefox made object-oriented. Fixed doctests" />
+    <MESSAGE value="Cleaned a few todos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -630,28 +697,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/parsley-firefox/boilerplate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="1" selection-start="3223" selection-end="3223" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/twisted/internet/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/scrapy/spidermanager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="33" selection-start="1161" selection-end="1169" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/scrapy/settings/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="2723" selection-end="2723" vertical-scroll-proportion="0.8004435" />
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/scrapy/crawler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="8" selection-start="1641" selection-end="1641" vertical-scroll-proportion="0.33262712" />
@@ -667,19 +712,9 @@
         <state line="6" column="17" selection-start="240" selection-end="240" vertical-scroll-proportion="0.19067797" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/shared/utils/json_like_structures.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="2368" selection-end="2368" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codebase/spiders/parsley/remote/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/shared/spiders/parselet/parsley_spiders.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="2271" selection-end="2271" vertical-scroll-proportion="2.2860963" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codebase/shared/utils/parselets.py">
@@ -704,16 +739,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parsley-firefox/boilerplate.js">
+    <entry file="file://$PROJECT_DIR$/codebase/run_from_python.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="1" selection-start="3223" selection-end="3223" vertical-scroll-proportion="0.0">
+        <state line="44" column="39" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/run_from_python.py">
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="8" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.7905983">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codebase/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codebase/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codebase/shared/spiders/parselet/parsley_spiders.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="10" selection-start="1122" selection-end="1122" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parsley-firefox/boilerplate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="41" selection-start="3192" selection-end="3192" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="2" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codebase/shared/utils/json_like_structures.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="0" selection-start="2338" selection-end="2338" vertical-scroll-proportion="0.8652695">
           <folding />
         </state>
       </provider>
