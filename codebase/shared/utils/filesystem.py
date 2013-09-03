@@ -21,11 +21,11 @@ class FileSystemAdapter:
         """
         if relative_path == '/':
             relative_path = '.'
-        if relative_path and relative_path[0] == '/':  # fs root path
+        if relative_path and relative_path[0] == '/':  # fs root_node path
             self._pwd = relative_path
         elif target_file:     # relative path
             self._pwd = os.path.realpath("%s/../%s" % (target_file, relative_path))
-        else:               # project root path
+        else:               # project root_node path
             self._pwd = os.path.realpath("%s/../../../%s" % (__file__, relative_path))
         return self._pwd
 

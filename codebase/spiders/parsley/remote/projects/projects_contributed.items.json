@@ -4,14 +4,14 @@
     "visible_name": "#page-subtitle",
     "uid": "regexp:match(.submitted a @href, '\\d+')",
     "nid": "regexp:match(id('block-project-development')//ul/li[contains(.,'commits')]/a/@href, '\\d+')",
-    "image_urls?": ".imagecache",
+    "image_urls?": "a.imagecache @href",
     "info(.project-info)": [{
           "info_to": "ul"
         }],
     "issues(.issue-cockpit-categories)?": [{
           "issues_open_count": "regexp:match(.issue-cockpit-totals a:nth-of-type(1), '\\d+')",
-          "issues_total_count": "regexp:match(.issue-cockpit-totals a:last, '\\d+')",
+          "issues_total_count": "regexp:match(.issue-cockpit-totals a:nth-of-type(2), '\\d+')",
           "bugreports_open_count": "regexp:match(.issue-cockpit-bug a:nth-of-type(1), '\\d+')",
-          "bugreports_total_count": "regexp:match(.issue-cockpit-bug a:last, '\\d+')"
+          "bugreports_total_count": "regexp:match(.issue-cockpit-bug a:nth-of-type(2), '\\d+')"
         }]
 }

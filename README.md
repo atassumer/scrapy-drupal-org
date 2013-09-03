@@ -13,13 +13,29 @@ Code to integrate PyParsley into Scrapy located in `codebase.shared` package.
 
 
 
-Main issue
+Tools
 ================
-PyParsey throws parsing errors too often. 
-There are 
- - `Segmentation error` for JSON syntax errors and
- - `RuntimeError` wrapped into `ParseletException` for selector errors
- 
-Both of them give no information on that went wrong.
+To write and debug your parselet, paste contents of `parsley-firefox/boilerplate.js` into Web Console
+Usage:
 
-To simplify parselet development I started to make firefox extension. See `parsley-firefox` folder
+```
+// parselet for https://drupal.org/project/flag
+json = {
+    "url": "ul.primary li:nth-of-type(1) a @href",
+    "machine_name": "regexp:match(ul.primary li:nth-of-type(1) a @href, '[^/]+$')",
+    "visible_name": "#page-subtitle",
+    "uid": "regexp:match(.submitted a @href, '\\d+')",
+    "nid": "regexp:match(id('block-project-development')//ul/li[contains(.,'commits')]/a/@href, '\\d+')",
+    "image_urls?": "a.imagecache @href",
+    "info(.project-info)": [{
+          "info_to": "ul"
+        }],
+    "issues(.issue-cockpit-categories)?": [{
+          "issues_open_count": "regexp:match(.issue-cockpit-totals a:nth-of-type(1), '\\d+')",
+          "issues_total_count": "regexp:match(.issue-cockpit-totals a:nth-of-type(2), '\\d+')",
+          "bugreports_open_count": "regexp:match(.issue-cockpit-bug a:nth-of-type(1), '\\d+')",
+          "bugreports_total_count": "regexp:match(.issue-cockpit-bug a:nth-of-type(2), '\\d+')"
+        }]
+}
+new Structure(json)  // run it
+```

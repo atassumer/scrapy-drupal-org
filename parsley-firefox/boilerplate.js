@@ -1,39 +1,45 @@
-// https://drupal.org/project/flag
+/**
 
-structure = {
-    "url": "ul.primary li:nth-of-type(1) a @href",
-    "machine_name": "regexp:match(ul.primary li:nth-of-type(1) a @href, '[^/]+$')",
-    "visible_name": "#page-subtitle",
-    "uid": "regexp:match(.submitted a @href, '\\d+')",
-    "nid": "regexp:match(id('block-project-development')//ul/li[contains(.,'commits')]/a/@href, '\\d+')",
-    "image_urls?": ".imagecache",
-    "info(.project-info)": [{
-          "info_to": "ul"
-        }],
-    "issues(.issue-cockpit-categories)?": [{
-          "issues_open_count": "regexp:match(.issue-cockpit-totals a:nth-of-type(1), '\\d+')",
-          "issues_total_count": "regexp:match(.issue-cockpit-totals a:last, '\\d+')",
-          "bugreports_open_count": "regexp:match(.issue-cockpit-bug a:nth-of-type(1), '\\d+')",
-          "bugreports_total_count": "regexp:match(.issue-cockpit-bug a:last, '\\d+')"
-        }]
-}
+    USAGE
 
 
+    // parselet for https://drupal.org/project/flag
+    json = {
+        "url": "ul.primary li:nth-of-type(1) a @href",
+        "machine_name": "regexp:match(ul.primary li:nth-of-type(1) a @href, '[^/]+$')",
+        "visible_name": "#page-subtitle",
+        "uid": "regexp:match(.submitted a @href, '\\d+')",
+        "nid": "regexp:match(id('block-project-development')//ul/li[contains(.,'commits')]/a/@href, '\\d+')",
+        "image_urls?": "a.imagecache @href",
+        "info(.project-info)": [{
+              "info_to": "ul"
+            }],
+        "issues(.issue-cockpit-categories)?": [{
+              "issues_open_count": "regexp:match(.issue-cockpit-totals a:nth-of-type(1), '\\d+')",
+              "issues_total_count": "regexp:match(.issue-cockpit-totals a:nth-of-type(2), '\\d+')",
+              "bugreports_open_count": "regexp:match(.issue-cockpit-bug a:nth-of-type(1), '\\d+')",
+              "bugreports_total_count": "regexp:match(.issue-cockpit-bug a:nth-of-type(2), '\\d+')"
+            }]
+    }
+    new Structure(json)  // run it
+*/
 
-// Known issues: Firefox's implementation of CSS differs from Parsley's implementation
+/**
+ * KNOWN ISSUES
+ *
+ * Firefox's implementation of CSS differs from Parsley's implementation
+ * Firefox don't support EXSLT functions
+ */
 
 
+/**
+ * Model
+ */
 
 
-// =====
-// model
-// =====
-
-
-// ==============
-// Selector class
-// ==============
-
+/**
+ * Class Selector
+ */
 //Selector.prototype.constructor=Selector;       // Otherwise instances of SingleSelector would have a constructor of Selector
 function Selector() {}
 
@@ -54,25 +60,26 @@ Selector.prototype.getNode = function() {
 }
 
 
-
-// ====================
-// SingleSelector class
-// ====================
+/**
+ * Class SingleSelector
+ */
 SingleSelector.prototype = new Selector();        // Here's where the inheritance occurs
 SingleSelector.prototype.constructor=SingleSelector;       // Otherwise instances of SingleSelector would have a constructor of Selector
 
-function SingleSelector(raw_selector, root_node) {
-	this.raw_selector = raw_selector;
+function SingleSelector(raw_selector, root_node, highlight) {
     this.extracted_selector_array = this._extractSelector(raw_selector)
     this.root_node = typeof root_node !== 'undefined' ? root_node : document
     this.node = this._getNode()
+    if (highlight == true) {
+        this.node.css("border", "1px solid black")
+    }
 }
 
 SingleSelector.prototype._extractSelector = function(raw_selector) {
     var result = raw_selector
     // extract attributes
     var re = /^[\w\-]+:[\w\-]+\((.*?)\)$/
-    var occurrences = re.exec(raw_selector)
+    var occurrences = re.exec(result)
     if (occurrences != null) {
         result = occurrences[1]
     }
@@ -90,60 +97,71 @@ SingleSelector.prototype.getValue = function() {
     if (this.extracted_selector_array.length == 2) {
         return this.getNode().attributes.getNamedItem(this.extracted_selector_array[1]).value
     } else {
-        return this.getNode().textContent
+        return this.getNode().textContent  // works in both CSS and XPath selectors
     }
 }
 
 
-// ===================
-// GroupSelector class
-// ===================
+/**
+ * Class GroupSelector
+ * @type {Selector}
+ */
 GroupSelector.prototype = new Selector();        // Here's where the inheritance occurs
-SingleSelector.prototype.constructor=GroupSelector;       // Otherwise instances of SingleSelector would have a constructor of Selector
+GroupSelector.prototype.constructor=GroupSelector;       // Otherwise instances of SingleSelector would have a constructor of Selector
 
-function GroupSelector(raw_selector) {
-	this.raw_selector = raw_selector;
-    this.extracted_selector_array = this._extractSelector(raw_selector)
+function GroupSelector(raw_group_selector) {
+    this.extracted_selector_array = this._extractSelector(raw_group_selector)
     this.root_node = document
     this.node = this._getNode()
 }
 
-GroupSelector.prototype._extractSelector = function(raw_selector) {
+GroupSelector.prototype._extractSelector = function(raw_group_selector) {
     var re = /\((.*?)\)/
-    return re.exec(raw_selector)[1]
+    return [re.exec(raw_group_selector)[1]]
 }
 
 
+/**
+ * Controller
+ */
 
+/**
+ * Class Structure
+ */
+function Structure(json) {
+    try {
+        this.parse()
+    } catch (err) {
+        throw 'USAGE: `new Structure(json)`'
+    }
+    this.json = json
+    this.extracted = {}
+    this.parse()
+    this.highlight = true
+}
 
-// ==========
-// controller
-// ==========
-_forEachSelector = function(key, selector, group_node) {
+Structure.prototype.parse = function() {
+    for (var selectorKey in this.json) {
+        this.parseSelector(selectorKey, this.json[selectorKey])
+    }
+}
+
+Structure.prototype.parseSelector = function(key, selector, group_node) {
     if (typeof selector == 'string') {
-        var obj = new SingleSelector(selector, group_node)
-        console.log(' ')
-        console.log(key)
-        console.log(selector)
-        console.log(group_node)
-        console.log(obj.extracted_selector_array)
-        console.log(obj.getNode())
-        console.log(obj.getValue())
+        var obj = new SingleSelector(selector, group_node, this.highlight)
+        this.extracted[key] = obj.getValue()
     } else if (selector instanceof Array) {
-        var subStructure = selector[0];
+        var subStructure = selector[0]
+        var root_node = new GroupSelector(key).getNode()
         for (var subStructureKey in subStructure) {
-            obj = new GroupSelector(selector)
-            group_node = obj.getNode()
-            _forEachSelector(subStructureKey, subStructure[subStructureKey], group_node)
+            this.parseSelector(subStructureKey, subStructure[subStructureKey], root_node)
         }
     }
 }
 
-forEachSelector = function(key, selector) {
-//        console.log(selector)
-////        console.log($(selector).text())
-//        console.log($(selector).css('border', '1px solid black'))
-    _forEachSelector(key, selector);
-};
+Structure.prototype.toString = function() {
+    return this.extracted
+}
 
-jQuery.each(structure, forEachSelector)
+
+// USAGE: `new Structure(json)`

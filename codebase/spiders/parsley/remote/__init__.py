@@ -15,7 +15,7 @@ class RemoteParsleySpider(ParsleySpider):
     def get_links_parselet_path(self):
         return FileSystemAdapter().get_full_path('spiders/parsley/remote/remote.links.json')
 
-    def parse_items(self, response):  # todo: should this behaviour be moved to the root class?
+    def parse_items(self, response):  # todo: should this behaviour be moved to the root_node class?
         if response.url in self.start_urls:
             return
         for item in super(RemoteParsleySpider, self).parse_items(response):
