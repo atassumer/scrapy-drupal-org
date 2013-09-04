@@ -2,19 +2,21 @@ from pyparsley import PyParsley
 import json
 
 from codebase.shared.items.load_item_objects import ParseletItemFactory
-from codebase.shared.utils.json_like_structures import flatten_nested_structure
+from codebase.shared.utils.json_like_structures import JsonResults
 
 
 class Parselet():
-
+    """
+    Base class for ItemsParselet and LinksParselet
+    """
     response = ""
     parselet_path = ""
-    structure = ""
+    json_results = ""
 
     def __init__(self, response, parselet_path):
         self.response = response
         self.parselet_path = parselet_path
-        self.structure = self._apply_parselet(self.parselet_path, self.response.body)
+        self.json_results = self._apply_parselet(self.parselet_path, self.response.body)
 
     def _apply_parselet(self, parselet_path, body):
         parser = PyParsley(self._json_load(parselet_path))
@@ -33,9 +35,12 @@ class Parselet():
 
 
 class ItemsParselet(Parselet):
-
+    """
+    Applies the parselet to the page. Returns scraped Item objects
+    """
     def collect(self, spider_name):
-        for result in flatten_nested_structure(self.structure):
+        json_results = JsonResults(self.json_results)
+        for result in json_results.getInCsvFormat():
             item = self._get_item_object(spider_name)()
             for key, value in result.iteritems():
                 item[key] = value
@@ -43,9 +48,11 @@ class ItemsParselet(Parselet):
 
 
 class LinksParselet(Parselet):
-
+    """
+    Applies the parselet to the page. Returns scraped links
+    """
     def collect(self):
-        for dictionary in self.structure['links']:
+        for dictionary in self.json_results['links']:
             yield dictionary['link']
 
 

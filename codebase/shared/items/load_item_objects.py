@@ -5,7 +5,9 @@ from codebase.shared.utils.filesystem import FileSystemAdapter
 
 
 class ParseletItemFactory():
-
+    """
+    Class for creation of Scrapy's Item object out of given parselet json file
+    """
     spider_name = None
     root_path = None
 

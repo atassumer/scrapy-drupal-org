@@ -4,7 +4,9 @@ import fnmatch
 
 
 class FileSystemAdapter:
-
+    """
+    Set of functions to work with the file system
+    """
     _pwd = ""
 
     def get_full_path(self, relative_path='', target_file=None):

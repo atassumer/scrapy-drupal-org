@@ -8,8 +8,13 @@ from codebase.shared.utils.parselets import ItemsParselet, LinksParselet
 
 class ParsleySpider(BaseSpider):
     """
-    Any method of this class may be redefined in descending classes
-    Path attributed may be relative
+    Scrapy's BaseSpider have only one parsing callback: BaseSpider.parse()
+    ParsleySpider adds six others:
+    .parse_items() and .parse_links()
+    .get_items_parselet_path() and .get_links_parselet_path()
+    .collect_items_manually() and .collect_links_manually()
+
+    # todo: Path attributed may be relative
 
     >>> # the same operations as in the class
     >>> from pyparsley import PyParsley
@@ -20,9 +25,6 @@ class ParsleySpider(BaseSpider):
     >>> parselet.parse(string=html_file, allow_net=False, allow_local=False)['reviews'][0]['date']
     '7/5/2013'
     """
-    # name = "tests"
-    # allowed_domains = ["drupal.org"]
-    # start_urls = ["http://drupal.org/project/views"]
 
     def parse(self, response):
         print 'PARSE'
