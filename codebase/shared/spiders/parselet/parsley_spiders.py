@@ -27,9 +27,6 @@ class ParsleySpider(BaseSpider):
     """
 
     def parse(self, response):
-        print 'PARSE'
-        # raise NotImplementedError("Should have implemented this")
-        # todo: implement post-validation as a pipeline
         for item in self.parse_items(response):
             yield item
 

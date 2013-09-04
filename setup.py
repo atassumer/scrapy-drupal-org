@@ -6,5 +6,4 @@ setup(
     packages=find_packages(),
     entry_points={'scrapy': ['settings = codebase.settings']},
 )
-# todo: move to `./codebase/`
 # todo: rename `codebase` to `source_code`
