@@ -3,7 +3,7 @@ from scrapy.crawler import Crawler
 from scrapy.settings import Settings
 from scrapy import log, signals
 from codebase.spiders.parsley.remote.projects import LinkedProjectsRemoteParsleySpider
-from codebase.shared.utils.parselets import ParseletException
+from codebase.shared.utils.parselet import ParseletException
 from pprint import pprint
 from codebase.spiders.parsley.remote.projects import RelatedProjectsRemoteParsleySpider
 

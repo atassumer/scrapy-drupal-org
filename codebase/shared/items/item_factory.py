@@ -1,12 +1,11 @@
 from scrapy.item import Item, Field
 import json
-
 from codebase.shared.utils.file_system_adapter import FileSystemAdapter
 
 
 class ItemFactory():
     """
-    Class for creation of Scrapy's Item object out of given parselet json file
+    Class for creation of Scrapy's Item object out of given parselet json file path
     """
     spider_name = None
     root_path = None

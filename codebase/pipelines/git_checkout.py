@@ -1,4 +1,4 @@
-from codebase.shared.utils.filesystem import FileSystemAdapter
+from codebase.shared.utils.file_system_adapter import FileSystemAdapter
 from codebase.settings import C_GIT_ROOT
 
 

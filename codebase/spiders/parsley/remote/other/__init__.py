@@ -1,5 +1,5 @@
 from codebase.spiders.parsley.remote import RemoteParsleySpider
-from codebase.shared.utils.parselets import ItemsParselet
+from codebase.shared.utils.parselet import ItemsParselet
 
 
 class OtherRemoteParsleySpider(RemoteParsleySpider):

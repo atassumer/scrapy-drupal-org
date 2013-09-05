@@ -9,6 +9,7 @@ class Parselet():
     """
     Base class for ItemsParselet and LinksParselet
     """
+    # todo: tests for each method
     response = ""
     parselet_path = ""
     json_results = ""

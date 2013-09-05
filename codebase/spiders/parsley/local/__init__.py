@@ -1,4 +1,4 @@
-from codebase.shared.spiders.parselet.parsley_spiders import ParsleySpider
+from codebase.shared.spiders.parselet.parsley_spider import ParsleySpider
 
 
 class LocalParsleySpider(ParsleySpider):

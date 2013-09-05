@@ -14,8 +14,6 @@ class ParsleySpider(BaseSpider):
     .get_items_parselet_path() and .get_links_parselet_path()
     .collect_items_manually() and .collect_links_manually()
 
-    # todo: Path attributed may be relative
-
     >>> # the same operations as in the class
     >>> from pyparsley import PyParsley
     >>> fs = FileSystemAdapter()
@@ -25,7 +23,9 @@ class ParsleySpider(BaseSpider):
     >>> parselet.parse(string=html_file, allow_net=False, allow_local=False)['reviews'][0]['date']
     '7/5/2013'
     """
-
+    # todo: Annotate each protected method
+    # todo: class methods should accept relative paths. Make tests for that?
+    # todo: make tests for each method?
     def parse(self, response):
         for item in self.parse_items(response):
             yield item
@@ -66,6 +66,9 @@ class ParsleySpider(BaseSpider):
         return fs.glob("%s.items.json" % self.name).next()
 
     def get_links_parselet_path(self):
+        """
+        Should have the following structure: ['links']['link']
+        """
         return None
 
     def collect_items_manually(self, response):

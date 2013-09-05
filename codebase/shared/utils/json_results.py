@@ -4,6 +4,8 @@ class JsonResults:
     """
     Convert results from JSON-like array to CSV-like array
     """
+    # todo: make tests for structures mentioned in parsley documentation
+    # todo: make tests for three-level structure
     def __init__(self, results_in_json):
         self.results_in_json = results_in_json
 
