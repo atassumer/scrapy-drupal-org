@@ -1,10 +1,10 @@
 from scrapy.item import Item, Field
 import json
 
-from codebase.shared.utils.filesystem import FileSystemAdapter
+from codebase.shared.utils.file_system_adapter import FileSystemAdapter
 
 
-class ParseletItemFactory():
+class ItemFactory():
     """
     Class for creation of Scrapy's Item object out of given parselet json file
     """
@@ -15,7 +15,7 @@ class ParseletItemFactory():
 
     def __init__(self, spider_name, root_path='spiders/parsley'):
         """
-        >>> factory = ParseletItemFactory('tests_yelp', 'tests/yelp')
+        >>> factory = ItemFactory('tests_yelp', 'tests/yelp')
         >>> obj = factory.get_object()
         >>> obj
         <class 'scrapy.item.TestsYelpItem'>
@@ -84,7 +84,7 @@ class ParseletItemFactory():
 
     def _clean_attribute(self, attribute):
         """
-        >>> obj = ParseletItemFactory('parsley_item_factory_test')
+        >>> obj = ItemFactory('parsley_item_factory_test')
         >>> obj._clean_attribute('optional_key?')
         'optional_key'
         >>> obj._clean_attribute('mandatory_key')

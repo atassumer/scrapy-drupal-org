@@ -2,8 +2,8 @@ from scrapy.http import Request
 from scrapy.spider import BaseSpider
 
 from codebase import settings  # todo: get rid of external dependencies like this
-from codebase.shared.utils.filesystem import FileSystemAdapter
-from codebase.shared.utils.parselets import ItemsParselet, LinksParselet
+from codebase.shared.utils.file_system_adapter import FileSystemAdapter
+from codebase.shared.utils.parselet import ItemsParselet, LinksParselet
 
 
 class ParsleySpider(BaseSpider):
