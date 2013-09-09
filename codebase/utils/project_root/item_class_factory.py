@@ -5,7 +5,7 @@ class ModuleInfoItemClassFactory:
     """
     >>> obj = ModuleInfoItemClassFactory(
     ...     'TestModuleInfoItemClassFactoryItem', ModuleInfoItemClassFactory.DRUPAL_MODULES_VERSIONS_UNION)
-    >>> list(obj.getSupportedStringParameters())[0:10]
+    >>> list(obj.getSupportedParameters())[0:10]
     ['core', 'description', 'major_version', 'module', 'is_core_project', 'project', 'version', 'hidden', 'php', 'name']
     >>> item_object = obj.getItemClass()
     >>> item_object
@@ -28,7 +28,7 @@ class ModuleInfoItemClassFactory:
     DRUPAL_THEMES = 10
     DRUPAL_MODULE_DEPENDENCY = 20
 
-    supported_string_parameters = {  # todo: does the dataset contains any other parameters?
+    supported_parameters = {  # todo: does the dataset contains any other parameters?
         # `package` and `dependencies` are excluded
         # https://drupal.org/node/171205
         'themes': {'name', 'description', 'screenshot', 'version', 'core', 'engine', 'base_theme',
@@ -52,27 +52,27 @@ class ModuleInfoItemClassFactory:
 
     def getItemClass(self):  # todo: this method copied from parselet_item_factory. Should I make shared class?
         third_param = dict()
-        for attr in self.getSupportedStringParameters():
+        for attr in self.getSupportedParameters():
             third_param[attr] = Field()
         item = type(self.item_class_name, (Item, ), third_param)
         return item
 
-    def getSupportedStringParameters(self):
+    def getSupportedParameters(self):
         if self.attributes_constant == self.DRUPAL_MODULES_VERSION_6:
-            params = self.supported_string_parameters['modules_6']
+            params = self.supported_parameters['modules_6']
         elif self.attributes_constant == self.DRUPAL_MODULES_VERSION_7:
-            params = self.supported_string_parameters['modules_7']
+            params = self.supported_parameters['modules_7']
         elif self.attributes_constant == self.DRUPAL_THEMES:
-            params = self.supported_string_parameters['themes']
+            params = self.supported_parameters['themes']
         elif self.attributes_constant == self.DRUPAL_MODULES_VERSIONS_UNION:
-            params = self.supported_string_parameters['modules_6'] & self.supported_string_parameters['modules_7']  # union
+            params = self.supported_parameters['modules_6'] & self.supported_parameters['modules_7']  # union
         elif self.attributes_constant == self.DRUPAL_MODULES_VERSIONS_INTERSECTION:
-            params = self.supported_string_parameters['modules_6'] | self.supported_string_parameters['modules_7']  # intersection
+            params = self.supported_parameters['modules_6'] | self.supported_parameters['modules_7']  # intersection
         elif self.attributes_constant == self.DRUPAL_MODULE_DEPENDENCY:
-            params = self.supported_string_parameters['dependencies']
+            params = self.supported_parameters['dependencies']
         else:
             raise ModuleInfoItemClassFactoryException('Attribute constant %s is not correct' % self.attributes_constant)
-        return params | self.supported_string_parameters['meta']
+        return params | self.supported_parameters['meta']
 
 
 class ModuleInfoItemClassFactoryException(Exception):

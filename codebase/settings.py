@@ -6,7 +6,8 @@ NEWSPIDER_MODULE = 'codebase.spiders'
 DEFAULT_ITEM_CLASS = 'scrapy.item.Item'
 
 HTTPCACHE_ENABLED = True
-HTTPCACHE_STORAGE = 'scrapy.contrib.downloadermiddleware.httpcache.FilesystemCacheStorage'
+# HTTPCACHE_STORAGE = 'scrapy.contrib.downloadermiddleware.httpcache.FilesystemCacheStorage'  # old path
+HTTPCACHE_STORAGE = 'scrapy.contrib.httpcache.FilesystemCacheStorage'  # new path
 HTTPCACHE_EXPIRATION_SECS = 0
 HTTPCACHE_DIR = '/home/ubuntu/Programs/drupal/files/cached_pages'
 
@@ -20,7 +21,7 @@ DOWNLOADER_MIDDLEWARES = {
 
 ITEM_PIPELINES = [
     # 'scrapy.contrib.pipeline.images.ImagesPipeline',
-    'codebase.pipelines.git_clone.GitClonePipeline',
+    'codebase.pipelines.projects_releases_git_checkout.ProjectsReleasesGitCheckoutPipeline',
     # 'codebase.pipelines.original_image.OriginalImagesPipeline',
     # 'codebase.pipelines.transform_item.TransformItemPipeline',
 ]
@@ -32,7 +33,7 @@ ITEM_PIPELINES = [
 C_CODEBASE_ROOT = "/home/ubuntu/Programs/drupal/scrapy-parsley/codebase"
 
 C_CONTRIBUTED_PROJECTS_ROOT = "/home/ubuntu/Programs/drupal/files/git"
-C_CORE_PROJECTS_ROOTS = C_CONTRIBUTED_PROJECTS_ROOT + '/drupal/modules'
+C_CORE_PROJECTS_ROOT = C_CONTRIBUTED_PROJECTS_ROOT + '/drupal/modules'
 
 C_SUPPORTED_MAJOR_VERSIONS = [6, 7]
 

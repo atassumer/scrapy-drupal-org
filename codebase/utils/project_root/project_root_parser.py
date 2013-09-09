@@ -79,7 +79,11 @@ class ModuleInfoFile:
     >>> item_class = ModuleInfoItemClassFactory('ModuleInfoFileMetaTest', meta_constant).getItemClass()
     >>> obj.processStringParameters(item_class, ['name', 'description'])
     {'description': 'Provides a servive used to send Push Notifications using the device token.',
-     'name': 'Iphone Push Notification through Easyapns'}
+     'is_core_project': False,
+     'major_version': 7,
+     'module': 'views_export',
+     'name': 'Iphone Push Notification through Easyapns',
+     'project': 'views'}
     >>> # dependencies
     >>> meta_constant = ModuleInfoItemClassFactory.DRUPAL_MODULE_DEPENDENCY
     >>> item_class = ModuleInfoItemClassFactory('ModuleInfoFileDependencyTest', meta_constant).getItemClass()
@@ -101,8 +105,16 @@ class ModuleInfoFile:
         self.major_version = major_version
         self.is_core_project = is_core_project
 
-    def processStringParameters(self, item_class, params):  # todo: extract in subclass
+    def getItemObject(self, item_class):
         item = item_class()
+        item['module'] = self.module
+        item['project'] = self.project
+        item['major_version'] = self.major_version
+        item['is_core_project'] = self.is_core_project
+        return item
+
+    def processStringParameters(self, item_class, params):  # todo: extract in subclass
+        item = self.getItemObject(item_class)
         for line in self._getFileAsLines():
             for param in params:
                 occurrence = self.extractParameterFromLine(line, param)
@@ -111,15 +123,10 @@ class ModuleInfoFile:
         return item
 
     def processListParameter(self, item_class, marker):  # todo: extract in subclass
-        default_item = item_class()
-        default_item['module'] = self.module
-        default_item['project'] = self.project
-        default_item['major_version'] = self.major_version
-        default_item['is_core_project'] = self.is_core_project
         for line in self._getFileAsLines():
             occurrence = self.extractParameterFromLine(line, marker)
             if occurrence:
-                item = default_item.copy()  # todo: check
+                item = self.getItemObject(item_class)
                 item[marker] = occurrence
                 yield item
 
@@ -159,7 +166,5 @@ class ModuleInfoFileLine:
     def getValue(self):
         if self.line[0:len(self.parameter_name)] == self.parameter_name and string.find(self.line, '=') != -1:
             value = re.search('=[\s\'"]*(.*?)[\s\'"]*$', self.line).group(1)
-            return value
+            return value if value != 'VERSION' else False
         return False
-
-
