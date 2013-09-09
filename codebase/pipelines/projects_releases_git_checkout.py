@@ -1,8 +1,8 @@
 from codebase.shared.utils.file_system_adapter import FileSystemAdapter
-from codebase.settings import C_GIT_ROOT
+from codebase.settings import C_CONTRIBUTED_PROJECTS_ROOT
 
 
-class GitCheckoutPipeline(object):
+class ProjectsReleasesGitCheckoutPipeline(object):
 
     def process_item(self, current_item, current_spider):
         if current_spider.name == "projects_releases":
@@ -13,5 +13,5 @@ class GitCheckoutPipeline(object):
 
     def _git_checkout(self, project_machine_name, tag):
         fs = FileSystemAdapter()
-        fs.chdir("%s/%s" % (C_GIT_ROOT, project_machine_name))
+        fs.chdir("%s/%s" % (C_CONTRIBUTED_PROJECTS_ROOT, project_machine_name))
         fs.run("git checkout %s" % tag)

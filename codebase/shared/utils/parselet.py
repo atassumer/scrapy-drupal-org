@@ -1,7 +1,7 @@
 from pyparsley import PyParsley
 import json
 
-from codebase.shared.items.item_factory import ItemFactory
+from codebase.shared.items.parselet_item_factory import ParseletItemFactory
 from codebase.shared.utils.json_results import JsonResults
 
 
@@ -31,7 +31,7 @@ class Parselet():
         return json.load(open(path, 'r'))
 
     def _get_item_object(self, name):
-        factory = ItemFactory(name)
+        factory = ParseletItemFactory(name)
         return factory.get_object()
 
 

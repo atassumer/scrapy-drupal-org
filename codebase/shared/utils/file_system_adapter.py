@@ -9,7 +9,7 @@ class FileSystemAdapter:
     """
     _pwd = ""
 
-    def get_full_path(self, relative_path='', target_file=None):
+    def get_full_path(self, relative_path='', target_file=None):  # todo: rename to __init__
         """
         >>> from codebase.settings import C_CODEBASE_ROOT
         >>> FileSystemAdapter().get_full_path() == C_CODEBASE_ROOT
@@ -70,9 +70,9 @@ class FileSystemAdapter:
 
     def glob(self, pattern='*.info'):
         """
-        >>> from codebase.settings import C_GIT_ROOT
+        >>> from codebase.settings import C_CONTRIBUTED_PROJECTS_ROOT
         >>> fs = FileSystemAdapter()
-        >>> dont_output = fs.chdir(C_GIT_ROOT + '/views')
+        >>> dont_output = fs.chdir(C_CONTRIBUTED_PROJECTS_ROOT + '/views')
         >>> list(fs.glob('*.info'))[2][-30:]
         'views_export/views_export.info'
         """
@@ -80,6 +80,16 @@ class FileSystemAdapter:
             for filename in fnmatch.filter(filenames, pattern):
                 file_path = os.path.join(root, filename)
                 yield file_path
+
+    def get_subdirectories_names(self):
+        """
+        >>> from codebase.settings import C_CONTRIBUTED_PROJECTS_ROOT
+        >>> fs = FileSystemAdapter()
+        >>> dont_output = fs.chdir(C_CONTRIBUTED_PROJECTS_ROOT + '/views')
+        >>> list(fs.get_subdirectories_names())
+        ['includes', 'handlers', 'js', 'plugins', '.git', 'theme', 'css', 'help', 'docs', 'views_export', 'modules', 'images']
+        """
+        return [name for name in os.listdir(self.pwd()) if os.path.isdir(os.path.join(self.pwd(), name))]
 
 
 class FileSystemAdapterException(Exception):

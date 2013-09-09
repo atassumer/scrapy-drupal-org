@@ -1,8 +1,8 @@
 from codebase.shared.utils.file_system_adapter import FileSystemAdapter
-from codebase.settings import C_GIT_ROOT
+from codebase.settings import C_CONTRIBUTED_PROJECTS_ROOT
 
 
-class GitClonePipeline(object):
+class ProjectsContributedGitClonePipeline(object):
 
     def process_item(self, current_item, current_spider):
         if current_spider.name == "projects_releases":
@@ -12,5 +12,5 @@ class GitClonePipeline(object):
 
     def _git_clone(self, project_machine_name):
         fs = FileSystemAdapter()
-        print fs.chdir(C_GIT_ROOT)
+        print fs.chdir(C_CONTRIBUTED_PROJECTS_ROOT)
         fs.run("git clone --no-checkout http://git.drupal.org/project/%s.git" % project_machine_name)

@@ -3,7 +3,7 @@ import json
 from codebase.shared.utils.file_system_adapter import FileSystemAdapter
 
 
-class ItemFactory():
+class ParseletItemFactory():
     """
     Class for creation of Scrapy's Item object out of given parselet json file path
     """
@@ -14,7 +14,7 @@ class ItemFactory():
 
     def __init__(self, spider_name, root_path='spiders/parsley'):
         """
-        >>> factory = ItemFactory('tests_yelp', 'tests/yelp')
+        >>> factory = ParseletItemFactory('tests_yelp', 'tests/yelp')
         >>> obj = factory.get_object()
         >>> obj
         <class 'scrapy.item.TestsYelpItem'>
@@ -38,15 +38,20 @@ class ItemFactory():
 
     def _create_item_object(self, attributes):
         """
-        # >>> obj = _create_item_object('tests_yelp', ['first', 'second', 'third'])
-        # >>> obj
-        # <class 'scrapy.item.TestsYelpItem'>
-        # >>> instance = obj()
-        # >>> instance
-        # {}
-        # >>> instance['first'] = 'something'
-        # >>> instance
-        # {'first': 'something'}
+        >>> factory = ParseletItemFactory('tests_yelp', ['first', 'second', 'third'])
+        >>> obj = factory._create_item_object(['first', 'second'])
+        >>> obj
+        <class 'scrapy.item.TestsYelpItem'>
+        >>> instance = obj()
+        >>> instance
+        {}
+        >>> instance['first'] = 'something'
+        >>> instance
+        {'first': 'something'}
+        >>> instance.first
+        Traceback (most recent call last):
+            ...
+        AttributeError: Use item['first'] to get field value
         """
         class_name = "%sItem" % "".join(map(str.capitalize, self.spider_name.split('_')))
         third_param = dict()
@@ -83,7 +88,7 @@ class ItemFactory():
 
     def _clean_attribute(self, attribute):
         """
-        >>> obj = ItemFactory('parsley_item_factory_test')
+        >>> obj = ParseletItemFactory('parsley_item_factory_test')
         >>> obj._clean_attribute('optional_key?')
         'optional_key'
         >>> obj._clean_attribute('mandatory_key')

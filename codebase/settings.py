@@ -31,13 +31,9 @@ ITEM_PIPELINES = [
 #################
 C_CODEBASE_ROOT = "/home/ubuntu/Programs/drupal/scrapy-parsley/codebase"
 
-C_GIT_ROOT = "/home/ubuntu/Programs/drupal/files/git"
-C_PROJECTS_ROOTS = [
-    C_GIT_ROOT,
-    C_GIT_ROOT + '/drupal/modules'
-]
+C_CONTRIBUTED_PROJECTS_ROOT = "/home/ubuntu/Programs/drupal/files/git"
+C_CORE_PROJECTS_ROOTS = C_CONTRIBUTED_PROJECTS_ROOT + '/drupal/modules'
 
-C_TARGET_VERSION = 6  # todo: make it dynamic
-C_TARGET_QUALITY = 'ok'
+C_SUPPORTED_MAJOR_VERSIONS = [6, 7]
 
 C_PAGES_LIMIT = 5  # how many pages to crawl
