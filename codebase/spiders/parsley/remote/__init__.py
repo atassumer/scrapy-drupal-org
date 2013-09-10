@@ -21,8 +21,7 @@ class RemoteParsleySpider(ParsleySpider):
     def parse_items(self, response):  # todo: should this behaviour be moved to the root_node class?
         if response.url in self.start_urls:
             return
-        for item in super(RemoteParsleySpider, self).parse_items(response):
-            yield item
+        return (item for item in super(RemoteParsleySpider, self).parse_items(response))
 
     @overrides(ParsleySpider)
     def parse_links(self, response):

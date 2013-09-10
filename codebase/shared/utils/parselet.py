@@ -53,8 +53,7 @@ class LinksParselet(Parselet):
     Applies the parselet to the page. Returns scraped links
     """
     def collect(self):
-        for dictionary in self.json_results['links']:
-            yield dictionary['link']
+        return (dictionary['link'] for dictionary in self.json_results['links'])
 
 
 class ParseletException(Exception):

@@ -22,7 +22,7 @@ class DependenciesModulesLocalParsleySpider(ModulesLocalParsleySpider):
 
     @overrides(ParsleySpider)
     def collect_items_manually(self, response):
-        return [item for item in ModuleDependencyItemFactory(self.projects_roots).extractItems()]
+        return [item for item in ModuleDependencyItemFactory(self.projects_roots).getItems()]
 
 
 class MetaModulesLocalParsleySpider(ModulesLocalParsleySpider):
@@ -31,4 +31,4 @@ class MetaModulesLocalParsleySpider(ModulesLocalParsleySpider):
 
     @overrides(ParsleySpider)
     def collect_items_manually(self, response):
-        return [item for item in ModuleMetaItemFactory(self.projects_roots).extractItems()]
+        return [item for item in ModuleMetaItemFactory(self.projects_roots).getItems()]

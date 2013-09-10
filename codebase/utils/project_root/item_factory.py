@@ -2,7 +2,7 @@ from codebase.settings import C_SUPPORTED_MAJOR_VERSIONS, C_CONTRIBUTED_PROJECTS
 from codebase.utils.git import Git
 from codebase.utils.project_root.item_class_factory import ModuleInfoItemClassFactory
 from codebase.utils.project_root.project_root_parser import ProjectsRoot
-from codebase.shared.utils.overrides_decorator import overrides
+from codebase.shared.utils.overrides_decorator import overrides, can_be_overridden
 
 
 class ItemFactory:
@@ -29,7 +29,13 @@ class ItemFactory:
                 for obj in projects.getModuleInfoFileObjects():
                     yield obj
 
-    def extractItems(self):
+    def getItems(self):
+        for info in self._getModulesInfoFileObjects():
+            for item in self.getItemsFromInfoFileObject(info):
+                yield item
+
+    @can_be_overridden()
+    def getItemsFromInfoFileObject(self, info):
         raise NotImplementedError('ItemFactory.extractItems() should be implemented')
 
 
@@ -37,31 +43,27 @@ class ModuleMetaItemFactory(ItemFactory):
     """
     >>> projects_roots = (C_CORE_PROJECTS_ROOT, )
     >>> obj = ModuleMetaItemFactory(projects_roots)
-    >>> len([item['description'] for item in obj.extractItems()]) > 50
+    >>> len([item['description'] for item in obj.getItems()]) > 50
     True
     """
     itemClassName = "ModuleMetaItem"
     attributes_constant = ModuleInfoItemClassFactory.DRUPAL_MODULES_VERSIONS_INTERSECTION
 
     @overrides(ItemFactory)
-    def extractItems(self):  # todo: implement decorator
-        for info in self._getModulesInfoFileObjects():
-            for dependency in info.processSingleParameters(self.item_class, self.supported_parameters):
-                yield dependency
+    def getItemsFromInfoFileObject(self, info):  # todo: implement decorator
+        return (dependency for dependency in info.processSingleParameters(self.item_class, self.supported_parameters))
 
 
 class ModuleDependencyItemFactory(ItemFactory):
     """
     >>> projects_roots = (C_CORE_PROJECTS_ROOT, )
     >>> obj = ModuleDependencyItemFactory(projects_roots)
-    >>> 'comment' in [item['dependencies'] for item in obj.extractItems()]
+    >>> 'comment' in [item['dependencies'] for item in obj.getItems()]
     True
     """
     itemClassName = "ModuleDependencyItem"
     attributes_constant = ModuleInfoItemClassFactory.DRUPAL_MODULE_DEPENDENCY
 
     @overrides(ItemFactory)
-    def extractItems(self):  # todo: implement decorator
-        for info in self._getModulesInfoFileObjects():
-            for dependency in info.processMultipleParameter(self.item_class, 'dependencies'):
-                yield dependency
+    def getItemsFromInfoFileObject(self, info):  # todo: implement decorator
+        return (dependency for dependency in info.processMultipleParameter(self.item_class, 'dependencies'))
