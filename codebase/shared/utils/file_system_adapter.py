@@ -12,9 +12,10 @@ class FileSystemAdapter:
     def __init__(self, relative_path='', target_file=None):
         self.chdir(relative_path, target_file)
 
-    def get_full_path(self, relative_path='', target_file=None):  # todo: rename to __init__
+    def get_full_path(self, relative_path='', target_file=None):
         """
-        >>> from codebase.settings import C_CODEBASE_ROOT
+        >>> from scrapy.conf import get_project_settings
+        >>> C_CODEBASE_ROOT = get_project_settings()['C_CODEBASE_ROOT']
         >>> FileSystemAdapter().get_full_path() == C_CODEBASE_ROOT
         True
         >>> FileSystemAdapter().get_full_path('tests/yelp/yelp.items.json') == C_CODEBASE_ROOT + '/tests/yelp/yelp.items.json'
@@ -60,7 +61,8 @@ class FileSystemAdapter:
 
     def run_with_feedback(self, command):
         """
-        >>> from codebase.settings import C_CODEBASE_ROOT
+        >>> from scrapy.conf import get_project_settings
+        >>> C_CODEBASE_ROOT = get_project_settings()['C_CODEBASE_ROOT']
         >>> fs = FileSystemAdapter()
         >>> fs.chdir('.') == C_CODEBASE_ROOT
         True
@@ -73,9 +75,10 @@ class FileSystemAdapter:
 
     def glob(self, pattern='*.info'):
         """
-        >>> from codebase.settings import C_CONTRIBUTED_PROJECTS_ROOT
+        >>> from scrapy.conf import get_project_settings
+        >>> C_CODEBASE_ROOT = get_project_settings()['C_CODEBASE_ROOT']
         >>> fs = FileSystemAdapter()
-        >>> dont_output = fs.chdir(C_CONTRIBUTED_PROJECTS_ROOT + '/views')
+        >>> dont_output = fs.chdir(get_project_settings()['C_CONTRIBUTED_PROJECTS_ROOT'] + '/views')
         >>> list(fs.glob('*.info'))[2][-30:]
         'views_export/views_export.info'
         """
@@ -86,9 +89,10 @@ class FileSystemAdapter:
 
     def get_subdirectories_names(self):
         """
-        >>> from codebase.settings import C_CONTRIBUTED_PROJECTS_ROOT
+        >>> from scrapy.conf import get_project_settings
+        >>> C_CODEBASE_ROOT = get_project_settings()['C_CODEBASE_ROOT']
         >>> fs = FileSystemAdapter()
-        >>> dont_output = fs.chdir(C_CONTRIBUTED_PROJECTS_ROOT + '/views')
+        >>> dont_output = fs.chdir(get_project_settings()['C_CONTRIBUTED_PROJECTS_ROOT'] + '/views')
         >>> list(fs.get_subdirectories_names())
         ['includes', 'handlers', 'js', 'plugins', '.git', 'theme', 'css', 'help', 'docs', 'views_export', 'modules', 'images']
         """

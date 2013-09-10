@@ -1,10 +1,9 @@
 from scrapy.http import Request
 from scrapy.spider import BaseSpider
-
-from codebase import settings  # todo: get rid of external dependencies like this
 from codebase.shared.utils.file_system_adapter import FileSystemAdapter
 from codebase.shared.utils.parselet import ItemsParselet, LinksParselet
 from codebase.shared.utils.overrides_decorator import overrides, can_be_overridden
+from scrapy.conf import get_project_settings
 
 
 class ParsleySpider(BaseSpider):
@@ -32,7 +31,6 @@ class ParsleySpider(BaseSpider):
     '7/5/2013'
     """
     # todo: class methods should accept relative paths. Make tests for that?
-    # todo: make tests for each method?
 
     @overrides(BaseSpider)
     def parse(self, response):
@@ -42,9 +40,8 @@ class ParsleySpider(BaseSpider):
             yield item
 
         # links
-        counter = -1
-        if 'C_PAGES_LIMIT' in settings.__dict__:
-            counter = settings.C_PAGES_LIMIT
+        counter = get_project_settings()['C_PAGES_LIMIT'] or -1
+        if not counter:
             self.log('Warning: C_PAGES_LIMIT is not defined')
         for link_dict in self.parse_links(response):
             counter -= 1

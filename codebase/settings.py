@@ -37,4 +37,4 @@ C_CORE_PROJECTS_ROOT = C_CONTRIBUTED_PROJECTS_ROOT + '/drupal/modules'
 
 C_SUPPORTED_MAJOR_VERSIONS = [6, 7]
 
-C_PAGES_LIMIT = 5  # how many pages to crawl
+# C_PAGES_LIMIT = 5  # how many pages to crawl

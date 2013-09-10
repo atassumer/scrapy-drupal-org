@@ -1,6 +1,6 @@
 import string
 import subprocess
-from codebase.settings import C_CONTRIBUTED_PROJECTS_ROOT
+from scrapy.conf import get_project_settings
 
 
 class Git:

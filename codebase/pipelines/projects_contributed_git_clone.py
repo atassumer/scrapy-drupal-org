@@ -1,10 +1,9 @@
 from codebase.shared.utils.file_system_adapter import FileSystemAdapter
-from codebase.settings import C_CONTRIBUTED_PROJECTS_ROOT
+from scrapy.conf import get_project_settings
 
 
 class ProjectsContributedGitClonePipeline(object):
-
-    fs = FileSystemAdapter(C_CONTRIBUTED_PROJECTS_ROOT)
+    fs = FileSystemAdapter(get_project_settings()['C_CONTRIBUTED_PROJECTS_ROOT'])
 
     def process_item(self, current_item, current_spider):
         if current_spider.name == "projects_releases":
