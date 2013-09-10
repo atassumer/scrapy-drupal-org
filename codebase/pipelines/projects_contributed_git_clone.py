@@ -1,5 +1,6 @@
-from codebase.shared.utils.file_system_adapter import FileSystemAdapter
 from scrapy.conf import get_project_settings
+
+from shared.utils.file_system_adapter import FileSystemAdapter
 
 
 class ProjectsContributedGitClonePipeline(object):

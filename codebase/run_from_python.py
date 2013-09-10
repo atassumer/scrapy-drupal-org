@@ -2,9 +2,6 @@ from twisted.internet import reactor
 from scrapy.crawler import Crawler
 from scrapy.settings import Settings
 from scrapy import log, signals
-from codebase.spiders.parsley.remote.projects import LinkedProjectsRemoteParsleySpider
-from codebase.shared.utils.parselet import ParseletException
-from pprint import pprint
 from codebase.spiders.parsley.remote.projects import RelatedProjectsRemoteParsleySpider
 
 
@@ -41,5 +38,4 @@ class RunScrapyFromScript:
 # RunScrapyFromScript()
 # yappi.print_stats(sort_type=yappi.SORTTYPE_TSUB, sort_order=yappi.SORTORDER_DESC, limit=50)
 
-import cProfile
 # cProfile.run('RunScrapyFromScript()')

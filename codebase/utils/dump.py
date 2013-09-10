@@ -1,7 +1,7 @@
 import pickle
 import os
 
-from codebase.shared.utils.file_system_adapter import FileSystemAdapter
+from shared.utils.file_system_adapter import FileSystemAdapter
 
 
 class Dump:

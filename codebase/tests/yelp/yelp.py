@@ -1,4 +1,4 @@
-from codebase.shared.spiders.parsley_spider import ParsleySpider
+from shared.spiders.parsley_spider import ParsleySpider
 
 
 class YelpParsleySpider(ParsleySpider):

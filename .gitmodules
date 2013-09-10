@@ -1,0 +1,3 @@
+[submodule "scrapy-parsley"]
+	path = scrapy-parsley
+	url = https://github.com/php5engineer/scrapy-parsley.git

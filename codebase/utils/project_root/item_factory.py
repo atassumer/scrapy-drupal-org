@@ -2,7 +2,7 @@ from scrapy.conf import get_project_settings
 from codebase.utils.git import Git
 from codebase.utils.project_root.item_class_factory import ModuleInfoItemClassFactory
 from codebase.utils.project_root.project_root_parser import ProjectsRoot
-from codebase.shared.utils.overrides_decorator import overrides, can_be_overridden
+from shared.utils.overrides_decorator import overrides, can_be_overridden
 
 
 class ItemFactory:

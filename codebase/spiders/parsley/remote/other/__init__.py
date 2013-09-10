@@ -1,6 +1,6 @@
 from codebase.spiders.parsley.remote import RemoteParsleySpider
-from codebase.shared.utils.parselet import ItemsParselet
-from codebase.shared.spiders.parsley_spider import ParsleySpider, overrides
+from shared.utils.parselet import ItemsParselet
+from shared.spiders.parsley_spider import ParsleySpider, overrides
 
 
 class OtherRemoteParsleySpider(RemoteParsleySpider):

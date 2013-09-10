@@ -1,7 +1,8 @@
 import re
 import string
-from codebase.shared.utils.file_system_adapter import FileSystemAdapter
 import os
+
+from shared.utils.file_system_adapter import FileSystemAdapter
 
 
 class ProjectsRoot:
