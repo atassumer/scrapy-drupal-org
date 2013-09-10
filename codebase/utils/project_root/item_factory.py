@@ -53,7 +53,7 @@ class ModuleMetaItemFactory(ItemFactory):
     attributes_constant = ModuleInfoItemClassFactory.DRUPAL_MODULES_VERSIONS_INTERSECTION
 
     @overrides(ItemFactory)
-    def getItemsFromInfoFileObject(self, info):  # todo: implement decorator
+    def getItemsFromInfoFileObject(self, info):
         return (dependency for dependency in info.processSingleParameters(self.item_class, self.supported_parameters))
 
 

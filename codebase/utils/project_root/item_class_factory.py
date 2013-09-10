@@ -28,7 +28,7 @@ class ModuleInfoItemClassFactory:
     DRUPAL_THEMES = 10
     DRUPAL_MODULE_DEPENDENCY = 20
 
-    supported_parameters = {  # todo: does the dataset contains any other parameters?
+    supported_parameters = {  # todo: does the dataset contains custom other parameters?
         # `package` and `dependencies` are excluded
         # https://drupal.org/node/171205
         'themes': {'name', 'description', 'screenshot', 'version', 'core', 'engine', 'base_theme',

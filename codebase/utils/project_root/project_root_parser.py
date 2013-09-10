@@ -115,7 +115,7 @@ class ModuleInfoFile:
         item['is_core_project'] = self.is_core_project
         return item
 
-    def processSingleParameters(self, item_class, params):  # todo: extract in subclass
+    def processSingleParameters(self, item_class, params):
         item = self.getItemObject(item_class)
         for line in self._getFileAsLines():
             for param in params:
@@ -124,7 +124,7 @@ class ModuleInfoFile:
                     item[param] = occurrence
         return [item]
 
-    def processMultipleParameter(self, item_class, marker):  # todo: extract in subclass
+    def processMultipleParameter(self, item_class, marker):
         for line in self._getFileAsLines():
             occurrence = self.extractParameterFromLine(line, marker)
             if occurrence:
