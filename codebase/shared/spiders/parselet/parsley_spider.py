@@ -36,23 +36,21 @@ class ParsleySpider(BaseSpider):
 
     @overrides(BaseSpider)
     def parse(self, response):
+        self.log("url: %s" % response.url)
         # items
         for item in self.parse_items(response):
             yield item
 
         # links
-        try:
+        counter = -1
+        if 'C_PAGES_LIMIT' in settings.__dict__:
             counter = settings.C_PAGES_LIMIT
-        except AttributeError:
-            counter = -1
             self.log('Warning: C_PAGES_LIMIT is not defined')
         for link_dict in self.parse_links(response):
             counter -= 1
-            if counter == 0:
-                return
-            url = link_dict['url']
-            callback = link_dict['callback'] or self.parse
-            yield Request(url=url, callback=callback)
+            if counter:
+                callback = link_dict['callback'] or self.parse
+                yield Request(url=link_dict['url'], callback=callback)
 
     @can_be_overridden()
     def parse_items(self, response):
