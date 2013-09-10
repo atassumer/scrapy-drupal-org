@@ -21,7 +21,7 @@ DOWNLOADER_MIDDLEWARES = {
 
 ITEM_PIPELINES = [
     # 'scrapy.contrib.pipeline.images.ImagesPipeline',
-    'codebase.pipelines.projects_releases_git_checkout.ProjectsReleasesGitCheckoutPipeline',
+    'codebase.pipelines.projects_contributed_git_clone.ProjectsContributedGitClonePipeline',
     # 'codebase.pipelines.original_image.OriginalImagesPipeline',
     # 'codebase.pipelines.transform_item.TransformItemPipeline',
 ]

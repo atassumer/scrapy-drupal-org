@@ -36,14 +36,16 @@ class ParsleySpider(BaseSpider):
 
     @overrides(BaseSpider)
     def parse(self, response):
+        # items
         for item in self.parse_items(response):
             yield item
 
+        # links
         try:
             counter = settings.C_PAGES_LIMIT
         except AttributeError:
             counter = -1
-
+            self.log('Warning: C_PAGES_LIMIT is not defined')
         for link_dict in self.parse_links(response):
             counter -= 1
             if counter == 0:
@@ -73,8 +75,7 @@ class ParsleySpider(BaseSpider):
 
     @can_be_overridden()
     def get_items_parselet_path(self):
-        fs = FileSystemAdapter()
-        fs.chdir(fs.get_full_path('.'))
+        fs = FileSystemAdapter('spiders/parsley')
         return fs.glob("%s.items.json" % self.name).next()
 
     @can_be_overridden()

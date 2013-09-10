@@ -9,6 +9,9 @@ class FileSystemAdapter:
     """
     _pwd = ""
 
+    def __init__(self, relative_path='', target_file=None):
+        self.chdir(relative_path, target_file)
+
     def get_full_path(self, relative_path='', target_file=None):  # todo: rename to __init__
         """
         >>> from codebase.settings import C_CODEBASE_ROOT
