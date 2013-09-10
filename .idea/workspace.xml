@@ -4,31 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/codebase/utils/project_root/item_factory.py" line="50" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ff47b11-d42a-44bc-9a20-792b27b582c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy-parsley" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitmodules" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebase/shared/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebase/shared/items/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebase/shared/items/parselet_item_factory.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebase/shared/spiders/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebase/shared/spiders/parsley_spider.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebase/shared/utils/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebase/shared/utils/file_system_adapter.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebase/shared/utils/json_results.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebase/shared/utils/overrides_decorator.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebase/shared/utils/parselet.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/spiders/parsley/local/__init__.py" afterPath="$PROJECT_DIR$/codebase/spiders/parsley/local/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/spiders/parsley/local/modules/__init__.py" afterPath="$PROJECT_DIR$/codebase/spiders/parsley/local/modules/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/spiders/parsley/remote/__init__.py" afterPath="$PROJECT_DIR$/codebase/spiders/parsley/remote/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/spiders/parsley/remote/other/__init__.py" afterPath="$PROJECT_DIR$/codebase/spiders/parsley/remote/other/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/utils/dump.py" afterPath="$PROJECT_DIR$/codebase/utils/dump.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/utils/project_root/item_factory.py" afterPath="$PROJECT_DIR$/codebase/utils/project_root/item_factory.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/utils/project_root/project_root_parser.py" afterPath="$PROJECT_DIR$/codebase/utils/project_root/project_root_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/pipelines/projects_contributed_git_clone.py" afterPath="$PROJECT_DIR$/codebase/pipelines/projects_contributed_git_clone.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/run_from_python.py" afterPath="$PROJECT_DIR$/codebase/run_from_python.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
+    <list default="true" id="8ff47b11-d42a-44bc-9a20-792b27b582c7" name="Default" comment="Adden git submodule">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ubuntu-requirements.txt" afterPath="$PROJECT_DIR$/ubuntu-requirements.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/tests/yelp/yelp.py" afterPath="$PROJECT_DIR$/codebase/tests/yelp/yelp.py" />
     </list>
     <ignored path="scrapy-parsey.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,7 +36,7 @@
     <file path="/misc.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377784667357" ignored="false" />
     <file path="/hook.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377166486830" ignored="false" />
     <file path="/scan.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377699944942" ignored="false" />
-    <file path="/Dummy.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378819700763" ignored="false" />
+    <file path="/Dummy.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378821302560" ignored="false" />
     <file path="/projects_contributed.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698190773" ignored="false" />
     <file path="/other_git.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698186789" ignored="false" />
     <file path="/other_contributors.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698182547" ignored="false" />
@@ -113,6 +91,7 @@
     <file path="/overrides_decorator.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378804892660" ignored="false" />
     <file path="/profiler.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378813672249" ignored="false" />
     <file path="/setup.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378818394430" ignored="false" />
+    <file path="/ubuntu-requirements.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378821294250" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/codebase/pipelines/projects_releases_git_checkout.py" />
         <option value="$PROJECT_DIR$/codebase/shared/utils/parselet.py" />
         <option value="$PROJECT_DIR$/codebase/spiders/parsley/remote/__init__.py" />
         <option value="$PROJECT_DIR$/codebase/spiders/parsley/remote/other/__init__.py" />
@@ -176,6 +154,7 @@
         <option value="$PROJECT_DIR$/codebase/utils/project_root/item_factory.py" />
         <option value="$PROJECT_DIR$/codebase/utils/project_root/project_root_parser.py" />
         <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/ubuntu-requirements.txt" />
       </list>
     </option>
   </component>
@@ -593,7 +572,11 @@
       <created>1378819705694</created>
       <updated>1378819705694</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Adden git submodule">
+      <created>1378820347643</created>
+      <updated>1378820347643</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -683,7 +666,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moving shared folder into subproject" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adden git submodule" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -715,6 +698,7 @@
     <MESSAGE value="Load settings dynamically" />
     <MESSAGE value="cleaned todos" />
     <MESSAGE value="Moving shared folder into subproject" />
+    <MESSAGE value="Adden git submodule" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -722,13 +706,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/scrapy/utils/project.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="4" selection-start="1650" selection-end="1650" vertical-scroll-proportion="0.8961593">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codebase/pipelines/projects_contributed_git_clone.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="17" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
@@ -843,6 +820,13 @@
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ubuntu-requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="14" selection-start="36" selection-end="36" vertical-scroll-proportion="0.042674255">
+          <folding />
         </state>
       </provider>
     </entry>
