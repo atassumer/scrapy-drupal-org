@@ -1,5 +1,6 @@
 python2
 python-scrapy
+python-spynner
 
 # https://help.ubuntu.com/community/Drupal
 lamp-server
