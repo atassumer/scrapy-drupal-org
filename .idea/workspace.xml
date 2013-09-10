@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ff47b11-d42a-44bc-9a20-792b27b582c7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/items/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/items/parselet_item_factory.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/spiders/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/spiders/parsley_spider.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/utils/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/utils/file_system_adapter.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/utils/json_results.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/utils/overrides_decorator.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/utils/parselet.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy-parsley/README.md" afterPath="$PROJECT_DIR$/scrapy-parsley/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy-parsley" afterPath="$PROJECT_DIR$/scrapy-parsley" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scrapy-parsey.iws" />
@@ -47,7 +36,7 @@
     <file path="/misc.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377784667357" ignored="false" />
     <file path="/hook.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377166486830" ignored="false" />
     <file path="/scan.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377699944942" ignored="false" />
-    <file path="/Dummy.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378822973261" ignored="false" />
+    <file path="/Dummy.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378823717453" ignored="false" />
     <file path="/projects_contributed.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698190773" ignored="false" />
     <file path="/other_git.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698186789" ignored="false" />
     <file path="/other_contributors.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698182547" ignored="false" />
@@ -135,7 +124,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scrapy-parsley/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="30" column="25" selection-start="895" selection-end="895" vertical-scroll-proportion="0.6401138">
               <folding />
             </state>
           </provider>
@@ -159,6 +148,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GitLogSettings">
     <option name="myStructureFilterPaths" />
@@ -624,7 +618,11 @@
       <created>1378822976937</created>
       <updated>1378822976937</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="readme moved into subproject">
+      <created>1378823719369</created>
+      <updated>1378823719369</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -714,7 +712,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added rules into .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme moved into subproject" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -748,6 +746,7 @@
     <MESSAGE value="Moving shared folder into subproject" />
     <MESSAGE value="Adden git submodule" />
     <MESSAGE value="Added rules into .gitignore" />
+    <MESSAGE value="readme moved into subproject" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -867,7 +866,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scrapy-parsley/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="30" column="25" selection-start="895" selection-end="895" vertical-scroll-proportion="0.6401138">
           <folding />
         </state>
       </provider>

@@ -6,5 +6,3 @@ setup(
     packages=find_packages(),
     entry_points={'scrapy': ['settings = codebase.settings']},
 )
-# todo: rename `codebase` to `source_code`
-# todo: extract shared code in a separate github repository

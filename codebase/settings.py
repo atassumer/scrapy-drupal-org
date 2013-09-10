@@ -1,40 +1,26 @@
-#################
-# scrapy settings
-#################
+# Scrapy settings for drupalorg project
+
 SPIDER_MODULES = ['codebase.spiders']
 NEWSPIDER_MODULE = 'codebase.spiders'
-DEFAULT_ITEM_CLASS = 'scrapy.item.Item'
+DEFAULT_ITEM_CLASS = 'codebase.items.project_page.project.project.Project'
 
-HTTPCACHE_ENABLED = True
-# HTTPCACHE_STORAGE = 'scrapy.contrib.downloadermiddleware.httpcache.FilesystemCacheStorage'  # old path
-HTTPCACHE_STORAGE = 'scrapy.contrib.httpcache.FilesystemCacheStorage'  # new path
-HTTPCACHE_EXPIRATION_SECS = 0
-HTTPCACHE_DIR = '/home/ubuntu/Programs/drupal/files/cached_pages'
-
-IMAGES_MIN_HEIGHT = 110
-IMAGES_STORE = '/home/ubuntu/Programs/drupal/files/images'
+# DEPTH_LIMIT = 2
 
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.contrib.downloadermiddleware.httpcache.HttpCacheMiddleware': 543,
-    'scrapy.contrib.downloadermiddleware.robotstxt.RobotsTxtMiddleware': 965,
+    'scrapy.contrib.downloadermiddleware.robotstxt.RobotsTxtMiddleware': 965
 }
 
+HTTPCACHE_ENABLED = True
+HTTPCACHE_STORAGE = 'scrapy.contrib.downloadermiddleware.httpcache.FilesystemCacheStorage'
+HTTPCACHE_EXPIRATION_SECS = 0
+HTTPCACHE_DIR = '/media/ubuntu/fad36a44-712c-44d4-bb85-7a2dd8584a0a/etc/drupal/scrapy-drupal-org/cached_pages/'
+
 ITEM_PIPELINES = [
-    # 'scrapy.contrib.pipeline.images.ImagesPipeline',
-    'codebase.pipelines.projects_contributed_git_clone.ProjectsContributedGitClonePipeline',
+    'scrapy.contrib.pipeline.images.ImagesPipeline',
     # 'codebase.pipelines.original_image.OriginalImagesPipeline',
-    # 'codebase.pipelines.transform_item.TransformItemPipeline',
+    'codebase.pipelines.transform_item.TransformItemPipeline',
 ]
 
-
-#################
-# custom settings
-#################
-C_CODEBASE_ROOT = "/home/ubuntu/Programs/drupal/scrapy-parsley/codebase"
-
-C_CONTRIBUTED_PROJECTS_ROOT = "/home/ubuntu/Programs/drupal/files/git"
-C_CORE_PROJECTS_ROOT = C_CONTRIBUTED_PROJECTS_ROOT + '/drupal/modules'
-
-C_SUPPORTED_MAJOR_VERSIONS = [6, 7]
-
-# C_PAGES_LIMIT = 5  # how many pages to crawl
+IMAGES_STORE = '/usr/share/drupal7/sites/default/files/images/'
+IMAGES_MIN_HEIGHT = 110
