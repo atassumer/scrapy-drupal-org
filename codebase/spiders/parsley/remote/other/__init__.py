@@ -1,5 +1,6 @@
 from codebase.spiders.parsley.remote import RemoteParsleySpider
 from codebase.shared.utils.parselet import ItemsParselet
+from codebase.shared.spiders.parselet.parsley_spider import ParsleySpider, overrides
 
 
 class OtherRemoteParsleySpider(RemoteParsleySpider):
@@ -21,9 +22,11 @@ class TopOtherRemoteParsleySpider(OtherRemoteParsleySpider):
     """
     name = "other_top"
 
+    @overrides(ParsleySpider)
     def parse_links(self, response):  # overridden
         return []
 
+    @overrides(ParsleySpider)
     def parse_items(self, response):  # overridden
         parselet = ItemsParselet(response, self.get_items_parselet_path())
         for item in parselet.collect(self.name):

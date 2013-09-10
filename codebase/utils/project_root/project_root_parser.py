@@ -71,23 +71,25 @@ class ModuleInfoFile:
     version = "6.x-1.0"
     core = "6.x"
     project = "Easyapns"
+
+
     >>> from codebase.utils.project_root.item_class_factory import ModuleInfoItemClassFactory
     >>> path = '/home/ubuntu/Programs/drupal/files/git/1225224/iphone_push_notification_through_easyapns.info'
     >>> obj = ModuleInfoFile(path, 'views_export', 'views', 7, False)
     >>> # meta
     >>> meta_constant = ModuleInfoItemClassFactory.DRUPAL_MODULES_VERSIONS_UNION
     >>> item_class = ModuleInfoItemClassFactory('ModuleInfoFileMetaTest', meta_constant).getItemClass()
-    >>> obj.processStringParameters(item_class, ['name', 'description'])
-    {'description': 'Provides a servive used to send Push Notifications using the device token.',
+    >>> obj.processSingleParameters(item_class, ['name', 'description'])
+    [{'description': 'Provides a servive used to send Push Notifications using the device token.',
      'is_core_project': False,
      'major_version': 7,
      'module': 'views_export',
      'name': 'Iphone Push Notification through Easyapns',
-     'project': 'views'}
+     'project': 'views'}]
     >>> # dependencies
     >>> meta_constant = ModuleInfoItemClassFactory.DRUPAL_MODULE_DEPENDENCY
     >>> item_class = ModuleInfoItemClassFactory('ModuleInfoFileDependencyTest', meta_constant).getItemClass()
-    >>> [x['dependencies'] for x in obj.processListParameter(item_class, 'dependencies')]
+    >>> [x['dependencies'] for x in obj.processMultipleParameter(item_class, 'dependencies')]
     ['content', 'content_profile']
     """
     path = ""
@@ -113,16 +115,16 @@ class ModuleInfoFile:
         item['is_core_project'] = self.is_core_project
         return item
 
-    def processStringParameters(self, item_class, params):  # todo: extract in subclass
+    def processSingleParameters(self, item_class, params):  # todo: extract in subclass
         item = self.getItemObject(item_class)
         for line in self._getFileAsLines():
             for param in params:
                 occurrence = self.extractParameterFromLine(line, param)
                 if occurrence:
                     item[param] = occurrence
-        return item
+        return [item]
 
-    def processListParameter(self, item_class, marker):  # todo: extract in subclass
+    def processMultipleParameter(self, item_class, marker):  # todo: extract in subclass
         for line in self._getFileAsLines():
             occurrence = self.extractParameterFromLine(line, marker)
             if occurrence:

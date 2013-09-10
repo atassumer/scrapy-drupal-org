@@ -2,14 +2,14 @@ from codebase.settings import C_SUPPORTED_MAJOR_VERSIONS, C_CONTRIBUTED_PROJECTS
 from codebase.utils.git import Git
 from codebase.utils.project_root.item_class_factory import ModuleInfoItemClassFactory
 from codebase.utils.project_root.project_root_parser import ProjectsRoot
+from codebase.shared.utils.overrides_decorator import overrides
 
 
 class ItemFactory:
     attributes_constant = []  # should be overridden
     itemClassName = ""  # should be overridden
 
-    def __init__(self, attributes_constant, projects_roots):
-        self.attributes_constant = attributes_constant
+    def __init__(self, projects_roots):
         self.projects_roots = projects_roots
         self._createItemClass()
 
@@ -33,27 +33,35 @@ class ItemFactory:
         raise NotImplementedError('ItemFactory.extractItems() should be implemented')
 
 
-class StringsItemFactory(ItemFactory):
+class ModuleMetaItemFactory(ItemFactory):
     """
-    # >>> projects_roots = (C_CONTRIBUTED_PROJECTS_ROOT, C_CORE_PROJECTS_ROOTS)
-
     >>> projects_roots = (C_CORE_PROJECTS_ROOT, )
-    >>> obj = StringsItemFactory(ModuleInfoItemClassFactory.DRUPAL_MODULES_VERSIONS_UNION, projects_roots)
-    >>> len([x['description'] for x in obj.extractItems()]) > 50
+    >>> obj = ModuleMetaItemFactory(projects_roots)
+    >>> len([item['description'] for item in obj.extractItems()]) > 50
+    True
+    """
+    itemClassName = "ModuleMetaItem"
+    attributes_constant = ModuleInfoItemClassFactory.DRUPAL_MODULES_VERSIONS_INTERSECTION
+
+    @overrides(ItemFactory)
+    def extractItems(self):  # todo: implement decorator
+        for info in self._getModulesInfoFileObjects():
+            for dependency in info.processSingleParameters(self.item_class, self.supported_parameters):
+                yield dependency
+
+
+class ModuleDependencyItemFactory(ItemFactory):
+    """
+    >>> projects_roots = (C_CORE_PROJECTS_ROOT, )
+    >>> obj = ModuleDependencyItemFactory(projects_roots)
+    >>> 'comment' in [item['dependencies'] for item in obj.extractItems()]
     True
     """
     itemClassName = "ModuleDependencyItem"
     attributes_constant = ModuleInfoItemClassFactory.DRUPAL_MODULE_DEPENDENCY
 
-    def extractItems(self):
+    @overrides(ItemFactory)
+    def extractItems(self):  # todo: implement decorator
         for info in self._getModulesInfoFileObjects():
-            yield info.processStringParameters(self.item_class, self.supported_parameters)
-
-
-class ListItemFactory(ItemFactory):
-    itemClassName = "ModuleMetaItem"
-    attributes_constant = ModuleInfoItemClassFactory.DRUPAL_MODULES_VERSIONS_INTERSECTION
-
-    def extractItems(self):
-        for info in self._getModulesInfoFileObjects():
-            yield info.processListParameter(self.item_class, 'dependencies')
+            for dependency in info.processMultipleParameter(self.item_class, 'dependencies'):
+                yield dependency

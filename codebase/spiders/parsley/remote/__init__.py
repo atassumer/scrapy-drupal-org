@@ -1,6 +1,7 @@
 from codebase.shared.spiders.parselet.parsley_spider import ParsleySpider
 from codebase.shared.utils.file_system_adapter import FileSystemAdapter
 from codebase.utils.dump import Dump
+from codebase.shared.spiders.parselet.parsley_spider import overrides
 
 
 class RemoteParsleySpider(ParsleySpider):
@@ -12,15 +13,18 @@ class RemoteParsleySpider(ParsleySpider):
         "https://drupal.org/project/usage",
     ]
 
+    @overrides(ParsleySpider)
     def get_links_parselet_path(self):
         return FileSystemAdapter().get_full_path('spiders/parsley/remote/remote.links.json')
 
+    @overrides(ParsleySpider)
     def parse_items(self, response):  # todo: should this behaviour be moved to the root_node class?
         if response.url in self.start_urls:
             return
         for item in super(RemoteParsleySpider, self).parse_items(response):
             yield item
 
+    @overrides(ParsleySpider)
     def parse_links(self, response):
         dump = Dump('drupalorg_projects')
         if dump.exists():  # todo: implement caching in other places?
