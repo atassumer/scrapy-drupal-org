@@ -4,8 +4,19 @@
     <bookmark url="file://$PROJECT_DIR$/codebase/utils/project_root/item_factory.py" line="50" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ff47b11-d42a-44bc-9a20-792b27b582c7" name="Default" comment="Adden git submodule">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ubuntu-requirements.txt" afterPath="$PROJECT_DIR$/ubuntu-requirements.txt" />
+    <list default="true" id="8ff47b11-d42a-44bc-9a20-792b27b582c7" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/items/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/items/parselet_item_factory.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/spiders/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/spiders/parsley_spider.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/utils/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/utils/file_system_adapter.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/utils/json_results.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/utils/overrides_decorator.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/utils/parselet.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy-parsley/README.md" afterPath="$PROJECT_DIR$/scrapy-parsley/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scrapy-parsey.iws" />
@@ -36,7 +47,7 @@
     <file path="/misc.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377784667357" ignored="false" />
     <file path="/hook.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377166486830" ignored="false" />
     <file path="/scan.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377699944942" ignored="false" />
-    <file path="/Dummy.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378821302560" ignored="false" />
+    <file path="/Dummy.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378822973261" ignored="false" />
     <file path="/projects_contributed.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698190773" ignored="false" />
     <file path="/other_git.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698186789" ignored="false" />
     <file path="/other_contributors.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698182547" ignored="false" />
@@ -120,7 +131,26 @@
     <favorites_list name="scrapy-parsey" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scrapy-parsley/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -139,8 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/codebase/shared/utils/parselet.py" />
-        <option value="$PROJECT_DIR$/codebase/spiders/parsley/remote/__init__.py" />
         <option value="$PROJECT_DIR$/codebase/spiders/parsley/remote/other/__init__.py" />
         <option value="$PROJECT_DIR$/codebase/shared/spiders/parselet/parsley_spider.py" />
         <option value="$PROJECT_DIR$/codebase/spiders/parsley/local/modules/__init__.py" />
@@ -155,6 +183,8 @@
         <option value="$PROJECT_DIR$/codebase/utils/project_root/project_root_parser.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/ubuntu-requirements.txt" />
+        <option value="$PROJECT_DIR$/scrapy-parsley/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -220,6 +250,20 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="scrapy-parsey" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy-parsley" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy-parsey" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy-parsley" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scrapy-parsley" />
@@ -576,7 +620,11 @@
       <created>1378820347643</created>
       <updated>1378820347643</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added rules into .gitignore">
+      <created>1378822976937</created>
+      <updated>1378822976937</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -666,7 +714,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adden git submodule" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added rules into .gitignore" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -699,6 +747,7 @@
     <MESSAGE value="cleaned todos" />
     <MESSAGE value="Moving shared folder into subproject" />
     <MESSAGE value="Adden git submodule" />
+    <MESSAGE value="Added rules into .gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -706,41 +755,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/codebase/pipelines/projects_contributed_git_clone.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="17" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1407" selection-end="1407" vertical-scroll-proportion="1.2711865">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared/spiders/parsley_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared/utils/json_results.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="6" selection-start="175" selection-end="175" vertical-scroll-proportion="0.22875817">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared/utils/parselet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="255" selection-end="255" vertical-scroll-proportion="0.22245763">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codebase/spiders/parsley/remote/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="29" selection-start="965" selection-end="965" vertical-scroll-proportion="0.55508476">
@@ -789,22 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shared/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared/utils/file_system_adapter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="88" selection-start="2982" selection-end="2982" vertical-scroll-proportion="2.542373">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codebase/profiler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="152" selection-end="152" vertical-scroll-proportion="0.15889831">
@@ -826,6 +824,50 @@
     <entry file="file://$PROJECT_DIR$/ubuntu-requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="14" selection-start="36" selection-end="36" vertical-scroll-proportion="0.042674255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#/home/ubuntu/Programs/drupal/scrapy-parsley/shared/items/parselet_item_factory.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#/home/ubuntu/Programs/drupal/scrapy-parsley/shared/items/parselet_item_factory.py</OriginalElement>
+          <nodes>
+            <node x="" y="">exceptions.Exception</node>
+            <node x="" y="">shared.items.parselet_item_factory.ParsleyItemFactoryException</node>
+            <node x="" y="">shared.items.parselet_item_factory.ParseletItemFactory</node>
+            <node x="" y="">_abcoll.Iterable</node>
+            <node x="" y="">object</node>
+            <node x="" y="">_abcoll.Hashable</node>
+            <node x="" y="">_abcoll.Iterator</node>
+            <node x="" y="">exceptions.BaseException</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="201.5" y="206.5" />
+          <SelectedNodes />
+          <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy-parsley/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
