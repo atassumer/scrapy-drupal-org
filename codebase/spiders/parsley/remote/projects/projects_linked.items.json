@@ -1,6 +1,0 @@
-{
-    "from?": "ul.primary li:nth-of-type(1) a @href",
-    "to_links(//div[@class='node-content']//a)": [{
-          "to?": "regexp:match(@href, '/project/[^\\/?]+$')"
-        }]
-}

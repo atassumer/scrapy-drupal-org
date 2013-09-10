@@ -1,6 +1,0 @@
-{
-    "from": "ul.primary li:nth-of-type(1) a @href",
-    "to_block(id('block-pivots_block-0')//li/a)": [{
-          "to": "@href"
-        }]
-}
