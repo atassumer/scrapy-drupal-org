@@ -1,8 +1,8 @@
 #################
 # scrapy settings
 #################
-SPIDER_MODULES = ['codebase.spiders']
-NEWSPIDER_MODULE = 'codebase.spiders'
+SPIDER_MODULES = ['drupalorg.spiders']
+NEWSPIDER_MODULE = 'drupalorg.spiders'
 DEFAULT_ITEM_CLASS = 'scrapy.item.Item'
 
 HTTPCACHE_ENABLED = True
@@ -21,16 +21,16 @@ DOWNLOADER_MIDDLEWARES = {
 
 ITEM_PIPELINES = [
     # 'scrapy.contrib.pipeline.images.ImagesPipeline',
-    'codebase.pipelines.projects_contributed_git_clone.ProjectsContributedGitClonePipeline',
-    # 'codebase.pipelines.original_image.OriginalImagesPipeline',
-    # 'codebase.pipelines.transform_item.TransformItemPipeline',
+    'drupalorg.pipelines.projects_contributed_git_clone.ProjectsContributedGitClonePipeline',
+    # 'drupalorg.pipelines.original_image.OriginalImagesPipeline',
+    # 'drupalorg.pipelines.transform_item.TransformItemPipeline',
 ]
 
 
 ##################
 # parsley settings
 ##################
-PARSLEY_CRAWLER_ROOT = "/home/ubuntu/Programs/drupal/scrapy-parsley/codebase"
+PARSLEY_CRAWLER_ROOT = "/home/ubuntu/Programs/drupal/scrapy-parsley/drupalorg"
 PARSLEY_PAGES_LIMIT = 5  # how many pages to crawl
 
 

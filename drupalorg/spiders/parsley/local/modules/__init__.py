@@ -1,5 +1,5 @@
-from codebase.spiders.parsley.local import LocalParsleySpider
-from codebase.utils.project_root.item_factory import ModuleMetaItemFactory, ModuleDependencyItemFactory
+from drupalorg.spiders.parsley.local import LocalParsleySpider
+from drupalorg.utils.project_root.item_factory import ModuleMetaItemFactory, ModuleDependencyItemFactory
 from scrapy_parsley.spiders.parsley_spider import ParsleySpider, overrides
 
 

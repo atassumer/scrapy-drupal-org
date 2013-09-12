@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='codebase',
+    name='drupalorg',
     version='1.0',
     packages=find_packages(),
-    entry_points={'scrapy': ['settings = codebase.settings']},
+    entry_points={'scrapy': ['settings = drupalorg.settings']},
 )
-# todo: rename `codebase` to `drupalorg`
+# todo: rename `drupalorg` to `drupalorg`

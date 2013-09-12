@@ -1,4 +1,4 @@
-from codebase.spiders.parsley.remote import RemoteParsleySpider
+from drupalorg.spiders.parsley.remote import RemoteParsleySpider
 from scrapy_parsley.utils.parselet import ItemsParselet
 from scrapy_parsley.spiders.parsley_spider import ParsleySpider, overrides
 

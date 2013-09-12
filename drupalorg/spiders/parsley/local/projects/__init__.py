@@ -1,4 +1,4 @@
-from codebase.spiders.parsley.local import LocalParsleySpider
+from drupalorg.spiders.parsley.local import LocalParsleySpider
 
 
 class ProjectsLocalParsleySpider(LocalParsleySpider):

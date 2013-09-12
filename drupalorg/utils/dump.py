@@ -18,7 +18,7 @@ class Dump:
 
     def __init__(self, name):
         self.name = name
-        self.path = FileSystemAdapter().get_full_path('../pickle/%s.dump' % self.name)
+        self.path = FileSystemAdapter().get_full_path('../../files/pickle/%s.dump' % self.name)
 
     def dump(self, value):
         fp = open(self.path, 'w')

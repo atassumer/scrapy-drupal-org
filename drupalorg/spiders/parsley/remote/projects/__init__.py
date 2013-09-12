@@ -1,4 +1,4 @@
-from codebase.spiders.parsley.remote import RemoteParsleySpider
+from drupalorg.spiders.parsley.remote import RemoteParsleySpider
 
 
 class ProjectsRemoteParsleySpider(RemoteParsleySpider):

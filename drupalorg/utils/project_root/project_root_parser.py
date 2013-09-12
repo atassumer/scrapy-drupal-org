@@ -74,7 +74,7 @@ class ModuleInfoFile:
     project = "Easyapns"
 
 
-    >>> from codebase.utils.project_root.item_class_factory import ModuleInfoItemClassFactory
+    >>> from drupalorg.utils.project_root.item_class_factory import ModuleInfoItemClassFactory
     >>> path = '/home/ubuntu/Programs/drupal/files/git/1225224/iphone_push_notification_through_easyapns.info'
     >>> obj = ModuleInfoFile(path, 'views_export', 'views', 7, False)
     >>> # meta

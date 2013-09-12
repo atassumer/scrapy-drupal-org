@@ -1,6 +1,6 @@
 from scrapy_parsley.spiders.parsley_spider import ParsleySpider
 from scrapy_parsley.utils.file_system_adapter import FileSystemAdapter
-from codebase.utils.dump import Dump
+from drupalorg.utils.dump import Dump
 from scrapy_parsley.spiders.parsley_spider import overrides
 
 
