@@ -20,8 +20,8 @@ class RemoteParsleySpider(ParsleySpider):
     @overrides(ParsleySpider)
     def parse_items(self, response):
         if response.url in self.start_urls:
-            return
-        return (item for item in super(RemoteParsleySpider, self).parse_items(response))
+            return []
+        return [item for item in super(RemoteParsleySpider, self).parse_items(response)]
 
     @overrides(ParsleySpider)
     def parse_links(self, response):

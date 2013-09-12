@@ -1,11 +1,6 @@
-import string
-import subprocess
-from scrapy.conf import get_project_settings
-
-
 class Git:
     def checkout_all_projects(self, major_version):
-        # todo: need a persistent storage. pickle?
+        # todo: need a persistent storage. csv results?
         pass
 
 #
