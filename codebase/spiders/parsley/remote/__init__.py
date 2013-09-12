@@ -1,7 +1,7 @@
-from shared.spiders.parsley_spider import ParsleySpider
-from shared.utils.file_system_adapter import FileSystemAdapter
+from scrapy_parsley.spiders.parsley_spider import ParsleySpider
+from scrapy_parsley.utils.file_system_adapter import FileSystemAdapter
 from codebase.utils.dump import Dump
-from shared.spiders.parsley_spider import overrides
+from scrapy_parsley.spiders.parsley_spider import overrides
 
 
 class RemoteParsleySpider(ParsleySpider):

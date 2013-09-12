@@ -1,7 +1,7 @@
 import pickle
 import os
 
-from shared.utils.file_system_adapter import FileSystemAdapter
+from scrapy_parsley.utils.file_system_adapter import FileSystemAdapter
 
 
 class Dump:

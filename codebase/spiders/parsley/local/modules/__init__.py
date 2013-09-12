@@ -1,6 +1,6 @@
 from codebase.spiders.parsley.local import LocalParsleySpider
 from codebase.utils.project_root.item_factory import ModuleMetaItemFactory, ModuleDependencyItemFactory
-from shared.spiders.parsley_spider import ParsleySpider, overrides
+from scrapy_parsley.spiders.parsley_spider import ParsleySpider, overrides
 
 
 class ModulesLocalParsleySpider(LocalParsleySpider):

@@ -2,7 +2,7 @@ from scrapy.conf import get_project_settings
 from codebase.utils.git import Git
 from codebase.utils.project_root.item_class_factory import ModuleInfoItemClassFactory
 from codebase.utils.project_root.project_root_parser import ProjectsRoot
-from shared.utils.overrides_decorator import overrides, can_be_overridden
+from scrapy_parsley.utils.overrides_decorator import overrides, can_be_overridden
 
 
 class ItemFactory:
@@ -11,8 +11,8 @@ class ItemFactory:
 
     def __init__(self, projects_roots=False):
         if not projects_roots:
-            projects_roots = (get_project_settings()['C_CONTRIBUTED_PROJECTS_ROOT'],
-                              get_project_settings()['C_CORE_PROJECTS_ROOT'], )
+            projects_roots = (get_project_settings()['PARSLEY_CONTRIBUTED_PROJECTS_ROOT'],
+                              get_project_settings()['PARSLEY_CORE_PROJECTS_ROOT'], )
         self.projects_roots = projects_roots
         self._createItemClass()
 
@@ -24,10 +24,10 @@ class ItemFactory:
         self.supported_parameters = item_class_factory.getSupportedParameters()
 
     def _getModulesInfoFileObjects(self):
-        for major_version in get_project_settings()['C_SUPPORTED_MAJOR_VERSIONS']:
+        for major_version in get_project_settings()['PARSLEY_SUPPORTED_MAJOR_VERSIONS']:
             Git().checkout_all_projects(major_version)
             for projects_root in self.projects_roots:
-                is_core_project = projects_root == get_project_settings()['C_CORE_PROJECTS_ROOT']
+                is_core_project = projects_root == get_project_settings()['PARSLEY_CORE_PROJECTS_ROOT']
                 projects = ProjectsRoot(projects_root, major_version, is_core_project)
                 for obj in projects.getModuleInfoFileObjects():
                     yield obj
@@ -44,7 +44,7 @@ class ItemFactory:
 
 class ModuleMetaItemFactory(ItemFactory):
     """
-    >>> projects_roots = (get_project_settings()['C_CORE_PROJECTS_ROOT'], )
+    >>> projects_roots = (get_project_settings()['PARSLEY_CORE_PROJECTS_ROOT'], )
     >>> obj = ModuleMetaItemFactory(projects_roots)
     >>> len([item['description'] for item in obj.getItems()]) > 50
     True
@@ -59,7 +59,7 @@ class ModuleMetaItemFactory(ItemFactory):
 
 class ModuleDependencyItemFactory(ItemFactory):
     """
-    >>> projects_roots = (get_project_settings()['C_CORE_PROJECTS_ROOT'], )
+    >>> projects_roots = (get_project_settings()['PARSLEY_CORE_PROJECTS_ROOT'], )
     >>> obj = ModuleDependencyItemFactory(projects_roots)
     >>> 'comment' in [item['dependencies'] for item in obj.getItems()]
     True

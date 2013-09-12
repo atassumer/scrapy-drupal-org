@@ -27,14 +27,17 @@ ITEM_PIPELINES = [
 ]
 
 
-#################
-# custom settings
-#################
-C_CODEBASE_ROOT = "/home/ubuntu/Programs/drupal/scrapy-parsley/codebase"
+##################
+# parsley settings
+##################
+PARSLEY_CRAWLER_ROOT = "/home/ubuntu/Programs/drupal/scrapy-parsley/codebase"
+PARSLEY_PAGES_LIMIT = 5  # how many pages to crawl
 
-C_CONTRIBUTED_PROJECTS_ROOT = "/home/ubuntu/Programs/drupal/files/git"
-C_CORE_PROJECTS_ROOT = C_CONTRIBUTED_PROJECTS_ROOT + '/drupal/modules'
 
-C_SUPPORTED_MAJOR_VERSIONS = [6, 7]
+###########################
+# project-specific settings
+###########################
+PARSLEY_CONTRIBUTED_PROJECTS_ROOT = "/home/ubuntu/Programs/drupal/files/git"
+PARSLEY_CORE_PROJECTS_ROOT = PARSLEY_CONTRIBUTED_PROJECTS_ROOT + '/drupal/modules'
 
-# C_PAGES_LIMIT = 5  # how many pages to crawl
+PARSLEY_SUPPORTED_MAJOR_VERSIONS = [6, 7]

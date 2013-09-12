@@ -1,10 +1,10 @@
 from scrapy.conf import get_project_settings
 
-from shared.utils.file_system_adapter import FileSystemAdapter
+from scrapy_parsley.utils.file_system_adapter import FileSystemAdapter
 
 
 class ProjectsContributedGitClonePipeline(object):
-    fs = FileSystemAdapter(get_project_settings()['C_CONTRIBUTED_PROJECTS_ROOT'])
+    fs = FileSystemAdapter(get_project_settings()['PARSLEY_CONTRIBUTED_PROJECTS_ROOT'])
 
     def process_item(self, current_item, current_spider):
         if current_spider.name == "projects_releases":
