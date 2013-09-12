@@ -57,7 +57,7 @@ class Project:
         fs = FileSystemAdapter()
         fs.chdir(self.path)
         for filepath in fs.glob('*.info'):
-            module = os.path.basename(filepath).split('.')[0]  # todo: is dot allowed for module filenames?
+            module = os.path.basename(filepath).split('.')[0]  # assume dot is not allowed for module filenames
             yield ModuleInfoFile(filepath, module, self.machine_name, self.major_version, self.is_core_project)
 
 

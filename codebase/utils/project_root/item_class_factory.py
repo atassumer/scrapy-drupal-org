@@ -24,7 +24,7 @@ class ModuleInfoItemClassFactory:
     DRUPAL_MODULES_VERSION_6 = 6
     DRUPAL_MODULES_VERSION_7 = 7
     DRUPAL_MODULES_VERSIONS_INTERSECTION = 0
-    DRUPAL_MODULES_VERSIONS_UNION = 1  # todo: find a better name
+    DRUPAL_MODULES_VERSIONS_UNION = 1
     DRUPAL_THEMES = 10
     DRUPAL_MODULE_DEPENDENCY = 20
 
@@ -50,7 +50,7 @@ class ModuleInfoItemClassFactory:
         self.item_class_name = item_class_name
         self.attributes_constant = attributes_constant
 
-    def getItemClass(self):  # todo: this method copied from parselet_item_factory. Should I make shared class?
+    def getItemClass(self):
         third_param = dict()
         for attr in self.getSupportedParameters():
             third_param[attr] = Field()

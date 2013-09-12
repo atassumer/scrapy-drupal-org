@@ -68,7 +68,7 @@ class ModuleDependencyItemFactory(ItemFactory):
     attributes_constant = ModuleInfoItemClassFactory.DRUPAL_MODULE_DEPENDENCY
 
     @overrides(ItemFactory)
-    def getItemsFromInfoFileObject(self, info):  # todo: implement decorator
+    def getItemsFromInfoFileObject(self, info):
         return (dependency for dependency in info.processMultipleParameter(self.item_class, 'dependencies'))
 
 
