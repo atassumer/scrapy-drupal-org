@@ -74,13 +74,13 @@ class ModuleInfoFile:
     project = "Easyapns"
 
 
-    >>> from drupalorg.utils.project_root.item_class_factory import ModuleInfoItemClassFactory
+    >>> from drupalorg.utils.project_root.module_info_item import ModuleInfoItem
     >>> path = '/home/ubuntu/Programs/drupal/files/git/1225224/iphone_push_notification_through_easyapns.info'
     >>> obj = ModuleInfoFile(path, 'views_export', 'views', 7, False)
     >>> # meta
-    >>> meta_constant = ModuleInfoItemClassFactory.DRUPAL_MODULES_VERSIONS_UNION
-    >>> item_class = ModuleInfoItemClassFactory('ModuleInfoFileMetaTest', meta_constant).getItemClass()
-    >>> obj.processSingleParameters(item_class, ['name', 'description'])
+    >>> meta_constant = ModuleInfoItem.DRUPAL_MODULES_VERSIONS_UNION
+    >>> item = ModuleInfoItem(meta_constant)
+    >>> obj.processSingleParameters(item, ['name', 'description'])
     [{'description': 'Provides a servive used to send Push Notifications using the device token.',
      'is_core_project': False,
      'major_version': 7,
@@ -88,9 +88,9 @@ class ModuleInfoFile:
      'name': 'Iphone Push Notification through Easyapns',
      'project': 'views'}]
     >>> # dependencies
-    >>> meta_constant = ModuleInfoItemClassFactory.DRUPAL_MODULE_DEPENDENCY
-    >>> item_class = ModuleInfoItemClassFactory('ModuleInfoFileDependencyTest', meta_constant).getItemClass()
-    >>> [x['dependencies'] for x in obj.processMultipleParameter(item_class, 'dependencies')]
+    >>> meta_constant = ModuleInfoItem.DRUPAL_MODULE_DEPENDENCY
+    >>> item = ModuleInfoItem(meta_constant)
+    >>> [x['dependencies'] for x in obj.processMultipleParameter(item, 'dependencies')]
     ['content', 'content_profile']
     """
     path = ""
@@ -108,16 +108,15 @@ class ModuleInfoFile:
         self.major_version = major_version
         self.is_core_project = is_core_project
 
-    def getItemObject(self, item_class):
-        item = item_class()
+    def fillItemObject(self, item):
         item['module'] = self.module
         item['project'] = self.project
         item['major_version'] = self.major_version
-        item['is_core_project'] = self.is_core_project
+        item['is_core_project'] = self.is_core_project  # todo: copy?
         return item
 
-    def processSingleParameters(self, item_class, params):
-        item = self.getItemObject(item_class)
+    def processSingleParameters(self, item, params):
+        item = self.fillItemObject(item)
         for line in self._getFileAsLines():
             for param in params:
                 occurrence = self.extractParameterFromLine(line, param)
@@ -125,11 +124,11 @@ class ModuleInfoFile:
                     item[param] = occurrence
         return [item]
 
-    def processMultipleParameter(self, item_class, marker):
+    def processMultipleParameter(self, item, marker):
         for line in self._getFileAsLines():
             occurrence = self.extractParameterFromLine(line, marker)
             if occurrence:
-                item = self.getItemObject(item_class)
+                item = self.fillItemObject(item)
                 item[marker] = occurrence
                 yield item
 
@@ -162,6 +161,7 @@ class ModuleInfoFileLine:
     >>> obj.getValue()
     'content_profile'
     """
+
     def __init__(self, line, parameter_name):
         self.line = line
         self.parameter_name = parameter_name

@@ -1,13 +1,12 @@
 from drupalorg import settings
 from drupalorg.utils.git import Git
-from drupalorg.utils.project_root.item_class_factory import ModuleInfoItemClassFactory
+from drupalorg.utils.project_root.module_info_item import ModuleInfoItem
 from drupalorg.utils.project_root.project_root_parser import ProjectsRoot
 from scrapy_parsley.utils.overrides_decorator import overrides, can_be_overridden
 
 
 class ItemFactory:
-    attributes_constant = []  # should be overridden
-    itemClassName = ""  # should be overridden
+    attributes_constant = -1  # should be overridden
 
     def __init__(self, projects_roots=False):
         if not projects_roots:
@@ -17,11 +16,10 @@ class ItemFactory:
         self._createItemClass()
 
     def _createItemClass(self):
-        if self.attributes_constant == [] or self.itemClassName == "":
+        if self.attributes_constant <= -1:
             raise Exception("Item Factory fields should be overridden")
-        item_class_factory = ModuleInfoItemClassFactory(self.itemClassName, self.attributes_constant)
-        self.item_class = item_class_factory.getItemClass()
-        self.supported_parameters = item_class_factory.getSupportedParameters()
+        self.item = ModuleInfoItem(self.attributes_constant)
+        self.supported_parameters = self.item.getSupportedParameters(self.attributes_constant)
 
     def _getModulesInfoFileObjects(self):
         for major_version in settings.PARSLEY_SUPPORTED_MAJOR_VERSIONS:
@@ -49,12 +47,11 @@ class ModuleMetaItemFactory(ItemFactory):
     >>> len([item['description'] for item in obj.getItems()]) > 50
     True
     """
-    itemClassName = "ModuleMetaItem"
-    attributes_constant = ModuleInfoItemClassFactory.DRUPAL_MODULES_VERSIONS_INTERSECTION
+    attributes_constant = ModuleInfoItem.DRUPAL_MODULES_VERSIONS_INTERSECTION
 
     @overrides(ItemFactory)
     def getItemsFromInfoFileObject(self, info):
-        return [dependency for dependency in info.processSingleParameters(self.item_class, self.supported_parameters)]
+        return [dependency for dependency in info.processSingleParameters(self.item, self.supported_parameters)]
 
 
 class ModuleDependencyItemFactory(ItemFactory):
@@ -64,13 +61,8 @@ class ModuleDependencyItemFactory(ItemFactory):
     >>> 'comment' in [item['dependencies'] for item in obj.getItems()]
     True
     """
-    itemClassName = "ModuleDependencyItem"
-    attributes_constant = ModuleInfoItemClassFactory.DRUPAL_MODULE_DEPENDENCY
+    attributes_constant = ModuleInfoItem.DRUPAL_MODULE_DEPENDENCY
 
     @overrides(ItemFactory)
     def getItemsFromInfoFileObject(self, info):
-        return [dependency for dependency in info.processMultipleParameter(self.item_class, 'dependencies')]
-
-
-if __name__ == '__main__':
-    list(ModuleMetaItemFactory().getItems())
+        return [dependency for dependency in info.processMultipleParameter(self.item, 'dependencies')]
