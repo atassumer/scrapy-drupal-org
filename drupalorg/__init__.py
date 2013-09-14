@@ -3,6 +3,6 @@
 
 
 # import nltk
-# todo: create nltkcorpora from all descriptions
-# todo: find words which can be used as tags
-# todo: find words with anomally higher frequency in the corpora. they should better fit for tags
+# todo: nltk: create nltkcorpora from all descriptions
+# todo: nltk: find words which can be used as tags
+# todo: nltk: find words with anomally higher frequency in the corpora. they should better fit for tags
