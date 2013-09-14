@@ -34,3 +34,5 @@ class RemoteParsleySpider(ParsleySpider):
         for i in range(len(links_dict)):
             url = links_dict[i]['url']
             yield {'url': url, 'callback': self.parse_items}
+
+            # todo: profile classed to find bottlenecks

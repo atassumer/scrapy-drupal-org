@@ -6,4 +6,3 @@ setup(
     packages=find_packages(),
     entry_points={'scrapy': ['settings = drupalorg.settings']},
 )
-# todo: rename `drupalorg` to `drupalorg`

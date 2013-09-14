@@ -32,9 +32,9 @@ class ModuleInfoItem(ScrapyItemListWrapper):
     # supported_list_parameters = ['dependencies']
     attributes_constant = None
 
-    def __init__(self, attributes_constant, *args, **kwargs):
+    def __init__(self, attributes_constant):
         keys = self.getSupportedParameters(attributes_constant)
-        super(ModuleInfoItem, self).__init__(keys, *args, **kwargs)  # todo: try to get rid of *args
+        super(ModuleInfoItem, self).__init__(keys)
 
     def getSupportedParameters(self, attributes_constant):
         """

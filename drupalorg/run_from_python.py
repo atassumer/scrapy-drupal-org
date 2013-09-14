@@ -6,7 +6,6 @@ from drupalorg.spiders.parsley.remote.projects import RelatedProjectsRemoteParsl
 
 
 class RunScrapyFromScript:
-
     items = []
 
     def __init__(self):
@@ -28,14 +27,13 @@ class RunScrapyFromScript:
         print item
         print response
         print spider
-        # raise Exception(item)
         self.items.append(item)
         log.msg(item)
 
 
-# import yappi
-# yappi.start()
-# RunScrapyFromScript()
-# yappi.print_stats(sort_type=yappi.SORTTYPE_TSUB, sort_order=yappi.SORTORDER_DESC, limit=50)
+        # import yappi
+        # yappi.start()
+        # RunScrapyFromScript()
+        # yappi.print_stats(sort_type=yappi.SORTTYPE_TSUB, sort_order=yappi.SORTORDER_DESC, limit=50)
 
-# cProfile.run('RunScrapyFromScript()')
+        # cProfile.run('RunScrapyFromScript()')
