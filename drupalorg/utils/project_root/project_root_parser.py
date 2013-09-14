@@ -2,7 +2,7 @@ import re
 import string
 import os
 
-from scrapy_parsley.utils.file_system_adapter import FileSystemAdapter
+from scrapy_parsley.utils.file_system_adapter import FileSystemAdapter, Shell
 
 
 class ProjectsRoot:
@@ -23,7 +23,7 @@ class ProjectsRoot:
         self.is_core_project = is_core_project
 
     def _getProjectObjects(self):
-        fs = FileSystemAdapter()
+        fs = Shell()
         fs.chdir(self.projects_root)
         for project in fs.get_subdirectories_names():
             path = "%s/%s" % (self.projects_root, project)

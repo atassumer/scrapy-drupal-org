@@ -1,6 +1,6 @@
 from drupalorg.spiders.parsley.remote import RemoteParsleySpider
 from scrapy_parsley.utils.parselet.parselet import ItemsParselet
-from scrapy_parsley.spiders.parsley_spider import ParsleySpider, overrides
+from scrapy_parsley.parsley_spider import ParsleySpider, overrides
 
 
 class OtherRemoteParsleySpider(RemoteParsleySpider):
