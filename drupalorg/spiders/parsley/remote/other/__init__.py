@@ -29,4 +29,4 @@ class TopOtherRemoteParsleySpider(OtherRemoteParsleySpider):
     @overrides(ParsleyCrawlSpider)
     def _apply_parselet(self, response):  # overridden
         parselet = ItemsParselet(response, self.get_items_parselet_path())
-        return [item for item in parselet.collect()]
+        return parselet.collect()

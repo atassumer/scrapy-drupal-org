@@ -51,7 +51,7 @@ class ModuleMetaItemFactory(ItemFactory):
 
     @overrides(ItemFactory)
     def getItemsFromInfoFileObject(self, info):
-        return [dependency for dependency in info.processSingleParameters(self.item, self.supported_parameters)]
+        return info.processSingleParameters(self.item, self.supported_parameters)
 
 
 class ModuleDependencyItemFactory(ItemFactory):
@@ -65,4 +65,4 @@ class ModuleDependencyItemFactory(ItemFactory):
 
     @overrides(ItemFactory)
     def getItemsFromInfoFileObject(self, info):
-        return [dependency for dependency in info.processMultipleParameter(self.item, 'dependencies')]
+        return info.processMultipleParameter(self.item, 'dependencies')

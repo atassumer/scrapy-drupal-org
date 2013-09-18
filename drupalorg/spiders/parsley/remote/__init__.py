@@ -21,7 +21,7 @@ class RemoteParsleySpider(ParsleyCrawlSpider):
     def _apply_parselet(self, response):
         if response.url in self.start_urls:
             return []
-        return [item for item in super(RemoteParsleySpider, self)._apply_parselet(response)]
+        return super(RemoteParsleySpider, self)._apply_parselet(response)
 
     @overrides(ParsleyCrawlSpider)
     def parse_links(self, response):
