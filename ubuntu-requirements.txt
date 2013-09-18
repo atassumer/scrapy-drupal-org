@@ -6,3 +6,5 @@ python-spynner
 lamp-server
 drupal7
 mysql workbench (optional)
+
+pyreverse
