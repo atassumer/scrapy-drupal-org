@@ -2,7 +2,7 @@ from twisted.internet import reactor
 from scrapy.crawler import Crawler
 from scrapy.settings import Settings
 from scrapy import log, signals
-from drupalorg.spiders.parsley.remote.projects import RelatedProjectsRemoteParsleySpider
+from drupalorg.spiders.remote.projects import RelatedProjectsRemoteParsleySpider
 
 
 class RunScrapyFromScript:
