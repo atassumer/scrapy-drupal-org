@@ -3,7 +3,6 @@
 ##################
 PARSLEY_CRAWLER_ROOT = "/home/ubuntu/Programs/drupal/scrapy-parsley/drupalorg"
 PARSLEY_FILES_ROOT = "/home/ubuntu/Programs/drupal/files"
-PARSLEY_PAGES_LIMIT = 5  # how many pages to crawl
 
 
 #################
@@ -44,5 +43,5 @@ PARSLEY_CORE_PROJECTS_ROOT = PARSLEY_CONTRIBUTED_PROJECTS_ROOT + '/drupal/module
 PARSLEY_SUPPORTED_MAJOR_VERSIONS = [6, 7]
 PARSLEY_GIT_TAGS_CSV_PATH = PARSLEY_FILES_ROOT + '/projects_releases.csv'
 
-# PARSLEY_IMPLEMENTATION = 'fizx'
-PARSLEY_IMPLEMENTATION = 'redapple'
+PARSLEY_IMPLEMENTATION = 'fizx'
+# PARSLEY_IMPLEMENTATION = 'redapple'

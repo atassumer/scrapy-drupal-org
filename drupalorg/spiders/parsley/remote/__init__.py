@@ -1,10 +1,10 @@
-from scrapy_parsley.parsley_spider import ParsleySpider
+from scrapy_parsley.parsley_spider import ParsleyCrawlSpider
 from scrapy_parsley.utils.file_system_adapter import FileSystemAdapter
 from drupalorg.utils.dump import Dump
 from scrapy_parsley.parsley_spider import overrides
 
 
-class RemoteParsleySpider(ParsleySpider):
+class RemoteParsleySpider(ParsleyCrawlSpider):
     """
     
     """
@@ -13,17 +13,17 @@ class RemoteParsleySpider(ParsleySpider):
         "https://drupal.org/project/usage",
     ]
 
-    @overrides(ParsleySpider)
+    @overrides(ParsleyCrawlSpider)
     def get_links_parselet_path(self):
         return FileSystemAdapter().get_full_path('spiders/parsley/remote/remote.links.json')
 
-    @overrides(ParsleySpider)
-    def parse_items(self, response):
+    @overrides(ParsleyCrawlSpider)
+    def _apply_parselet(self, response):
         if response.url in self.start_urls:
             return []
-        return [item for item in super(RemoteParsleySpider, self).parse_items(response)]
+        return [item for item in super(RemoteParsleySpider, self)._apply_parselet(response)]
 
-    @overrides(ParsleySpider)
+    @overrides(ParsleyCrawlSpider)
     def parse_links(self, response):
         dump = Dump('drupalorg_projects')
         if dump.exists():  # todo: implement caching in other places?
@@ -33,6 +33,6 @@ class RemoteParsleySpider(ParsleySpider):
             dump.dump(links_dict)
         for i in range(len(links_dict)):
             url = links_dict[i]['url']
-            yield {'url': url, 'callback': self.parse_items}
+            yield {'url': url, 'callback': self._apply_parselet}
 
-            # todo: profile classed to find bottlenecks
+            # todo: profile classes to find bottlenecks

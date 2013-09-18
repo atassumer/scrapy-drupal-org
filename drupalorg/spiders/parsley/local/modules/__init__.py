@@ -1,6 +1,6 @@
 from drupalorg.spiders.parsley.local import LocalParsleySpider
 from drupalorg.utils.project_root.item_factory import ModuleMetaItemFactory, ModuleDependencyItemFactory
-from scrapy_parsley.parsley_spider import ParsleySpider, overrides
+from scrapy_parsley.parsley_spider import ParsleyCrawlSpider, overrides
 
 
 class ModulesLocalParsleySpider(LocalParsleySpider):
@@ -13,7 +13,7 @@ class ModulesLocalParsleySpider(LocalParsleySpider):
 class DependenciesModulesLocalParsleySpider(ModulesLocalParsleySpider):
     name = 'modules_dependencies'
 
-    @overrides(ParsleySpider)
+    @overrides(ParsleyCrawlSpider)
     def collect_items_manually(self, response):
         return [item for item in ModuleDependencyItemFactory().getItems()]
 
@@ -21,6 +21,6 @@ class DependenciesModulesLocalParsleySpider(ModulesLocalParsleySpider):
 class MetaModulesLocalParsleySpider(ModulesLocalParsleySpider):
     name = 'modules_meta'
 
-    @overrides(ParsleySpider)
+    @overrides(ParsleyCrawlSpider)
     def collect_items_manually(self, response):
         return [item for item in ModuleMetaItemFactory().getItems()]
