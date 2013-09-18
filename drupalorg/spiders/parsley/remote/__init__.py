@@ -1,29 +1,22 @@
 from scrapy_parsley.parsley_spider import ParsleyCrawlSpider
 from scrapy_parsley.utils.file_system_adapter import FileSystemAdapter
 from drupalorg.utils.dump import Dump
-from scrapy_parsley.parsley_spider import overrides
 
 
 class RemoteParsleySpider(ParsleyCrawlSpider):
-    """
-    
-    """
     allowed_domains = ["drupal.org"]
     start_urls = [
         "https://drupal.org/project/usage",
     ]
 
-    @overrides(ParsleyCrawlSpider)
     def get_links_parselet_path(self):
         return FileSystemAdapter().get_full_path('spiders/parsley/remote/remote.links.json')
 
-    @overrides(ParsleyCrawlSpider)
     def _apply_parselet(self, response):
         if response.url in self.start_urls:
             return []
         return super(RemoteParsleySpider, self)._apply_parselet(response)
 
-    @overrides(ParsleyCrawlSpider)
     def parse_links(self, response):
         dump = Dump('drupalorg_projects')
         if dump.exists():  # todo: implement caching in other places?

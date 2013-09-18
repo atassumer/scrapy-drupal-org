@@ -1,5 +1,5 @@
 {
     "name": "//div[@class='submitted']/a/text()",
     "link": "//div[@class='submitted']/a/@href",
-    "uid":  "regexp:match(//div[@class='submitted']/a/@href, '\\d+')"
+    "uid": "regexp:match(//div[@class='submitted']/a/@href, '\\d+')"
 }
