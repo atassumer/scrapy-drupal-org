@@ -1,6 +1,6 @@
 class Git:
     def checkout_all_projects(self, major_version):
-        # todo: need a persistent storage. csv results?
+        # todo: need a persistent storage. fix spiders, store CSV into the directory, parse file from this class
         pass
 
 #

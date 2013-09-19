@@ -13,22 +13,22 @@ class ModuleInfoItem(ScrapyItemListWrapper):
     DRUPAL_THEMES = 10
     DRUPAL_MODULE_DEPENDENCY = 20
 
-    supported_parameters = {# todo: does the dataset contains custom other parameters?
-                            # `package` and `dependencies` are excluded
-                            # https://drupal.org/node/171205
-                            'themes': {'name', 'description', 'screenshot', 'version', 'core', 'engine', 'base_theme',
-                                       'regions', 'features', 'theme_settings', 'stylesheets', 'scripts', 'php'},
-                            # sets string literal
-                            # https://drupal.org/node/231036
-                            'modules_6': {'name', 'description', 'core', 'php', 'hidden', 'version', 'project'},
-                            # https://drupal.org/node/542202
-                            'modules_7': {'name', 'description', 'core', 'stylesheets', 'scripts', 'files',
-                                          'package', 'php', 'version', 'configure', 'required', 'hidden', 'project'},
-                            #
-                            'dependencies': {'dependencies'},
-                            # file meta data
-                            'meta': {'module', 'project', 'major_version', 'is_core_project'},
-    }
+    supported_parameters = {
+        # `package` and `dependencies` are excluded
+        # https://drupal.org/node/171205
+        'themes': {'name', 'description', 'screenshot', 'version', 'core', 'engine', 'base_theme',
+                   'regions', 'features', 'theme_settings', 'stylesheets', 'scripts', 'php'},
+        # sets string literal
+        # https://drupal.org/node/231036
+        'modules_6': {'name', 'description', 'core', 'php', 'hidden', 'version', 'project'},
+        # https://drupal.org/node/542202
+        'modules_7': {'name', 'description', 'core', 'stylesheets', 'scripts', 'files',
+                      'package', 'php', 'version', 'configure', 'required', 'hidden', 'project'},
+        #
+        'dependencies': {'dependencies'},
+        # file meta data
+        'meta': {'module', 'project', 'major_version', 'is_core_project'},
+    }  # todo: does the dataset contains custom other parameters?
     # supported_list_parameters = ['dependencies']
     attributes_constant = None
 
