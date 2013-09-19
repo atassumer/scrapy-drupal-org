@@ -2,7 +2,7 @@ from drupalorg import settings
 from drupalorg.utils.git import Git
 from drupalorg.utils.project_root.module_info_item import ModuleInfoItem
 from drupalorg.utils.project_root.project_root_parser import ProjectsRoot
-from scrapy_parsley.utils.overrides_decorator import overrides, can_be_overridden
+from scrapy_parsley.scrapy_parsley2.overrides_decorator import overrides, can_be_overridden
 
 
 class ItemFactory:

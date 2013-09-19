@@ -2,7 +2,7 @@ import re
 import string
 import os
 
-from scrapy_parsley.utils.file_system_adapter import FileSystemAdapter, Shell
+from scrapy_parsley.scrapy_parsley2.file_system_adapter import FileSystemAdapter, Shell
 
 
 class ProjectsRoot:
@@ -74,7 +74,7 @@ class ModuleInfoFile:
     project = "Easyapns"
 
 
-    >>> from drupalorg.utils.project_root.module_info_item import ModuleInfoItem
+    >>> from drupalorg.scrapy_parsley2.project_root.module_info_item import ModuleInfoItem
     >>> path = '/home/ubuntu/Programs/drupal/files/git/1225224/iphone_push_notification_through_easyapns.info'
     >>> obj = ModuleInfoFile(path, 'views_export', 'views', 7, False)
     >>> # meta

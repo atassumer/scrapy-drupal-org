@@ -1,6 +1,6 @@
 from drupalorg import settings
 
-from scrapy_parsley.utils.file_system_adapter import FileSystemAdapter
+from scrapy_parsley.scrapy_parsley2.file_system_adapter import FileSystemAdapter
 
 
 class ProjectsContributedGitClonePipeline(object):

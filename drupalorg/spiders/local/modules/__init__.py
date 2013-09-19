@@ -1,7 +1,7 @@
 from drupalorg.spiders.local import LocalSpider
 from drupalorg.utils.project_root.item_factory import ModuleMetaItemFactory, ModuleDependencyItemFactory
-from scrapy_parsley.parsley_spider import ParsleyCrawlSpider
-from scrapy_parsley.utils.overrides_decorator import overrides
+from scrapy_parsley.scrapy_parsley2.parsley_spider import ParsleyCrawlSpider
+from scrapy_parsley.scrapy_parsley2.overrides_decorator import overrides
 
 
 class ModulesLocalSpider(LocalSpider):

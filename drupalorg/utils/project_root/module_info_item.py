@@ -1,4 +1,4 @@
-from scrapy_parsley.parsley_item import ScrapyItemListWrapper
+from scrapy_parsley.scrapy_parsley2.parsley_item import ScrapyItemListWrapper
 
 
 class ModuleInfoItem(ScrapyItemListWrapper):

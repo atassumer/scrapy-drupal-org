@@ -19,10 +19,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/utils/project_root/module_info_item.py" afterPath="$PROJECT_DIR$/drupalorg/utils/project_root/module_info_item.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/utils/project_root/project_root_parser.py" afterPath="$PROJECT_DIR$/drupalorg/utils/project_root/project_root_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/pipelines/projects_contributed_git_clone.py" afterPath="$PROJECT_DIR$/drupalorg/pipelines/projects_contributed_git_clone.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/tests/yelp/yelp.py" afterPath="$PROJECT_DIR$/scrapy_parsley/tests/yelp/yelp.py" />
-    </list>
-    <list id="5e9831d0-3f69-40d1-9f03-1502e70bae0d" name="New changelist" comment="fixed doctests">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/tests/yelp/yelp.py" afterPath="$PROJECT_DIR$/scrapy_parsley/tests/yelp/yelp.py" />
     </list>
     <ignored path="scrapy-parsey.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,7 +50,7 @@
     <file path="/misc.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377784667357" ignored="false" />
     <file path="/hook.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377166486830" ignored="false" />
     <file path="/scan.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377699944942" ignored="false" />
-    <file path="/Dummy.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379593518274" ignored="false" />
+    <file path="/Dummy.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379595136064" ignored="false" />
     <file path="/projects_contributed.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698190773" ignored="false" />
     <file path="/other_git.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698186789" ignored="false" />
     <file path="/other_contributors.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698182547" ignored="false" />
@@ -108,7 +106,6 @@
     <file path="/profiler.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378813672249" ignored="false" />
     <file path="/setup.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378969018332" ignored="false" />
     <file path="/ubuntu-requirements.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379515995977" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379593466537" ignored="false" />
     <file path="/scrapy.cfg" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378969539759" ignored="false" />
     <file path="/*.regexp" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379085299593" ignored="false" />
     <file path="/parsley_item.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379053455525" ignored="false" />
@@ -592,7 +589,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="8ff47b11-d42a-44bc-9a20-792b27b582c7" name="Default" comment="" />
-      <changelist id="5e9831d0-3f69-40d1-9f03-1502e70bae0d" name="New changelist" comment="" />
+      <changelist id="" name="New changelist" comment="" />
       <created>1377014189158</created>
       <updated>1377014189158</updated>
     </task>
@@ -764,7 +761,11 @@
       <created>1379593527826</created>
       <updated>1379593527826</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Moved some packages. Imports optimization cancelled">
+      <created>1379595143222</created>
+      <updated>1379595143222</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -854,7 +855,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting imports refactor. Tests passed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved some packages. Imports optimization cancelled" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -868,7 +869,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Added rules into .gitignore" />
     <MESSAGE value="readme moved into subproject" />
     <MESSAGE value="old version branch" />
     <MESSAGE value="added readme" />
@@ -893,6 +893,7 @@
     <MESSAGE value="introduced new state" />
     <MESSAGE value="Starting imports refactor" />
     <MESSAGE value="Starting imports refactor. Tests passed" />
+    <MESSAGE value="Moved some packages. Imports optimization cancelled" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

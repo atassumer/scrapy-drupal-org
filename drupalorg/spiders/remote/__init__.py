@@ -1,5 +1,5 @@
-from scrapy_parsley.parsley_spider import ParsleyCrawlSpider, CrawlSpider
-from scrapy_parsley.utils.overrides_decorator import overrides
+from scrapy_parsley.scrapy_parsley2.parsley_spider import ParsleyCrawlSpider, CrawlSpider
+from scrapy_parsley.scrapy_parsley2.overrides_decorator import overrides
 
 
 class RemoteParsleySpider(ParsleyCrawlSpider):
