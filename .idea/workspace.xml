@@ -2,40 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ff47b11-d42a-44bc-9a20-792b27b582c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_parsley" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/parsley_scrapy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy-parsley" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitmodules" afterPath="$PROJECT_DIR$/.gitmodules" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/spiders/parsley/local/__init__.py" afterPath="$PROJECT_DIR$/codebase/spiders/parsley/local/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/spiders/parsley/local/modules/__init__.py" afterPath="$PROJECT_DIR$/codebase/spiders/parsley/local/modules/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/spiders/parsley/remote/__init__.py" afterPath="$PROJECT_DIR$/codebase/spiders/parsley/remote/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/spiders/parsley/remote/other/__init__.py" afterPath="$PROJECT_DIR$/codebase/spiders/parsley/remote/other/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/utils/dump.py" afterPath="$PROJECT_DIR$/codebase/utils/dump.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/utils/file_system_adapter.py" afterPath="$PROJECT_DIR$/scrapy_parsley/utils/file_system_adapter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/utils/project_root/item_factory.py" afterPath="$PROJECT_DIR$/codebase/utils/project_root/item_factory.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/utils/parselet.py" afterPath="$PROJECT_DIR$/scrapy_parsley/utils/parselet.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/items/parselet_item_factory.py" afterPath="$PROJECT_DIR$/scrapy_parsley/items/parselet_item_factory.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/spiders/parsley_spider.py" afterPath="$PROJECT_DIR$/scrapy_parsley/spiders/parsley_spider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/utils/project_root/project_root_parser.py" afterPath="$PROJECT_DIR$/codebase/utils/project_root/project_root_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/pipelines/projects_contributed_git_clone.py" afterPath="$PROJECT_DIR$/codebase/pipelines/projects_contributed_git_clone.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/settings.py" afterPath="$PROJECT_DIR$/codebase/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codebase/tests/yelp/yelp.py" afterPath="$PROJECT_DIR$/codebase/tests/yelp/yelp.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/parsley_item.py" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_item.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/parsley_spider.py" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_spider.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/utils/__init__.py" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/utils/file_system_adapter.py" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/file_system_adapter.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/utils/overrides_decorator.py" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/overrides_decorator.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/utils/parselet/__init__.py" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/utils/parselet/json_results.py" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/json_results.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/utils/parser/__init__.py" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/utils/parser/states.py" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/states.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/spiders/local/__init__.py" afterPath="$PROJECT_DIR$/drupalorg/spiders/local/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/spiders/local/modules/__init__.py" afterPath="$PROJECT_DIR$/drupalorg/spiders/local/modules/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/spiders/remote/__init__.py" afterPath="$PROJECT_DIR$/drupalorg/spiders/remote/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/utils/dump.py" afterPath="$PROJECT_DIR$/drupalorg/utils/dump.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/utils/project_root/item_factory.py" afterPath="$PROJECT_DIR$/drupalorg/utils/project_root/item_factory.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/utils/project_root/module_info_item.py" afterPath="$PROJECT_DIR$/drupalorg/utils/project_root/module_info_item.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/utils/project_root/project_root_parser.py" afterPath="$PROJECT_DIR$/drupalorg/utils/project_root/project_root_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/pipelines/projects_contributed_git_clone.py" afterPath="$PROJECT_DIR$/drupalorg/pipelines/projects_contributed_git_clone.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/tests/yelp/yelp.py" afterPath="$PROJECT_DIR$/scrapy_parsley/tests/yelp/yelp.py" />
     </list>
-    <list id="5e9831d0-3f69-40d1-9f03-1502e70bae0d" name="New changelist" comment="" />
+    <list id="5e9831d0-3f69-40d1-9f03-1502e70bae0d" name="New changelist" comment="fixed doctests">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="scrapy-parsey.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/" />
     <ignored mask=".idea/*" />
-    <file path="/__init__.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378811617416" ignored="false" />
+    <file path="/__init__.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379594365168" ignored="false" />
     <file path="/load_items.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377178634160" ignored="false" />
     <file path="/filesystem.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378284194110" ignored="false" />
-    <file path="/settings.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378967312762" ignored="false" />
+    <file path="/settings.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379089005573" ignored="false" />
     <file path="/yelp.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377359411975" ignored="false" />
     <file path="/utils.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377084805327" ignored="false" />
     <file path="/structures.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377153750458" ignored="false" />
-    <file path="/a.dummy" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378967681677" ignored="false" />
+    <file path="/a.dummy" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379594142094" ignored="false" />
     <file path="/related.projects.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377160399674" ignored="false" />
     <file path="$PROJECT_DIR$/codebase/spiders/parsley/local/modules/modules/dependencies/__init__.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377160734672" ignored="false" />
     <file path="$PROJECT_DIR$/codebase/spiders/parsley/local/modules/modules/__init__.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377160734672" ignored="false" />
@@ -52,7 +52,7 @@
     <file path="/misc.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377784667357" ignored="false" />
     <file path="/hook.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377166486830" ignored="false" />
     <file path="/scan.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377699944942" ignored="false" />
-    <file path="/Dummy.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378961486877" ignored="false" />
+    <file path="/Dummy.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379593518274" ignored="false" />
     <file path="/projects_contributed.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698190773" ignored="false" />
     <file path="/other_git.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698186789" ignored="false" />
     <file path="/other_contributors.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698182547" ignored="false" />
@@ -65,8 +65,8 @@
     <file path="/projects_meta.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698200390" ignored="false" />
     <file path="/projects_related.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698204529" ignored="false" />
     <file path="/projects_releases.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377698209830" ignored="false" />
-    <file path="/remote.links.json" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377883531016" ignored="false" />
-    <file path="/parselet.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378811214328" ignored="false" />
+    <file path="/remote.links.json" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379513618602" ignored="false" />
+    <file path="/parselet.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379521377216" ignored="false" />
     <file path="/json_like_structures.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378316384652" ignored="false" />
     <file path="/projects_rating.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377776800825" ignored="false" />
     <file path="/pickle.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377782042889" ignored="false" />
@@ -76,10 +76,10 @@
     <file path="/projects_releases.items.json" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377796451700" ignored="false" />
     <file path="/git_clone.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377853324666" ignored="false" />
     <file path="/load_item_objects.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378284103264" ignored="false" />
-    <file path="/" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377844162374" ignored="false" />
-    <file path="/dump.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377849736852" ignored="false" />
+    <file path="/" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379568944804" ignored="false" />
+    <file path="/dump.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378969302815" ignored="false" />
     <file path="/git_checkout.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1377853010796" ignored="false" />
-    <file path="/parsley_spider.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378817671805" ignored="false" />
+    <file path="/parsley_spider.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379579476330" ignored="false" />
     <file path="/parsley_spiders.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378281499311" ignored="false" />
     <file path="/parselets.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378316181991" ignored="false" />
     <file path="/projects_contributed.items.json" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378043043657" ignored="false" />
@@ -92,22 +92,33 @@
     <file path="/2.js" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378200238444" ignored="false" />
     <file path="/a.js" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378218433624" ignored="false" />
     <file path="/README.md" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378226884210" ignored="false" />
-    <file path="/item_factory.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378817400907" ignored="false" />
-    <file path="/json_results.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378370499657" ignored="false" />
-    <file path="/projects_contributed_git_clone.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378816978567" ignored="false" />
+    <file path="/item_factory.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379431591176" ignored="false" />
+    <file path="/json_results.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379085439512" ignored="false" />
+    <file path="/projects_contributed_git_clone.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378987265257" ignored="false" />
     <file path="/projects_releases_git_checkout.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378371728887" ignored="false" />
     <file path="/module_info_file.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378726946485" ignored="false" />
-    <file path="/file_system_adapter.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378968182767" ignored="false" />
-    <file path="/git.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378462110063" ignored="false" />
-    <file path="/parselet_item_factory.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378721173417" ignored="false" />
-    <file path="/item_class_factory.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378818105548" ignored="false" />
-    <file path="/project_root_parser.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378818249260" ignored="false" />
+    <file path="/file_system_adapter.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379169401796" ignored="false" />
+    <file path="/git.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379568389780" ignored="false" />
+    <file path="/parselet_item_factory.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379008183111" ignored="false" />
+    <file path="/item_class_factory.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379054906873" ignored="false" />
+    <file path="/project_root_parser.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379591868233" ignored="false" />
     <file path="$PROJECT_DIR$/codebase/spiders/manual/__init__.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378741902093" ignored="false" />
     <file path="/module_info_item_factory.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378745772134" ignored="false" />
-    <file path="/overrides_decorator.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378804892660" ignored="false" />
+    <file path="/overrides_decorator.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379068121220" ignored="false" />
     <file path="/profiler.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378813672249" ignored="false" />
-    <file path="/setup.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378818394430" ignored="false" />
-    <file path="/ubuntu-requirements.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378821294250" ignored="false" />
+    <file path="/setup.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378969018332" ignored="false" />
+    <file path="/ubuntu-requirements.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379515995977" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379593466537" ignored="false" />
+    <file path="/scrapy.cfg" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1378969539759" ignored="false" />
+    <file path="/*.regexp" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379085299593" ignored="false" />
+    <file path="/parsley_item.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379053455525" ignored="false" />
+    <file path="/module_info_item.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379057791206" ignored="false" />
+    <file path="/parser.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379578130232" ignored="false" />
+    <file path="/*.txt" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379085305869" ignored="false" />
+    <file path="/tests_yelp.links.json" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379510274171" ignored="false" />
+    <file path="/other_spiders.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379576120184" ignored="false" />
+    <file path="/projects_spiders.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379576051095" ignored="false" />
+    <file path="/states.py" changelist="8ff47b11-d42a-44bc-9a20-792b27b582c7" time="1379589581777" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,27 +142,21 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="scrapy-parsey" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="file_system_adapter.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scrapy_parsley/utils/file_system_adapter.py">
+      <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scrapy_parsley/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="472" selection-end="472" vertical-scroll-proportion="0.2290185">
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codebase/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.0">
+            <state line="3" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0931677">
               <folding />
             </state>
           </provider>
@@ -181,29 +186,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/codebase/shared/spiders/parsley_spider.py" />
-        <option value="$PROJECT_DIR$/codebase/utils/project_root/item_class_factory.py" />
-        <option value="$PROJECT_DIR$/codebase/utils/project_root/project_root_parser.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/ubuntu-requirements.txt" />
-        <option value="$PROJECT_DIR$/scrapy-parsley/README.md" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/codebase/spiders/parsley/local/__init__.py" />
-        <option value="$PROJECT_DIR$/codebase/spiders/parsley/local/modules/__init__.py" />
-        <option value="$PROJECT_DIR$/codebase/spiders/parsley/remote/__init__.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/items/parselet_item_factory.py" />
-        <option value="$PROJECT_DIR$/codebase/settings.py" />
-        <option value="$PROJECT_DIR$/codebase/pipelines/projects_contributed_git_clone.py" />
-        <option value="$PROJECT_DIR$/codebase/utils/project_root/item_factory.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/spiders/parsley_spider.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/utils/file_system_adapter.py" />
+        <option value="$PROJECT_DIR$/drupalorg/spiders/local/modules/__init__.py" />
+        <option value="$PROJECT_DIR$/drupalorg/spiders/remote/__init__.py" />
+        <option value="$PROJECT_DIR$/drupalorg/utils/project_root/item_factory.py" />
+        <option value="$PROJECT_DIR$/drupalorg/utils/project_root/module_info_item.py" />
+        <option value="$PROJECT_DIR$/drupalorg/utils/project_root/project_root_parser.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/parsley_spider.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley/parselet/__init__.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley/parser/states.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley/__init__.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/tests/yelp/yelp.py" />
+        <option value="$PROJECT_DIR$/drupalorg/utils/dump.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_item.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/__init__.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/states.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/__init__.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/__init__.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="188" />
+    <option name="x" value="189" />
     <option name="y" value="24" />
-    <option name="width" value="1250" />
+    <option name="width" value="1247" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -211,15 +216,23 @@
       <profile-state>
         <expanded-state>
           <State>
+            <id />
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
             <id>JavaScript</id>
           </State>
           <State>
-            <id>JavaScript validity issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Potentially confusing code constructsJavaScript</id>
+            <id>Python</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyMissingConstructorInspection</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -292,7 +305,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="codebase" />
+              <option name="myItemId" value="scrapy_parsley" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy_parsley2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,10 +321,10 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="Errors" />
     <property name="recentsLimit" value="5" />
     <property name="JavaScriptLanguageLevel" value="JS_1_7" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/codebase/utils/git.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scrapy_parsley/utils/parselet/parser/__init__.py" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -327,82 +344,14 @@
       <recent name="$PROJECT_DIR$/codebase/spiders/parsley" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/codebase/shared/spiders" />
-      <recent name="$PROJECT_DIR$/codebase/spiders/manual" />
-      <recent name="$PROJECT_DIR$/codebase/spiders" />
-      <recent name="$PROJECT_DIR$/codebase/utils" />
+      <recent name="$PROJECT_DIR$/scrapy_parsley/utils" />
+      <recent name="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2" />
+      <recent name="$PROJECT_DIR$/drupalorg/spiders" />
+      <recent name="$PROJECT_DIR$/drupalorg/spiders/parsley/remote" />
+      <recent name="$PROJECT_DIR$/scrapy_parsley/utils/parselet" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley">
-    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/codebase" type="tests" factoryName="Doctests" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/codebase" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="scrapy-parsey" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="$PROJECT_DIR$/codebase" />
-      <option name="TEST_TYPE" value="TEST_FOLDER" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <RunnerSettings RunnerId="PythonCover" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonCover" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley" type="tests" factoryName="Doctests" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="scrapy-parsey" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
-      <option name="TEST_TYPE" value="TEST_FOLDER" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Doctest FileSystemAdapter.get_full_path" type="tests" factoryName="Doctests" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy_parsley/utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="scrapy-parsey" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapy_parsley/utils/file_system_adapter.py" />
-      <option name="CLASS_NAME" value="FileSystemAdapter" />
-      <option name="METHOD_NAME" value="get_full_path" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/drupalorg">
     <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley" type="tests" factoryName="Doctests" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -425,12 +374,12 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/parsley-firefox" type="tests" factoryName="Doctests" temporary="true">
+    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2" type="tests" factoryName="Doctests" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/parsley-firefox" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -439,7 +388,73 @@
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="$PROJECT_DIR$/parsley-firefox" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2" />
+      <option name="TEST_TYPE" value="TEST_FOLDER" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/utils/parselet" type="tests" factoryName="Doctests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy_parsley/utils/parselet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="scrapy-parsey" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$/scrapy_parsley/utils/parselet" />
+      <option name="TEST_TYPE" value="TEST_FOLDER" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/drupalorg" type="tests" factoryName="Doctests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/drupalorg" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="scrapy-parsey" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$/drupalorg" />
+      <option name="TEST_TYPE" value="TEST_FOLDER" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2/parselet" type="tests" factoryName="Doctests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="scrapy-parsey" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet" />
       <option name="TEST_TYPE" value="TEST_FOLDER" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
@@ -529,20 +544,27 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/codebase" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Doctest FileSystemAdapter.get_full_path" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/parsley-firefox" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/utils/parselet" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/drupalorg" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2/parselet" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/codebase" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/parsley-firefox" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Doctest FileSystemAdapter.get_full_path" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/drupalorg" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2/parselet" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/utils/parselet" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2" />
       </list>
     </recent_temporary>
   </component>
@@ -662,10 +684,90 @@
       <created>1378825415701</created>
       <updated>1378825415701</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fixed doctests">
+      <created>1378968439355</created>
+      <updated>1378968439355</updated>
+    </task>
+    <task id="LOCAL-00024" summary="cleaned todos&#10;">
+      <created>1378969122784</created>
+      <updated>1378969122784</updated>
+    </task>
+    <task id="LOCAL-00025" summary="refactored folders structure">
+      <created>1378969832567</created>
+      <updated>1378969832567</updated>
+    </task>
+    <task id="LOCAL-00026" summary="file structure refactorings">
+      <created>1378983566334</created>
+      <updated>1378983566334</updated>
+    </task>
+    <task id="LOCAL-00027" summary="ParsleyItemFactory refactored into ParsleyItem(Item)">
+      <created>1379008621810</created>
+      <updated>1379008621810</updated>
+    </task>
+    <task id="LOCAL-00028" summary="created ModuleInfoItem">
+      <created>1379058118855</created>
+      <updated>1379058118855</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Added support for both PyParsley and ParslePy">
+      <created>1379083326198</created>
+      <updated>1379083326198</updated>
+    </task>
+    <task id="LOCAL-00030" summary="tests folder moved into scrapy_parsley package">
+      <created>1379138941904</created>
+      <updated>1379138941904</updated>
+    </task>
+    <task id="LOCAL-00031" summary="extracted Shell class">
+      <created>1379170084482</created>
+      <updated>1379170084482</updated>
+    </task>
+    <task id="LOCAL-00032" summary="fixed doctests">
+      <created>1379173012854</created>
+      <updated>1379173012854</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Rethinked ParsleySpider. todo: fix derived spiders">
+      <created>1379481229529</created>
+      <updated>1379481229529</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Small generators syntax fix">
+      <created>1379481864180</created>
+      <updated>1379481864180</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Moved Parselets. Added docs for ParsleySpiders.">
+      <created>1379488781747</created>
+      <updated>1379488781747</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Performance measured with timeit.timeit(). Fizx is 5% faster on the Yelp page">
+      <created>1379510504099</created>
+      <updated>1379510504099</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Spiders moved">
+      <created>1379514622286</created>
+      <updated>1379514622286</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Measured performance of links_parselet on usage.html. The difference is less than 3%">
+      <created>1379519703561</created>
+      <updated>1379519703561</updated>
+    </task>
+    <task id="LOCAL-00039" summary="spiders folder moved">
+      <created>1379519799916</created>
+      <updated>1379519799916</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Cleaned todos">
+      <created>1379568447669</created>
+      <updated>1379568447669</updated>
+    </task>
+    <task id="LOCAL-00041" summary="introduced new state">
+      <created>1379589136283</created>
+      <updated>1379589136284</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Starting imports refactor. Tests passed">
+      <created>1379593527826</created>
+      <updated>1379593527826</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="0">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -686,28 +788,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="188" y="24" width="1250" height="877" extended-state="4" />
+    <frame x="189" y="24" width="1247" height="877" extended-state="4" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3269494" sideWeight="0.49916944" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31687242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40192044" sideWeight="0.4992" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24792013" sideWeight="0.7174211" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1530782" sideWeight="0.7174211" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32784638" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2825789" sideWeight="0.49956256" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32784638" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282967" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3196159" sideWeight="0.49916944" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3100137" sideWeight="0.49958298" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39506173" sideWeight="0.4992" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31053352" sideWeight="0.500417" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19516264" sideWeight="0.20027435" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19516264" sideWeight="0.46364883" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3269494" sideWeight="0.500417" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33607683" sideWeight="0.49956256" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32647464" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.648834" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -715,7 +817,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
       <value>
@@ -752,11 +854,11 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting imports refactor. Tests passed" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
     <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
     <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
@@ -766,139 +868,103 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Parsley-firefox made object-oriented. Fixed doctests" />
-    <MESSAGE value="Cleaned a few todos" />
-    <MESSAGE value="Removed todos which are already done" />
-    <MESSAGE value="Parsley-for-firefox now working" />
-    <MESSAGE value="Added element highlighting" />
-    <MESSAGE value="Added documentation. Refactored JsonResults" />
-    <MESSAGE value="Cleaned todos" />
-    <MESSAGE value="Renamed some classes" />
-    <MESSAGE value="Added a few todos" />
-    <MESSAGE value="Written project root parser" />
-    <MESSAGE value="Added modules_meta and modules_dependencies filesystem spiders" />
-    <MESSAGE value="Added override decorator" />
-    <MESSAGE value="Added fs.__init__. Removed git checkout pipeline" />
-    <MESSAGE value="Reduced number of lines in ParsleySpider.parse" />
-    <MESSAGE value="Replace some `yield` statements with return tuple completion" />
-    <MESSAGE value="Load settings dynamically" />
-    <MESSAGE value="cleaned todos" />
-    <MESSAGE value="Moving shared folder into subproject" />
-    <MESSAGE value="Adden git submodule" />
     <MESSAGE value="Added rules into .gitignore" />
     <MESSAGE value="readme moved into subproject" />
     <MESSAGE value="old version branch" />
     <MESSAGE value="added readme" />
+    <MESSAGE value="cleaned todos&#10;" />
+    <MESSAGE value="refactored folders structure" />
+    <MESSAGE value="file structure refactorings" />
+    <MESSAGE value="ParsleyItemFactory refactored into ParsleyItem(Item)" />
+    <MESSAGE value="created ModuleInfoItem" />
+    <MESSAGE value="Added support for both PyParsley and ParslePy" />
+    <MESSAGE value="tests folder moved into scrapy_parsley package" />
+    <MESSAGE value="extracted Shell class" />
+    <MESSAGE value="fixed doctests" />
+    <MESSAGE value="Rethinked ParsleySpider. todo: fix derived spiders" />
+    <MESSAGE value="Generators optimizations" />
+    <MESSAGE value="Small generators syntax fix" />
+    <MESSAGE value="Moved Parselets. Added docs for ParsleySpiders." />
+    <MESSAGE value="Performance measured with timeit.timeit(). Fizx is 5% faster on the Yelp page" />
+    <MESSAGE value="Spiders moved" />
+    <MESSAGE value="Measured performance of links_parselet on usage.html. The difference is less than 3%" />
+    <MESSAGE value="spiders folder moved" />
+    <MESSAGE value="Cleaned todos" />
+    <MESSAGE value="introduced new state" />
+    <MESSAGE value="Starting imports refactor" />
+    <MESSAGE value="Starting imports refactor. Tests passed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="23" />
+      <option name="time" value="24" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitmodules">
+    <entry file="file://$PROJECT_DIR$/drupalorg/spiders/remote/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="2" column="0" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/drupalorg/pipelines/projects_contributed_git_clone.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="5" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" />
+        <state line="2" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/utils/project_root/project_root_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/spiders/parsley/local/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/spiders/parsley/local/modules/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/spiders/parsley/remote/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="35" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_parsley/items/parselet_item_factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.08534851" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/__init__.py">
+    <entry file="file://$PROJECT_DIR$/drupalorg/utils/project_root/module_info_item.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/utils/dump.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/docrunner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="44" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+        <state line="286" column="0" selection-start="8692" selection-end="8692" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupalorg/utils/project_root/project_root_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="0" selection-start="2424" selection-end="2424" vertical-scroll-proportion="0.3319149">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupalorg/utils/dump.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="106" selection-end="106" vertical-scroll-proportion="0.124223605">
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/spiders/parsley/remote/usage.html">
+    <entry file="file://$PROJECT_DIR$/scrapy_parsley/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="426" column="71" selection-start="93014" selection-end="93014" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_parsley/tests/yelp/yelp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/tests/yelp/yelp.html">
+    <entry file="file://$PROJECT_DIR$/scrapy_parsley/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4154" column="131" selection-start="177182" selection-end="177182" vertical-scroll-proportion="-5.5">
+        <state line="3" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0931677">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/pipelines/projects_contributed_git_clone.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="50" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/utils/project_root/item_factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="49" selection-start="2149" selection-end="2149" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_parsley/spiders/parsley_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="31" selection-start="1759" selection-end="1759" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codebase/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_parsley/utils/file_system_adapter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="472" selection-end="472" vertical-scroll-proportion="0.2290185">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
