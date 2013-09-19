@@ -1,7 +1,0 @@
-{
-    "links(id('project-usage-all-projects')//tr/td/a)": [
-        {
-            "link": "str:replace(@href, '/project/usage/', 'https://drupal.org/project/')"
-        }
-    ]
-}
