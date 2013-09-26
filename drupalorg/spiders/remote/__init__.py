@@ -8,9 +8,10 @@ class RemoteParsleySpider(ParsleyCrawlSpider):
         "https://drupal.org/project/usage",
     ]
     links_parselet = {
-        "links(id('project-usage-all-projects')//tr/td/a)": [
+        "links(id('project-usage-all-projects')//tbody/tr)": [
             {
-                "link": "str:replace(@href, '/project/usage/', 'https://drupal.org/project/')"
+                # "link": "str:replace(//a/@href, '/project/usage/', 'https://drupal.org/project/')"
+                "link": "//a/@href"
             }
         ]
     }
