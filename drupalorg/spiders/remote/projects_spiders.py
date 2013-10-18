@@ -12,7 +12,7 @@ class ContributedProjectsRemoteParsleySpider(ProjectsRemoteParsleySpider):
 
     """
     name = 'projects_contributed'
-    parselet = {
+    items_parselet = {
         "url": "ul.primary li:nth-of-type(1) a @href",
         "machine_name": "regexp:match(ul.primary li:nth-of-type(1) a @href, '[^/]+$')",
         "visible_name": "#page-subtitle",
@@ -40,7 +40,7 @@ class LinkedProjectsRemoteParsleySpider(ProjectsRemoteParsleySpider):
 
     """
     name = 'projects_linked'
-    parselet = {
+    items_parselet = {
         "from?": "ul.primary li:nth-of-type(1) a @href",
         "to_links(//div[@class='node-content']//a)": [
             {
@@ -55,7 +55,7 @@ class RelatedProjectsRemoteParsleySpider(ProjectsRemoteParsleySpider):
 
     """
     name = 'projects_related'
-    parselet = {
+    items_parselet = {
         "from": "ul.primary li:nth-of-type(1) a @href",
         "to_block(id('block-pivots_block-0')//li/a)": [
             {
@@ -70,7 +70,7 @@ class ReleasesProjectsRemoteParsleySpider(ProjectsRemoteParsleySpider):
 
     """
     name = 'projects_releases'
-    parselet = {
+    items_parselet = {
         "project_machine_name": "regexp:match(ul.primary li:nth-of-type(1) a @href, '[^/]+$')",
         "releases_recommended(.download-table-ok tr)": [
             {

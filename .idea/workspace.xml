@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ff47b11-d42a-44bc-9a20-792b27b582c7" name="Default" comment="">
+    <list default="true" id="8ff47b11-d42a-44bc-9a20-792b27b582c7" name="Default" comment="Before today">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drupalorg/spiders/tv_series_wiki/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/abstract.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/fizx.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/processes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/redapple.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drupalorg/spiders/tv_series_wiki/series.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/states.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley" afterPath="$PROJECT_DIR$/scrapy_parsley" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/spiders/remote/__init__.py" afterPath="$PROJECT_DIR$/drupalorg/spiders/remote/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/__init__.py" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/__init__.py" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/json_results.py" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/json_results.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/spiders/remote/other_spiders.py" afterPath="$PROJECT_DIR$/drupalorg/spiders/remote/other_spiders.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_item.py" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_item.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_spider.py" afterPath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_spider.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/spiders/remote/projects_spiders.py" afterPath="$PROJECT_DIR$/drupalorg/spiders/remote/projects_spiders.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scrapy-parsey.iml" afterPath="$PROJECT_DIR$/.idea/scrapy-parsey.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/settings.py" afterPath="$PROJECT_DIR$/drupalorg/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scrapy-parsey.iws" />
@@ -46,31 +60,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="parsley_spider.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_spider.py">
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="1692">
+            <state line="18" column="0" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2214">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/drupalorg/spiders/remote/__init__.py">
+      <file leaf-file-name="parsley_item.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_item.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="5" selection-start="584" selection-end="584" vertical-scroll-proportion="0.5748503" vertical-offset="0" max-vertical-offset="648">
+            <state line="75" column="20" selection-start="2404" selection-end="2404" vertical-scroll-proportion="0.0" vertical-offset="1116" max-vertical-offset="3006">
               <folding>
-                <element signature="e#0#89#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projects_spiders.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drupalorg/spiders/remote/projects_spiders.py">
+      <file leaf-file-name="series.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/drupalorg/spiders/tv_series_wiki/series.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1656">
-              <folding />
+            <state line="56" column="0" selection-start="2439" selection-end="2439" vertical-scroll-proportion="0.8495822" vertical-offset="398" max-vertical-offset="1116">
+              <folding>
+                <element signature="e#25#100#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,6 +99,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="SYNC_SETTING" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -99,40 +116,37 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/drupalorg/utils/project_root/module_info_item.py" />
-        <option value="$PROJECT_DIR$/drupalorg/utils/project_root/project_root_parser.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/parsley_spider.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley/parser/states.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley/__init__.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/tests/yelp/yelp.py" />
-        <option value="$PROJECT_DIR$/drupalorg/utils/dump.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_item.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/__init__.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/states.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/__init__.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley/parselet/__init__.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/tests/yelp/tests_yelp.links.json" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/__init__.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_spider.py" />
         <option value="$PROJECT_DIR$/drupalorg/spiders/remote/__init__.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/abstract_parser.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/states.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/abstract.py" />
+        <option value="$PROJECT_DIR$/multiprocessing.py" />
+        <option value="$PROJECT_DIR$/processes.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/fizx.py" />
+        <option value="$PROJECT_DIR$/tv_series_wiki/spiders/series.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/json_results.py" />
+        <option value="$PROJECT_DIR$/drupalorg/settings.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/redapple.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/__init__.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_spider.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/__init__.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_item.py" />
+        <option value="$PROJECT_DIR$/drupalorg/spiders/tv_series_wiki/series.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="184" />
+    <option name="x" value="191" />
     <option name="y" value="24" />
-    <option name="width" value="1231" />
-    <option name="height" value="877" />
+    <option name="width" value="1249" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
         <expanded-state>
           <State>
-            <id />
-          </State>
-          <State>
-            <id>RELAX NG</id>
+            <id>Python</id>
           </State>
         </expanded-state>
       </profile-state>
@@ -164,7 +178,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -225,27 +238,126 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy_parsley" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy_parsley2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy-parsey" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy-parsley" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy_parsley" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy_parsley2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parselet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy-parsey" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy-parsley" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parsley_firefox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy-parsey" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy-parsley" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="drupalorg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy-parsey" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy-parsley" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drupalorg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy-parsey" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy-parsley" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drupalorg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tv_series_wiki" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="JavaScriptLanguageLevel" value="JS_1_7" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/scrapy_parsley/utils/parselet/parser/__init__.py" />
     <property name="FullScreen" value="false" />
     <property name="JavaScriptPreferStrict" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -258,19 +370,19 @@
       <recent name="$PROJECT_DIR$/codebase/spiders/parsley" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/drupalorg/spiders/tv_series_wiki" />
       <recent name="$PROJECT_DIR$/scrapy_parsley/utils" />
       <recent name="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2" />
       <recent name="$PROJECT_DIR$/drupalorg/spiders" />
       <recent name="$PROJECT_DIR$/drupalorg/spiders/parsley/remote" />
-      <recent name="$PROJECT_DIR$/scrapy_parsley/utils/parselet" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley">
-    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley" type="tests" factoryName="Doctests" temporary="true">
+  <component name="RunManager" selected="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2">
+    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/usr/bin/python2" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy_parsley" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -288,11 +400,11 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2" type="tests" factoryName="Doctests" temporary="true">
+    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/usr/bin/python2" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -310,12 +422,12 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/utils/parselet" type="tests" factoryName="Doctests" temporary="true">
+    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2/parser" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy_parsley/utils/parselet" />
+      <option name="SDK_HOME" value="/usr/bin/python2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -324,7 +436,7 @@
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="$PROJECT_DIR$/scrapy_parsley/utils/parselet" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser" />
       <option name="TEST_TYPE" value="TEST_FOLDER" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
@@ -332,33 +444,11 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/drupalorg" type="tests" factoryName="Doctests" temporary="true">
+    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2/parselet" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/drupalorg" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="scrapy-parsey" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="$PROJECT_DIR$/drupalorg" />
-      <option name="TEST_TYPE" value="TEST_FOLDER" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2/parselet" type="tests" factoryName="Doctests" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/usr/bin/python2" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -374,6 +464,52 @@
       <option name="USE_PATTERN" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Doctests in json_results" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="/usr/bin/python2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="scrapy-parsey" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/json_results.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="scrapy-parsey" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
@@ -442,13 +578,32 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/usr/bin/python2" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="scrapy-parsey" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
+      <option name="TEST_TYPE" value="TEST_FOLDER" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="scrapy-parsey" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -461,17 +616,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/utils/parselet" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/drupalorg" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2/parselet" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2/parser" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2/parselet" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Doctests in json_results" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/drupalorg" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2/parselet" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/utils/parselet" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2/parselet" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Doctests in json_results" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/scrapy_parsley2/parser" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Doctests in /home/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley" />
       </list>
     </recent_temporary>
   </component>
@@ -678,7 +833,11 @@
       <created>1379595181816</created>
       <updated>1379595181816</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Before today">
+      <created>1380177452294</created>
+      <updated>1380177452294</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -702,30 +861,52 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="184" y="24" width="1231" height="877" extended-state="4" />
+    <frame x="191" y="24" width="1249" height="876" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31697613" sideWeight="0.49916944" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31643835" sideWeight="0.49916944" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30916554" sideWeight="0.49958298" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19772172" sideWeight="0.23076923" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19772172" sideWeight="0.45225465" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3269494" sideWeight="0.500417" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33607683" sideWeight="0.49956256" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32647464" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39071038" sideWeight="0.4992" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19689542" sideWeight="0.34016395" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19689542" sideWeight="0.66849315" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.397878" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19753087" sideWeight="0.2260274" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32625994" sideWeight="0.500417" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33150685" sideWeight="0.49956256" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32647464" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31053352" sideWeight="0.500417" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31053352" sideWeight="0.500417" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39506173" sideWeight="0.4992" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282967" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282967" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.648834" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31643835" sideWeight="0.49916944" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39178082" sideWeight="0.4992" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31053352" sideWeight="0.500417" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.397878" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19753087" sideWeight="0.2260274" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32625994" sideWeight="0.500417" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32647464" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282967" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.648834" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30916554" sideWeight="0.49958298" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19689542" sideWeight="0.34016395" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19689542" sideWeight="0.66849315" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33150685" sideWeight="0.49956256" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -735,7 +916,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="readme moved into subproject" />
     <MESSAGE value="old version branch" />
     <MESSAGE value="added readme" />
     <MESSAGE value="cleaned todos&#10;" />
@@ -760,102 +940,111 @@
     <MESSAGE value="Starting imports refactor" />
     <MESSAGE value="Starting imports refactor. Tests passed" />
     <MESSAGE value="Moved some packages. Imports optimization cancelled" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved some packages. Imports optimization cancelled" />
+    <MESSAGE value="Before today" />
+    <option name="LAST_COMMIT_MESSAGE" value="Before today" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <option name="time" value="27" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/drupalorg/spiders/remote/projects_spiders.py">
+    <entry file="file://$PROJECT_DIR$/drupalorg/profiler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state line="5" column="0" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198" />
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/multiprocessing/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="4" selection-start="2951" selection-end="2951" vertical-scroll-proportion="-5.810379" vertical-offset="4441" max-vertical-offset="5022" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupalorg/spiders/remote/other_spiders.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.07799443" vertical-offset="56" max-vertical-offset="774" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/fizx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="7" selection-start="3119" selection-end="3119" vertical-scroll-proportion="0.0" vertical-offset="1057" max-vertical-offset="1962" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/abstract.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/json_results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="1505" selection-end="1505" vertical-scroll-proportion="0.49720672" vertical-offset="238" max-vertical-offset="1548" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parsley_firefox/boilerplate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="167" column="25" selection-start="5211" selection-end="5211" vertical-scroll-proportion="0.0" vertical-offset="2848" max-vertical-offset="3564" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupalorg/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.0" vertical-offset="453" max-vertical-offset="900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/redapple.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="23" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="972">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/pipelines/projects_contributed_git_clone.py">
+    <entry file="file://$PROJECT_DIR$/processes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state line="26" column="4" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="630" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/utils/project_root/module_info_item.py">
+    <entry file="file://$PROJECT_DIR$/drupalorg/run_from_python.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/docrunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="286" column="0" selection-start="8692" selection-end="8692" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/utils/project_root/project_root_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="2424" selection-end="2424" vertical-scroll-proportion="0.3319149" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/utils/dump.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="106" selection-end="106" vertical-scroll-proportion="0.124223605" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_parsley/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_parsley/tests/yelp/yelp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_parsley/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0931677" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_parsley/tests/yelp/yelp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-259.8184" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_parsley/tests/yelp/tests_yelp.links.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="14" selection-start="16" selection-end="16" vertical-scroll-proportion="0.03267974" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/spiders/remote/usage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="91" selection-start="8137" selection-end="8163" vertical-scroll-proportion="-2.4313726" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="7" selection-start="2612" selection-end="2612" vertical-scroll-proportion="0.3997253" vertical-offset="0" max-vertical-offset="0" />
+        <state line="14" column="12" selection-start="449" selection-end="449" vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/spiders/remote/projects_spiders.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/spiders/remote/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="5" selection-start="584" selection-end="584" vertical-scroll-proportion="0.5748503" vertical-offset="0" max-vertical-offset="648">
+        <state line="28" column="13" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.66713095" vertical-offset="25" max-vertical-offset="1602">
           <folding>
-            <element signature="e#0#89#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="12" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.59749305" vertical-offset="147" max-vertical-offset="1908">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parselet/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2214">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="20" selection-start="2404" selection-end="2404" vertical-scroll-proportion="0.0" vertical-offset="1116" max-vertical-offset="3006">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupalorg/spiders/tv_series_wiki/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="0" selection-start="2439" selection-end="2439" vertical-scroll-proportion="0.8495822" vertical-offset="398" max-vertical-offset="1116">
+          <folding>
+            <element signature="e#25#100#0" expanded="true" />
           </folding>
         </state>
       </provider>

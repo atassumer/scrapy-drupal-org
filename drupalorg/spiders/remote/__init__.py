@@ -21,10 +21,10 @@ class RemoteParsleySpider(ParsleyCrawlSpider):
 
     @overrides(CrawlSpider)
     def parse_start_url(self, response):
-        return self.apply_links_parselet(response, self.parse_items)
+        return self.apply_links_parselet(self.parse_items, response)
 
     def parse_items(self, response):
-        return self.apply_parselet(response)
+        return self.apply_items_parselet(response)
 
 
 # todo: profile classes to find bottlenecks

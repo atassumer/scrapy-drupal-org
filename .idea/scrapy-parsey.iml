@@ -12,8 +12,8 @@
     <option name="myDocStringFormat" value="Plain" />
   </component>
   <component name="TestRunnerService">
-    <option name="projectConfiguration" value="Unittests" />
-    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+    <option name="projectConfiguration" value="Attests" />
+    <option name="PROJECT_TEST_RUNNER" value="Attests" />
   </component>
 </module>
 
