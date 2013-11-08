@@ -22,6 +22,7 @@ class WikiSeries(ParsleyBaseSpider):
         'english_title?': 'li.interwiki-en a @title',
         'russian_wiki_unformatted_link': "#ca-view a @href",
         'english_wiki_unformatted_link': "li.interwiki-en a @href",
+        'year_of_premiere': '',
     }
 
     def parse(self, response):  # 100
@@ -51,6 +52,6 @@ class WikiSeries(ParsleyBaseSpider):
 
     def parse_article(self, response):
         # example: Viva la Bam
-        for item in self.apply_items_parselet(response, override_implementation=Parser.REDAPPLE):
+        for item in self.apply_items_parselet(response, parser=Parser.REDAPPLE):
             #item.replace('english_wiki_unformatted_link', '^.*?$', '______')
             yield item

@@ -2,7 +2,6 @@ from drupalorg import settings
 from drupalorg.utils.git import Git
 from drupalorg.utils.project_root.module_info_item import ModuleInfoItem
 from drupalorg.utils.project_root.project_root_parser import ProjectsRoot
-from scrapy_parsley.scrapy_parsley2.overrides_decorator import overrides, can_be_overridden
 
 
 class ItemFactory:
@@ -13,15 +12,15 @@ class ItemFactory:
             projects_roots = (settings.PARSLEY_CONTRIBUTED_PROJECTS_ROOT,
                               settings.PARSLEY_CORE_PROJECTS_ROOT, )
         self.projects_roots = projects_roots
-        self._createItemClass()
+        self._create_item_class()
 
-    def _createItemClass(self):
+    def _create_item_class(self):
         if self.attributes_constant <= -1:
             raise Exception("Item Factory fields should be overridden")
         self.item = ModuleInfoItem(self.attributes_constant)
         self.supported_parameters = self.item.getSupportedParameters(self.attributes_constant)
 
-    def _getModulesInfoFileObjects(self):
+    def _get_modules_info_file_objects(self):
         for major_version in settings.PARSLEY_SUPPORTED_MAJOR_VERSIONS:
             Git().checkout_all_projects(major_version)
             for projects_root in self.projects_roots:
@@ -30,13 +29,12 @@ class ItemFactory:
                 for obj in projects.getModuleInfoFileObjects():
                     yield obj
 
-    def getItems(self):
-        for info in self._getModulesInfoFileObjects():
-            for item in self.getItemsFromInfoFileObject(info):
+    def get_items(self):
+        for info in self._get_modules_info_file_objects():
+            for item in self.get_items_from_info_file_object(info):
                 yield item
 
-    @can_be_overridden()
-    def getItemsFromInfoFileObject(self, info):
+    def get_items_from_info_file_object(self, info):
         raise NotImplementedError('ItemFactory.extractItems() should be implemented')
 
 
@@ -49,8 +47,7 @@ class ModuleMetaItemFactory(ItemFactory):
     """
     attributes_constant = ModuleInfoItem.DRUPAL_MODULES_VERSIONS_INTERSECTION
 
-    @overrides(ItemFactory)
-    def getItemsFromInfoFileObject(self, info):
+    def get_items_from_info_file_object(self, info):
         return info.processSingleParameters(self.item, self.supported_parameters)
 
 
@@ -63,6 +60,5 @@ class ModuleDependencyItemFactory(ItemFactory):
     """
     attributes_constant = ModuleInfoItem.DRUPAL_MODULE_DEPENDENCY
 
-    @overrides(ItemFactory)
-    def getItemsFromInfoFileObject(self, info):
+    def get_items_from_info_file_object(self, info):
         return info.processMultipleParameter(self.item, 'dependencies')
