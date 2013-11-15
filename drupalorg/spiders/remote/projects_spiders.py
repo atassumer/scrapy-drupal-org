@@ -1,8 +1,3 @@
-from drupalorg.spiders.remote import RemoteParsleySpider
-from scrapy_parsley.scrapy_parsley2.parser import Parser
-from scrapy_parsley.scrapy_parsley2.parsley_item import ParsletScrapyItem
-
-
 """Dependencies between dumps in RDBMS
 
 Layer 0: *other_contributors
@@ -12,6 +7,11 @@ Layer 3: modules_dependencies
 
 * - required for the next level
 """
+
+from drupalorg.spiders.remote import RemoteParsleySpider
+from scrapy_parsley.scrapy_parsley2.parser.implementations import ParserImplementations
+from scrapy_parsley.scrapy_parsley2.parsley_item import ParsletScrapyItem
+
 
 # extractors
 EXTRACTOR_MACHINE_NAME_COINTAINER = "ul.primary li:nth-of-type(1) a @href"  # '/project/entityreference_prepopulate'
@@ -23,13 +23,7 @@ REGEXP_MACHINE_NAME = '[^/]+/?$'
 REGEXP_DIGITS_GROUP = '\\d+'
 
 
-# todo: ensure there is no repeating field names
-
-
 class ContributedProjectsRemoteParsleySpider(RemoteParsleySpider):
-    """
-
-    """
     name = 'projects_contributed'
 
     items_parselet = {
@@ -46,7 +40,7 @@ class ContributedProjectsRemoteParsleySpider(RemoteParsleySpider):
                 "project_development_status": "//li[contains(.,'Development')]/span",
                 "project_reported_installs?": "//li[strong and contains(.,'Reported installs')]/strong",
                 "project_downloads_count?": "//li[contains(.,'Downloads')]",
-                "project_authomated_tests_enabled?": "//li[contains(.,'tests')]",
+                "project_automated_tests_status?": "//li[contains(.,'tests')]",
                 "project_modified": "li.modified",
             }
         ],
@@ -61,14 +55,19 @@ class ContributedProjectsRemoteParsleySpider(RemoteParsleySpider):
     }
 
     def parse_items(self, response):
-        for item in self.apply_items_parselet(response, parser=Parser.REDAPPLE):
+        """
+        @url https://drupal.org/project/views
+        @returns items 2 10
+        @returns requests 0 0
+        """
+        for item in self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE):
             item.replace('project_url', '^/', 'https://drupal.org/')
             item.extract('project_machine_name', REGEXP_MACHINE_NAME)
             item.extract('project_uid', REGEXP_DIGITS_GROUP)
             item.extract('project_nid', REGEXP_DIGITS_GROUP)
-            item.replace('project_downloads_count', '\D', '')  # todo: test
-            item.replace('project_authomated_tests_enabled', 'Automated tests: Enabled',
-                         'Enabled')  # non-maching if disabled
+            item.replace('project_downloads_count', '\D', '')  # todo: check
+            item.replace('project_automated_tests_status', 'Automated tests: Enabled', 'Enabled')
+            item.replace('project_automated_tests_status', '^$', 'Disabled')  # todo check
             item.extract('project_modified', '^Last modified: (.*?)$', 1)
             item.replace('project_modified', ',', '')
             item.extract('project_issues_open_count', REGEXP_DIGITS_GROUP)
@@ -79,9 +78,6 @@ class ContributedProjectsRemoteParsleySpider(RemoteParsleySpider):
 
 
 class LinkedProjectsRemoteParsleySpider(RemoteParsleySpider):
-    """
-
-    """
     name = 'projects_linked'
     items_parselet = {
         "linked_from?": EXTRACTOR_MACHINE_NAME_COINTAINER,
@@ -94,7 +90,12 @@ class LinkedProjectsRemoteParsleySpider(RemoteParsleySpider):
     }  # works with both parsers
 
     def parse_items(self, response):
-        for item in self.apply_items_parselet(response, parser=Parser.REDAPPLE):
+        """
+        @url https://drupal.org/project/views
+        @returns items 1 1
+        @returns requests 0 0
+        """
+        for item in self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE):
             item.extract('linked_from', REGEXP_MACHINE_NAME)
             item.extract('linked_to', REGEXP_MACHINE_NAME)
             yield item
@@ -102,7 +103,9 @@ class LinkedProjectsRemoteParsleySpider(RemoteParsleySpider):
 
 class RelatedProjectsRemoteParsleySpider(RemoteParsleySpider):
     """
-
+    @url https://drupal.org/project/views
+    @returns items 1 1
+    @returns requests 0 0
     """
     name = 'projects_related'
     items_parselet = {
@@ -115,7 +118,12 @@ class RelatedProjectsRemoteParsleySpider(RemoteParsleySpider):
     }  # works with both parsers
 
     def parse_items(self, response):
-        for item in self.apply_items_parselet(response, parser=Parser.REDAPPLE):
+        """
+        @url https://drupal.org/project/views
+        @returns items 1 1
+        @returns requests 0 0
+        """
+        for item in self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE):
             item.extract('related_from', REGEXP_MACHINE_NAME)
             item.extract('related_to', REGEXP_MACHINE_NAME)
             yield item
@@ -123,7 +131,9 @@ class RelatedProjectsRemoteParsleySpider(RemoteParsleySpider):
 
 class ReleasesProjectsRemoteParsleySpider(RemoteParsleySpider):
     """
-
+    @url https://drupal.org/project/views
+    @returns items 1 1
+    @returns requests 0 0
     """
     name = 'projects_releases'  # requires Git
     items_parselet = {
@@ -142,7 +152,12 @@ class ReleasesProjectsRemoteParsleySpider(RemoteParsleySpider):
     }  # works with both parsers
 
     def parse_items(self, response):
-        for item in self.apply_items_parselet(response, parser=Parser.REDAPPLE):
+        """
+        @url https://drupal.org/project/views
+        @returns items 1 1
+        @returns requests 0 0
+        """
+        for item in self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE):
             item.extract('release_project_machine_name', REGEXP_MACHINE_NAME)
             item.extract('release_version_major', '^\\d')
             item.extract('release_zip_filesize_visible', '[^(].+[^)]')
@@ -151,9 +166,6 @@ class ReleasesProjectsRemoteParsleySpider(RemoteParsleySpider):
 
 
 class ContributorsOtherRemoteParsleySpider(RemoteParsleySpider):
-    """
-
-    """
     name = 'other_contributors'
     items_parselet = {
         "contributor_name": "div.submitted a", # `Drupal on`  (getting unexpected suffix)
@@ -163,21 +175,23 @@ class ContributorsOtherRemoteParsleySpider(RemoteParsleySpider):
     # time: 3 minutes
 
     def parse_items(self, response):
+        """
+        @url https://drupal.org/project/views
+        @returns items 1 1
+        @returns requests 0 0
+        """
         core_user_item = ParsletScrapyItem(self.items_parselet)
         core_user_item['contributor_name'] = 'Core projects'
         core_user_item['contributor_uid'] = 0
         yield core_user_item
 
-        for item in self.apply_items_parselet(response, parser=Parser.REDAPPLE):
+        for item in self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE):
             item.extract('contributor_name', '^(.*?)( on)?$', 1)
             item.extract('contributor_uid', REGEXP_DIGITS_GROUP)
             yield item
 
 
 class TopOtherRemoteParsleySpider(RemoteParsleySpider):
-    """
-
-    """
     name = "other_top"
     items_parselet = {
         "links(id('project-usage-all-projects')/tbody/tr)": [
@@ -189,6 +203,11 @@ class TopOtherRemoteParsleySpider(RemoteParsleySpider):
     }
 
     def parse_start_url(self, response):
-        for item in self.apply_items_parselet(response, parser=Parser.REDAPPLE):
+        """
+        @url https://drupal.org/project/views
+        @returns items 2 2
+        @returns requests 0 0
+        """
+        for item in self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE):
             item.extract('top_machine_name', REGEXP_MACHINE_NAME)
             yield item

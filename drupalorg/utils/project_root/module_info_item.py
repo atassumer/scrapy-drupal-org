@@ -1,3 +1,5 @@
+from scrapy.exceptions import CloseSpider
+
 from scrapy_parsley.scrapy_parsley2.parsley_item import ScrapyItemListWrapper
 
 
@@ -60,7 +62,7 @@ class ModuleInfoItem(ScrapyItemListWrapper):
         return params | self.supported_parameters['meta']
 
 
-class IncorrectAttributeConstant(Exception):
+class IncorrectAttributeConstant(CloseSpider):
     """
     >>> ModuleInfoItem(6)
     {}

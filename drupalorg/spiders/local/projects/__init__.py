@@ -6,7 +6,9 @@ from scrapy_parsley.scrapy_parsley2.parsley_item import ScrapyItemListWrapper
 
 class ProjectsLocalSpider(LocalSpider):
     """
-
+    @url https://drupal.org/project/views
+    @returns items 1 1
+    @returns requests 0 0
     """
     allowed_domains = ["localhost"]
     start_urls = [
@@ -21,6 +23,11 @@ class CoreProjectsLocalSpider(ProjectsLocalSpider):
     name = 'projects_core'
 
     def parse(self, response):
+        """
+        @url http://localhost/
+        @returns items 33 33
+        @returns requests 0 0
+        """
         fs = FileSystemAdapter(PARSLEY_CORE_PROJECTS_ROOT)
         projects = fs.get_subdirectories_names()
         for project in projects:

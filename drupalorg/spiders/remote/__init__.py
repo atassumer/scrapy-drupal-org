@@ -1,5 +1,5 @@
+from scrapy_parsley.scrapy_parsley2.parser.implementations import ParserImplementations
 from scrapy_parsley.scrapy_parsley2.parsley_spider import ParsleyCrawlSpider
-from scrapy_parsley.scrapy_parsley2.parser import Parser
 
 
 class RemoteParsleySpider(ParsleyCrawlSpider):
@@ -23,12 +23,12 @@ class RemoteParsleySpider(ParsleyCrawlSpider):
         return self.apply_links_parselet(
             callback=self.parse_items,
             response=response,
-            override_implementation=Parser.FIZX,
+            override_implementation=ParserImplementations.FIZX,
             cache_key='drupalorg_projects'
         )
 
     def parse_items(self, response):
-        return self.apply_items_parselet(response, parser=Parser.REDAPPLE)
+        return self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE)
 
 
 # todo: profile classes to find bottlenecks

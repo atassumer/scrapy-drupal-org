@@ -7,7 +7,7 @@ from scrapy_parsley.scrapy_parsley2.file_system_adapter import FileSystemAdapter
 
 class ProjectsRoot:
     """
-    >>> path = '/home/ubuntu/Programs/drupal/files/git/drupal/modules'
+    >>> path = '/media/ubuntu/39bb3d82-6f8a-414b-8005-2528f35107cd/ubuntu/Programs/drupal/files/git/drupal/modules'
     >>> obj = ProjectsRoot(path, 7, False)
     >>> files = obj.getModuleInfoFileObjects()
     >>> 'book' in [x.project for x in files]
@@ -37,7 +37,7 @@ class ProjectsRoot:
 
 class Project:
     """
-    >>> path = '/home/ubuntu/Programs/drupal/files/git/views/'
+    >>> path = '/media/ubuntu/39bb3d82-6f8a-414b-8005-2528f35107cd/ubuntu/Programs/drupal/files/git/views/'
     >>> obj = Project('1225224', path, 7, False)
     >>> [x.module for x in obj.getModuleInfoFileObjects()]
     ['views', 'views_ui', 'views_export']
@@ -75,7 +75,7 @@ class ModuleInfoFile:
 
 
     >>> from drupalorg.scrapy_parsley2.project_root.module_info_item import ModuleInfoItem
-    >>> path = '/home/ubuntu/Programs/drupal/files/git/1225224/iphone_push_notification_through_easyapns.info'
+    >>> path = '/media/ubuntu/39bb3d82-6f8a-414b-8005-2528f35107cd/ubuntu/Programs/drupal/files/git/1225224/iphone_push_notification_through_easyapns.info'
     >>> obj = ModuleInfoFile(path, 'views_export', 'views', 7, False)
     >>> # meta
     >>> meta_constant = ModuleInfoItem.DRUPAL_MODULES_VERSIONS_UNION

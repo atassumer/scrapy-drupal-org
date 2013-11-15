@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
+from scrapy_parsley.scrapy_parsley2.parser.implementations import ParserImplementations
 
 from scrapy_parsley.scrapy_parsley2.parsley_spider import ParsleyBaseSpider
-from scrapy_parsley.scrapy_parsley2.parser import Parser
 
 
 class WikiSeries(ParsleyBaseSpider):
@@ -52,6 +52,6 @@ class WikiSeries(ParsleyBaseSpider):
 
     def parse_article(self, response):
         # example: Viva la Bam
-        for item in self.apply_items_parselet(response, parser=Parser.REDAPPLE):
+        for item in self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE):
             #item.replace('english_wiki_unformatted_link', '^.*?$', '______')
             yield item

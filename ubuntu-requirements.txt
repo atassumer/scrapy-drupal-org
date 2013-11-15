@@ -7,4 +7,4 @@ lamp-server
 drupal7
 mysql workbench (optional)
 
-pyreverse
+pyreverse (pylint package)
