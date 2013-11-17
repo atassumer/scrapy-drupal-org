@@ -7,7 +7,7 @@ def f(dictionary, ten_range):
     ten_range.reverse()
 
     structure = {"title": "/div/div/div"}
-    filepath = '/media/ubuntu/39bb3d82-6f8a-414b-8005-2528f35107cd/ubuntu/Programs/drupal/scrapy-parsley/scrapy_parsley/tests/yelp/yelp.html'
+    filepath = '/home/ubuntu/Programs/drupal/scrapy-parsley_wrappers/scrapy_parsley/tests/yelp/yelp.html'
     parselet = PyParsley(structure)
     dictionary['sub'] = parselet.parse(file=filepath, output='json')
     dictionary['2'] = 2

@@ -9,8 +9,8 @@ Layer 3: modules_dependencies
 """
 
 from drupalorg.spiders.remote import RemoteParsleySpider
-from scrapy_parsley.scrapy_parsley2.parser.implementations import ParserImplementations
-from scrapy_parsley.scrapy_parsley2.parsley_item import ParsletScrapyItem
+from scrapy_parsley.source_code.parsley_wrappers.parser.implementations import ParserImplementations
+from scrapy_parsley.source_code.scrapy_wrappers.item import ParsletScrapyItem
 
 
 # extractors
@@ -60,7 +60,7 @@ class ContributedProjectsRemoteParsleySpider(RemoteParsleySpider):
         @returns items 2 10
         @returns requests 0 0
         """
-        for item in self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE):
+        for item in self.apply_items_parselet(response, override_parser=ParserImplementations.REDAPPLE):
             item.replace('project_url', '^/', 'https://drupal.org/')
             item.extract('project_machine_name', REGEXP_MACHINE_NAME)
             item.extract('project_uid', REGEXP_DIGITS_GROUP)
@@ -95,7 +95,7 @@ class LinkedProjectsRemoteParsleySpider(RemoteParsleySpider):
         @returns items 1 1
         @returns requests 0 0
         """
-        for item in self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE):
+        for item in self.apply_items_parselet(response, override_parser=ParserImplementations.REDAPPLE):
             item.extract('linked_from', REGEXP_MACHINE_NAME)
             item.extract('linked_to', REGEXP_MACHINE_NAME)
             yield item
@@ -123,7 +123,7 @@ class RelatedProjectsRemoteParsleySpider(RemoteParsleySpider):
         @returns items 1 1
         @returns requests 0 0
         """
-        for item in self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE):
+        for item in self.apply_items_parselet(response, override_parser=ParserImplementations.REDAPPLE):
             item.extract('related_from', REGEXP_MACHINE_NAME)
             item.extract('related_to', REGEXP_MACHINE_NAME)
             yield item
@@ -157,7 +157,7 @@ class ReleasesProjectsRemoteParsleySpider(RemoteParsleySpider):
         @returns items 1 1
         @returns requests 0 0
         """
-        for item in self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE):
+        for item in self.apply_items_parselet(response, override_parser=ParserImplementations.REDAPPLE):
             item.extract('release_project_machine_name', REGEXP_MACHINE_NAME)
             item.extract('release_version_major', '^\\d')
             item.extract('release_zip_filesize_visible', '[^(].+[^)]')
@@ -185,7 +185,7 @@ class ContributorsOtherRemoteParsleySpider(RemoteParsleySpider):
         core_user_item['contributor_uid'] = 0
         yield core_user_item
 
-        for item in self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE):
+        for item in self.apply_items_parselet(response, override_parser=ParserImplementations.REDAPPLE):
             item.extract('contributor_name', '^(.*?)( on)?$', 1)
             item.extract('contributor_uid', REGEXP_DIGITS_GROUP)
             yield item
@@ -208,6 +208,6 @@ class TopOtherRemoteParsleySpider(RemoteParsleySpider):
         @returns items 2 2
         @returns requests 0 0
         """
-        for item in self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE):
+        for item in self.apply_items_parselet(response, override_parser=ParserImplementations.REDAPPLE):
             item.extract('top_machine_name', REGEXP_MACHINE_NAME)
             yield item

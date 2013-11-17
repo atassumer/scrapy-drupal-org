@@ -1,4 +1,4 @@
-from scrapy_parsley.scrapy_parsley2.parsley_spider import CrawlSpider
+from scrapy_parsley.source_code.scrapy_wrappers.spider import CrawlSpider
 
 
 class LocalSpider(CrawlSpider):

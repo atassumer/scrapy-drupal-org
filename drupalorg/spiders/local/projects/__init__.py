@@ -1,7 +1,7 @@
 from drupalorg.spiders.local import LocalSpider
-from scrapy_parsley.scrapy_parsley2.file_system_adapter import FileSystemAdapter
+from scrapy_parsley.tests.file_system_adapter import FileSystemAdapter
 from drupalorg.settings import PARSLEY_CORE_PROJECTS_ROOT
-from scrapy_parsley.scrapy_parsley2.parsley_item import ScrapyItemListWrapper
+from scrapy_parsley.source_code.scrapy_wrappers.item import ScrapyItemListWrapper
 
 
 class ProjectsLocalSpider(LocalSpider):

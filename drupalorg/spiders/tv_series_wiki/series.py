@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from scrapy_parsley.scrapy_parsley2.parser.implementations import ParserImplementations
+from scrapy_parsley.source_code.parsley_wrappers.parser.implementations import ParserImplementations
 
-from scrapy_parsley.scrapy_parsley2.parsley_spider import ParsleyBaseSpider
+from scrapy_parsley.source_code.scrapy_wrappers.spider import ParsleyBaseSpider
 
 
 class WikiSeries(ParsleyBaseSpider):
@@ -27,7 +27,7 @@ class WikiSeries(ParsleyBaseSpider):
 
     def parse(self, response):  # 100
         # example: Категория:Телесериалы США по десятилетиям
-        for item in self.apply_links_parselet(
+        for item in self.apply_requests_parselet(
                 callback=self.parse_decade,
                 response=response,
                 override_parselet=self.links_parselet_categories):
@@ -37,12 +37,12 @@ class WikiSeries(ParsleyBaseSpider):
 
     def parse_decade(self, response):  # 10
         # example: Категория:Телесериалы США 2000-х годов
-        for item in self.apply_links_parselet(
+        for item in self.apply_requests_parselet(
                 callback=self.parse_article,
                 response=response,
                 override_parselet=self.links_parselet_categories):
             yield item
-        for item in self.apply_links_parselet(
+        for item in self.apply_requests_parselet(
                 callback=self.parse_article,
                 response=response,
                 override_parselet=self.links_parselet_next_200):
@@ -52,6 +52,6 @@ class WikiSeries(ParsleyBaseSpider):
 
     def parse_article(self, response):
         # example: Viva la Bam
-        for item in self.apply_items_parselet(response, parser=ParserImplementations.REDAPPLE):
+        for item in self.apply_items_parselet(response, override_parser=ParserImplementations.REDAPPLE):
             #item.replace('english_wiki_unformatted_link', '^.*?$', '______')
             yield item
