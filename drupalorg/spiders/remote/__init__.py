@@ -1,5 +1,5 @@
-from scrapy_parsley.source_code.parsley_wrappers.parser.implementations import ParserImplementations
-from scrapy_parsley.source_code.scrapy_wrappers.spider import ParsleyCrawlSpider
+from scrapy_parsley.src.parsley_wrappers.parser.implementations import ParserImplementations
+from scrapy_parsley.src.scrapy_wrappers.spider import ParsleyCrawlSpider
 
 
 class RemoteParsleySpider(ParsleyCrawlSpider):

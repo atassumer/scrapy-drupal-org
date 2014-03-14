@@ -1,15 +1,10 @@
 from drupalorg.spiders.local import LocalSpider
-from scrapy_parsley.tests.file_system_adapter import FileSystemAdapter
+from scrapy_parsley.src.utils.file_system_adapter import FileSystemAdapter
 from drupalorg.settings import PARSLEY_CORE_PROJECTS_ROOT
-from scrapy_parsley.source_code.scrapy_wrappers.item import ScrapyItemListWrapper
+from scrapy_parsley.src.scrapy_wrappers.item import ScrapyItemListWrapper
 
 
 class ProjectsLocalSpider(LocalSpider):
-    """
-    @url https://drupal.org/project/views
-    @returns items 1 1
-    @returns requests 0 0
-    """
     allowed_domains = ["localhost"]
     start_urls = [
         "http://localhost/",
@@ -24,6 +19,7 @@ class CoreProjectsLocalSpider(ProjectsLocalSpider):
 
     def parse(self, response):
         """
+
         @url http://localhost/
         @returns items 33 33
         @returns requests 0 0

@@ -13,8 +13,8 @@ NEWSPIDER_MODULE = 'drupalorg.spiders'
 DEFAULT_ITEM_CLASS = 'scrapy_wrappers.item.Item'
 
 HTTPCACHE_ENABLED = True
-#HTTPCACHE_STORAGE = 'scrapy_wrappers.contrib.downloadermiddleware.httpcache.FilesystemCacheStorage'  # old path
-HTTPCACHE_STORAGE = 'scrapy_wrappers.contrib.httpcache.FilesystemCacheStorage'  # new path
+#HTTPCACHE_STORAGE = 'scrapy.contrib.downloadermiddleware.httpcache.FilesystemCacheStorage'  # old path
+HTTPCACHE_STORAGE = 'scrapy.contrib.httpcache.FilesystemCacheStorage'  # new path
 HTTPCACHE_EXPIRATION_SECS = 0
 HTTPCACHE_DIR = PARSLEY_FILES_ROOT + '/cached_pages'
 
@@ -22,13 +22,15 @@ IMAGES_MIN_HEIGHT = 110
 IMAGES_STORE = PARSLEY_FILES_ROOT + '/images'
 
 DOWNLOADER_MIDDLEWARES = {
-    'scrapy_wrappers.contrib.downloadermiddleware.httpcache.HttpCacheMiddleware': 543,
-    'scrapy_wrappers.contrib.downloadermiddleware.robotstxt.RobotsTxtMiddleware': 965,
+    'scrapy.contrib.downloadermiddleware.httpcache.HttpCacheMiddleware': 543,
+    'scrapy.contrib.downloadermiddleware.robotstxt.RobotsTxtMiddleware': 965,
 }
 
 ITEM_PIPELINES = {
-    # 'scrapy_wrappers.contrib.pipeline.images.ImagesPipeline': 100,
-    'drupalorg.pipelines.projects_contributed_git_clone.ProjectsContributedGitClonePipeline': 200,
+    'drupalorg.pipelines.projects_contributed.ProjectsContributedGitClonePipeline': 200,
+    'drupalorg.pipelines.projects_linked.ProjectsLinkedDropSelfLinkedPipeline': 210,
+    'drupalorg.pipelines.top_other.TopOtherTopCategoriesPipeline': 220,
+    # 'scrapy.contrib.pipeline.images.ImagesPipeline': 100,
     # 'drupalorg.pipelines.original_image.OriginalImagesPipeline': 300,
     # 'drupalorg.pipelines.transform_item.TransformItemPipeline': 400,
 }

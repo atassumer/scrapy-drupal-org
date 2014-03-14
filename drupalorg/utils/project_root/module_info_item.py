@@ -1,6 +1,6 @@
-from scrapy_parsley.source_code.scrapy_wrappers.close_spider import CloseSpiderWrapper
+from scrapy_parsley.src.scrapy_wrappers.close_spider import CloseSpiderWrapper
 
-from scrapy_parsley.source_code.scrapy_wrappers.item import ScrapyItemListWrapper
+from scrapy_parsley.src.scrapy_wrappers.item import ScrapyItemListWrapper
 
 
 class ModuleInfoItem(ScrapyItemListWrapper):
