@@ -7,6 +7,7 @@ Layer 3: modules_dependencies
 
 * - required for the next level
 """
+import re
 
 from drupalorg.spiders.remote import RemoteParsleySpider
 from scrapy_parsley.src.parsley_wrappers.parser.implementations import ParserImplementations
@@ -27,12 +28,11 @@ class ContributedProjectsRemoteParsleySpider(RemoteParsleySpider):
     name = 'projects_contributed'
 
     items_parselet = {
-        "_id": EXTRACTOR_NID_COINTAINER,
+        "_id": EXTRACTOR_NID_COINTAINER, # todo: make it work
         "project_url": EXTRACTOR_MACHINE_NAME_COINTAINER,
         "project_machine_name": EXTRACTOR_MACHINE_NAME_COINTAINER,
         "project_visible_name": "#page-subtitle",
         "project_uid": EXTRACTOR_UID_COINTAINER,
-        "project_description?": ".field-items", # "(//div[@class='field-items'])[last()]"  // todo: make it work
         "project_image_url?": "a.imagecache @href",
         "info(.project-info)": [
             {
@@ -67,11 +67,14 @@ class ContributedProjectsRemoteParsleySpider(RemoteParsleySpider):
             item.replace('project_url', '^/', 'https://drupal.org/')
             item.extract('project_machine_name', REGEXP_MACHINE_NAME, 1)
             item.extract('project_uid', REGEXP_DIGITS_GROUP, 1)
+
+            item.extract('project_reported_installs', REGEXP_DIGITS_GROUP, 1)
             item.replace('project_downloads_count', '\D', '')  # todo: check
             item.replace('project_automated_tests_status', '^.*?Automated tests: Enabled.*?$', 'Enabled')
-            item.replace('project_automated_tests_status', '^$', 'Disabled')  # todo check
+            item.replace('project_automated_tests_status', '^\s+$', 'Disabled')  # todo check
             item.extract('project_modified', '^Last modified: (.*?)$', 1)
             item.replace('project_modified', ',', '')
+
             item.extract('project_issues_open_count', REGEXP_DIGITS_GROUP, 1)
             item.extract('project_issues_total_count', REGEXP_DIGITS_GROUP, 1)
             item.extract('project_bugreports_open_count', REGEXP_DIGITS_GROUP, 1)
@@ -206,7 +209,7 @@ class ProjectsCategoriesRemoteParsleySpider(RemoteParsleySpider):
     def parse_items(self, response):
         """
         @url https://drupal.org/project/flag
-        @returns items 100 100
+        @returns items 4 4
         @returns requests 0 0
         """
         for item in self.apply_items_parselet(response, override_parser=ParserImplementations.REDAPPLE):
@@ -215,17 +218,20 @@ class ProjectsCategoriesRemoteParsleySpider(RemoteParsleySpider):
             yield item
 
 
-class TopOtherRemoteParsleySpider(RemoteParsleySpider):
+class TopOtherRemoteParsleySpider(RemoteParsleySpider):  # todo: regenerate
     name = "other_top"
     items_parselet = {
         "links(id('project-usage-all-projects')/tbody/tr)": [
             {
-                "top_machine_name": "td:nth-of-type(2)",
+                "top_machine_name": "td:nth-of-type(2) a @href",
                 "top_place": "td:nth-of-type(1)",
-                "top_category?": "not in the top"  # should be redefined in the pipeline
+                "top_category_name": "td:nth-of-type(1)", # should be redefined in the pipeline
+                "top_category_id": "td:nth-of-type(1)", # should be redefined in the pipeline
             }
         ]
     }
+    get_top_category_id = lambda self, top_place: len(top_place)
+    get_top_category_name = lambda self, top_place: "TOP 1" + "0" * len(top_place)
 
     def parse_start_url(self, response):
         """
@@ -235,4 +241,35 @@ class TopOtherRemoteParsleySpider(RemoteParsleySpider):
         """
         for item in self.apply_items_parselet(response, override_parser=ParserImplementations.REDAPPLE):
             item.extract('top_machine_name', REGEXP_MACHINE_NAME, 1)
+            item.set('top_category_id', self.get_top_category_id(item['top_category_id']))  # todo: make callback
+            item.set('top_category_name', self.get_top_category_name(item['top_category_name']))
             yield item
+
+
+class ProjectsDescriptionParsleySpider(RemoteParsleySpider):
+    """
+    ParsleySpider should generate `scrapy.item.Item`
+    """
+    name = "projects_description"
+    items_parselet = {
+        "project_machine_name": EXTRACTOR_MACHINE_NAME_COINTAINER,
+        "project_description": 'a', # replaced in the code below
+    }
+
+    def parse_items(self, response):
+        """
+        @url https://drupal.org/project/views
+        @returns items 12700 12700
+        @returns requests 0 0
+        """
+        for item in self.apply_items_parselet(response, override_parser=ParserImplementations.REDAPPLE):
+            item.extract('project_machine_name', REGEXP_MACHINE_NAME, 1)
+            item.set('project_description', self._extract_description(response.body))
+            yield item
+
+    def _extract_description(self, body):
+        opening_tag_string = '<div class="field-items">'
+        next_opening_tag_string = '<div class="project-info item-list">'
+        pattern = "(%s.*?)%s" % (re.escape(opening_tag_string), re.escape(next_opening_tag_string))
+        groups = re.search(pattern, body, re.DOTALL)
+        return groups.group(1)

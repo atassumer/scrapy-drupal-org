@@ -2,46 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ff47b11-d42a-44bc-9a20-792b27b582c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_parsley/src/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_parsley/src/parsley_wrappers/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_parsley/src/scrapy_wrappers/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_parsley/src/utils/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_parsley/src/utils/dump.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_parsley/src/scrapy_wrappers/item.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drupalorg/pipelines/projects_linked.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drupalorg/pipelines/top_other.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/drupalorg/utils/dump.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/fizx.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/redapple.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_spider.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parsley_wrappers/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/scrapy_wrappers/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/scrapy_wrappers/item.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy_parsley/source_code/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy_parsley/source_code/parsley_wrappers/parser/abstract.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/drupalorg/pipelines/projects_contributed_git_clone.py" afterPath="$PROJECT_DIR$/drupalorg/pipelines/projects_contributed.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/scrapy_parsley2/parser/abstract.py" afterPath="$PROJECT_DIR$/scrapy_parsley/src/parsley_wrappers/parser/abstract.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/source_code/parsley_wrappers/parselet.py" afterPath="$PROJECT_DIR$/scrapy_parsley/src/parsley_wrappers/parselet.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/source_code/parsley_wrappers/parser/__init__.py" afterPath="$PROJECT_DIR$/scrapy_parsley/src/parsley_wrappers/parser/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/source_code/parsley_wrappers/parser/fizx.py" afterPath="$PROJECT_DIR$/scrapy_parsley/src/parsley_wrappers/parser/fizx.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/source_code/parsley_wrappers/parser/implementations.py" afterPath="$PROJECT_DIR$/scrapy_parsley/src/parsley_wrappers/parser/implementations.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/source_code/parsley_wrappers/parser/redapple.py" afterPath="$PROJECT_DIR$/scrapy_parsley/src/parsley_wrappers/parser/redapple.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/source_code/parsley_wrappers/results.py" afterPath="$PROJECT_DIR$/scrapy_parsley/src/parsley_wrappers/results.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/source_code/scrapy_wrappers/close_spider.py" afterPath="$PROJECT_DIR$/scrapy_parsley/src/scrapy_wrappers/close_spider.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/source_code/scrapy_wrappers/spider.py" afterPath="$PROJECT_DIR$/scrapy_parsley/src/scrapy_wrappers/spider.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scrapy_parsley/tests/file_system_adapter.py" afterPath="$PROJECT_DIR$/scrapy_parsley/src/utils/file_system_adapter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drupalorg/Makefile" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/drupalorg/pipelines/top_other.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy_parsley/source_code/parsley_wrappers/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy_parsley/source_code/scrapy_wrappers/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy_parsley/source_code/scrapy_wrappers/item.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley" afterPath="$PROJECT_DIR$/scrapy_parsley" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/spiders/local/__init__.py" afterPath="$PROJECT_DIR$/drupalorg/spiders/local/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/spiders/local/projects/__init__.py" afterPath="$PROJECT_DIR$/drupalorg/spiders/local/projects/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/spiders/remote/__init__.py" afterPath="$PROJECT_DIR$/drupalorg/spiders/remote/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/__init__.py" afterPath="$PROJECT_DIR$/scrapy_parsley/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/utils/project_root/module_info_item.py" afterPath="$PROJECT_DIR$/drupalorg/utils/project_root/module_info_item.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/utils/project_root/project_root_parser.py" afterPath="$PROJECT_DIR$/drupalorg/utils/project_root/project_root_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/src/scrapy_wrappers/item.py" afterPath="$PROJECT_DIR$/scrapy_parsley/src/scrapy_wrappers/item.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/spiders/remote/projects_spiders.py" afterPath="$PROJECT_DIR$/drupalorg/spiders/remote/projects_spiders.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/spiders/tv_series_wiki/series.py" afterPath="$PROJECT_DIR$/drupalorg/spiders/tv_series_wiki/series.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/run_from_python.py" afterPath="$PROJECT_DIR$/drupalorg/run_from_python.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupalorg/settings.py" afterPath="$PROJECT_DIR$/drupalorg/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_parsley/tests/yelp/yelp.py" afterPath="$PROJECT_DIR$/scrapy_parsley/tests/yelp/yelp.py" />
     </list>
     <ignored path="scrapy-parsey.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,42 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="projects_spiders.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drupalorg/spiders/remote/projects_spiders.py">
+      <file leaf-file-name="Makefile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/drupalorg/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="158" column="11" selection-start="6846" selection-end="6846" vertical-scroll-proportion="0.0" vertical-offset="2183" max-vertical-offset="3904">
-              <folding>
-                <element signature="e#272#328#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/drupalorg/spiders/local/modules/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="888" selection-end="888" vertical-scroll-proportion="0.54468083" vertical-offset="0" max-vertical-offset="940">
+            <state line="30" column="18" selection-start="911" selection-end="911" vertical-scroll-proportion="0.5177994" vertical-offset="0" max-vertical-offset="927">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projects_contributed.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drupalorg/pipelines/projects_contributed.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="12" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="item.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapy_parsley/src/scrapy_wrappers/item.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="0" selection-start="3332" selection-end="3332" vertical-scroll-proportion="0.0" vertical-offset="1015" max-vertical-offset="2928">
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -146,9 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/scrapy_parsley/src/parsley_wrappers/parser/implementations.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/__init__.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/src/parsley_wrappers/parser/redapple.py" />
         <option value="$PROJECT_DIR$/drupalorg/spiders/local/__init__.py" />
         <option value="$PROJECT_DIR$/scrapy_parsley/src/parsley_wrappers/results.py" />
         <option value="$PROJECT_DIR$/drupalorg/pipelines/related_projects_remove_self_links.py" />
@@ -156,12 +93,15 @@
         <option value="$PROJECT_DIR$/drupalorg/pipelines/projects_linked_drop_self_linked.py" />
         <option value="$PROJECT_DIR$/drupalorg/pipelines/top_other_percentages.py" />
         <option value="$PROJECT_DIR$/drupalorg/pipelines/top_other_top_categories.py" />
-        <option value="$PROJECT_DIR$/drupalorg/settings.py" />
         <option value="$PROJECT_DIR$/drupalorg/spiders/local/projects/__init__.py" />
         <option value="$PROJECT_DIR$/scrapy_parsley/src/scrapy_wrappers/spider.py" />
-        <option value="$PROJECT_DIR$/scrapy_parsley/src/scrapy_wrappers/item.py" />
         <option value="$PROJECT_DIR$/drupalorg/pipelines/projects_contributed.py" />
+        <option value="$PROJECT_DIR$/scrapy_parsley/src/scrapy_wrappers/item.py" />
+        <option value="$PROJECT_DIR$/drupalorg/pipelines/top_other.py" />
+        <option value="$PROJECT_DIR$/drupalorg/settings.py" />
         <option value="$PROJECT_DIR$/drupalorg/spiders/remote/projects_spiders.py" />
+        <option value="$PROJECT_DIR$/drupalorg/run_from_python.py" />
+        <option value="$PROJECT_DIR$/drupalorg/Makefile" />
       </list>
     </option>
   </component>
@@ -179,6 +119,15 @@
             <id />
           </State>
           <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>Portability issues</id>
+          </State>
+          <State>
             <id>Python</id>
           </State>
           <State>
@@ -188,11 +137,6 @@
             <id>XML</id>
           </State>
         </expanded-state>
-        <selected-state>
-          <State>
-            <id>Buildout</id>
-          </State>
-        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -222,7 +166,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -231,229 +174,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsley" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsley" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy_parsley" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsley" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy_parsley" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsley" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy_parsley" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy_wrappers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsley" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parsley_firefox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsley" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupalorg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsley" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupalorg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spiders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsley" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupalorg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spiders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsley" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupalorg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spiders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsley" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupalorg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spiders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapy-parsley" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupalorg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spiders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="Errors" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="JavaScriptLanguageLevel" value="JS_1_7" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="JavaScriptPreferStrict" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -980,7 +718,11 @@
       <created>1384674615991</created>
       <updated>1384674615991</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Small fixes">
+      <created>1394794643829</created>
+      <updated>1394794643837</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1010,9 +752,8 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.314888" sideWeight="0.49916944" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32859176" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30916554" sideWeight="0.49958298" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3177471" sideWeight="0.4992" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14925373" sideWeight="0.68225294" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14925373" sideWeight="0.68225294" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14925373" sideWeight="0.6826411" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15754561" sideWeight="0.6826411" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39657444" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19753087" sideWeight="0.2260274" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32625994" sideWeight="0.500417" order="12" side_tool="true" content_ui="tabs" />
@@ -1022,6 +763,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31053352" sideWeight="0.500417" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31735888" sideWeight="0.4992" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.648834" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1059,10 +801,10 @@
     <MESSAGE value="Moved some packages. Imports optimization cancelled" />
     <MESSAGE value="Before today" />
     <MESSAGE value="Small improvements" />
-    <MESSAGE value="Small fixes" />
     <MESSAGE value="New fixes" />
     <MESSAGE value="Directories tree changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Directories tree changed" />
+    <MESSAGE value="Small fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small fixes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1072,120 +814,84 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/drupalorg/pipelines/top_other.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="304" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="938" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/__init__.py">
+    <entry file="file://$PROJECT_DIR$/processes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="940">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="938" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/profiler.py">
+    <entry file="file://$PROJECT_DIR$/scrapy_parsley/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="940">
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="938" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/run_from_python.py">
+    <entry file="file://$PROJECT_DIR$/drupalorg/spiders/remote/usage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="940">
-          <folding />
-        </state>
+        <state line="131" column="412" selection-start="8601" selection-end="8601" vertical-scroll-proportion="0.34717607" vertical-offset="1887" max-vertical-offset="209648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_parsley/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="938" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_parsley/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5520" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="938" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitmodules">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="938" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupalorg/spiders/tv_series_wiki/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="34" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.33333334" vertical-offset="191" max-vertical-offset="976" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupalorg/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="832">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_parsley/src/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="940">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_parsley/src/scrapy_wrappers/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="940">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_parsley/src/parsley_wrappers/parselet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="6" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="2016">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/spiders/local/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="192">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/spiders/local/projects/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="672">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/spiders/remote/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="9" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624">
-          <folding />
-        </state>
+        <state line="31" column="55" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.5" vertical-offset="176" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scrapy_parsley/src/scrapy_wrappers/spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="42" selection-start="1985" selection-end="1985" vertical-scroll-proportion="0.0" vertical-offset="580" max-vertical-offset="1520">
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="13" column="20" selection-start="408" selection-end="408" vertical-scroll-proportion="0.2217484" vertical-offset="0" max-vertical-offset="1520" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_parsley/src/parsley_wrappers/parselet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.5117271" vertical-offset="0" max-vertical-offset="2016" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupalorg/spiders/remote/projects_spiders.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="11" selection-start="6846" selection-end="6846" vertical-scroll-proportion="0.0" vertical-offset="2183" max-vertical-offset="3904">
-          <folding>
-            <element signature="e#272#328#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="25" column="0" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4496" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/pipelines/projects_contributed.py">
+    <entry file="file://$PROJECT_DIR$/drupalorg/run_from_python.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="12" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
-          <folding />
-        </state>
+        <state line="40" column="35" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="736" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_parsley/src/scrapy_wrappers/item.py">
+    <entry file="file://$PROJECT_DIR$/drupalorg/spiders/remote/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="0" selection-start="3332" selection-end="3332" vertical-scroll-proportion="0.0" vertical-offset="1015" max-vertical-offset="2928">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="34" column="0" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drupalorg/spiders/local/modules/__init__.py">
+    <entry file="file://$PROJECT_DIR$/drupalorg/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="888" selection-end="888" vertical-scroll-proportion="0.54468083" vertical-offset="0" max-vertical-offset="940">
+        <state line="30" column="18" selection-start="911" selection-end="911" vertical-scroll-proportion="0.5177994" vertical-offset="0" max-vertical-offset="927">
           <folding />
         </state>
       </provider>

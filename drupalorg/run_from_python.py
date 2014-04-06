@@ -37,3 +37,5 @@
 #         # yappi.print_stats(sort_type=yappi.SORTTYPE_TSUB, sort_order=yappi.SORTORDER_DESC, limit=50)
 #
 #         # cProfile.run('RunScrapyFromScript()')
+
+# todo makefile to run the commands

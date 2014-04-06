@@ -10,7 +10,7 @@ PARSLEY_FILES_ROOT = "/home/ubuntu/Programs/drupal/files"
 #################
 SPIDER_MODULES = ['drupalorg.spiders']
 NEWSPIDER_MODULE = 'drupalorg.spiders'
-DEFAULT_ITEM_CLASS = 'scrapy_wrappers.item.Item'
+DEFAULT_ITEM_CLASS = 'scrapy.item.Item'
 
 HTTPCACHE_ENABLED = True
 #HTTPCACHE_STORAGE = 'scrapy.contrib.downloadermiddleware.httpcache.FilesystemCacheStorage'  # old path
@@ -29,7 +29,6 @@ DOWNLOADER_MIDDLEWARES = {
 ITEM_PIPELINES = {
     'drupalorg.pipelines.projects_contributed.ProjectsContributedGitClonePipeline': 200,
     'drupalorg.pipelines.projects_linked.ProjectsLinkedDropSelfLinkedPipeline': 210,
-    'drupalorg.pipelines.top_other.TopOtherTopCategoriesPipeline': 220,
     # 'scrapy.contrib.pipeline.images.ImagesPipeline': 100,
     # 'drupalorg.pipelines.original_image.OriginalImagesPipeline': 300,
     # 'drupalorg.pipelines.transform_item.TransformItemPipeline': 400,
